@@ -4,7 +4,7 @@ canvas_course_id: 23615
 course_code: ENGE707_2026_S2
 last_checked: 2026-07-30
 ---
-hghg
+
 # Data Engineering and AI Current Canvas Information
 
 Return to [[Data Engineering and AI Overview|subject overview]] · Follow the [[Data Engineering and AI Roadmap|course roadmap]] · Open the [[Data Engineering and AI Assessment Index|assessment index]].
@@ -27,6 +27,8 @@ Recommended tools include Python, NumPy, Pandas, scikit-learn, Git/GitHub, Matpl
 - **ML/Kaggle competition — 40%:** 18 October 2026 on the overview page.
 
 Project work must be completed in groups of at least two; individual projects are not permitted. Register the team and topic through the [group-registration assignment](https://canvas.aut.ac.nz/courses/23615/assignments/195242) by **31 July 2026 at 23:59:59 NZST**. The 23 and 29 July announcements warn that late registration incurs a **5% deduction from the final project mark**. Team members may come from different lab streams, and marks are based on each student's individual contribution.
+
+dsdsd
 
 The 17 July assessment announcement clarifies that each 30-mark project phase consists of 25 report marks and 5 lab-performance marks. Phase 1 lab marks are earned across Labs 2–6; Phase 2 across Labs 7–11. These marks are based on demonstrated lab performance/results checked by teaching assistants, not merely submitting lab files.
 
