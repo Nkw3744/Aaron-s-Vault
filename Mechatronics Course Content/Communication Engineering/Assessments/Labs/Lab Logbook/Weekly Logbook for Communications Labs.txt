@@ -1,0 +1,15 @@
+Logbook for Communications Eng
+
+
+Week 1
+Everyone in the group came and we got right into setting up matlab. team works well together and we promptly started on working for lab 5- taking turns on the computer following the guidelines of the lab book. we each had a go on the computer while someone else ould ready out the next instructions, someone would research for gaining some context on what we working on, and someone was looking forward on the next steps. we did eventually hit a hurdle with the code not producing 3 graphs and tried using claude to help out but could not complete in time
+
+Week 2
+picking of from our code error from last week we continued to work through it. looking back we probably took the wrong approuch because we were a little scattered with changing the code around indididually. occassional deleting and resseting the code when we could likely have worked out the issues in the code we had in there if we spent a bit of time. but i thoing the issue was mainly theres on computer and not everyone could visuallize the parts of the code they wanted to look at all at the same time. so we worked more individually to try solve the issue but it ended up overwritting each other a bit. we eventually got there and completed the lab successfully. 
+
+
+Week 3
+couple of teammates were sick so 2 of us worked on lab 4. it worked out well. we took time to learnfrom other classmates and the lecturer what out labs context was and the gerneral scope of it. we took the time to ensure we could properly decode the messages by doing some practice and checking with classmates. then we broke the task up into finding results and recording and we couldquickly gather the data points that we needed for the lab. allowing us time for next lab to properly answer the labbook questions and understand the intricasies of the signals we were decodding.
+
+Week 4
+..

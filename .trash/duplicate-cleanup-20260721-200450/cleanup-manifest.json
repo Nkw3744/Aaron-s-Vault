@@ -1,0 +1,87 @@
+{
+  "created": "2026-07-21T20:05:35.353727+12:00",
+  "moved_files": [
+    {
+      "source": "IMG_2219.PNG",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/IMG_2219.PNG",
+      "sha256": "fcce66b9c8d42e8a832de38d134cc35f7fb08a9445cd068f586c4786f90847c9",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Supporting Screenshots/IMG_2219.PNG"
+      ]
+    },
+    {
+      "source": "IMG_2220.PNG",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/IMG_2220.PNG",
+      "sha256": "72b25582d0e7c459ad91ab92883f17e0d8d20edc14c6a741082da2c45e1f6092",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Supporting Screenshots/IMG_2220.PNG"
+      ]
+    },
+    {
+      "source": "IMG_2221.PNG",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/IMG_2221.PNG",
+      "sha256": "b4632303cd9a59b91a43fb90a2bafdfdb3fbafff974458787cf9da85c125e873",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Supporting Screenshots/IMG_2221.PNG"
+      ]
+    },
+    {
+      "source": "IMG_2222.PNG",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/IMG_2222.PNG",
+      "sha256": "f0fc54cea9f063743adbaeb61eaa53d2c14a528f9a125a6f71d8c8bbacb68a0e",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Supporting Screenshots/IMG_2222.PNG"
+      ]
+    },
+    {
+      "source": "IMG_2223.PNG",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/IMG_2223.PNG",
+      "sha256": "f626a29eb126d80f1251e5e1a651104abab1a8c80a78816f00aa8c763d9c9e27",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Supporting Screenshots/IMG_2223.PNG"
+      ]
+    },
+    {
+      "source": "Thermo formula sheet full 25.pdf",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Thermo formula sheet full 25.pdf",
+      "sha256": "7e8de1027d014e8aa497646605972e79c3ba309ccf3eb3cfc77097bece7b31cc",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Resources/Archive/Thermo formula sheet full 25.pdf"
+      ]
+    },
+    {
+      "source": "Thermo Formula Sheet Full Overview .pdf",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Thermo Formula Sheet Full Overview .pdf",
+      "sha256": "0495d063a17262be859a89248336ce97b21d2cec9f1b58693fae68b685f15d83",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Resources/Thermo Formula Sheet Full Overview .pdf"
+      ]
+    },
+    {
+      "source": "Thermo notes 25.pdf",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Thermo notes 25.pdf",
+      "sha256": "824b9ae83afac993aa014d069123169595d79aab212e5a8bbadfeb4ffa2a2627",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Resources/Thermo notes 25.pdf"
+      ]
+    },
+    {
+      "source": "Thermo Report Rankine Cycles 2025.pdf",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Thermo Report Rankine Cycles 2025.pdf",
+      "sha256": "1f7538e63267d115ec554e956a442e8a7f7d129ad972d74c2aea545adda2c5a2",
+      "canonical_matches": [
+        "Mechatronics Course Content/Thermodynamics/Assessments/Labs/Archive/Rankine Steam Cycle Lab 2025/Thermo Report Rankine Cycles 2025.pdf"
+      ]
+    }
+  ],
+  "moved_directories": [
+    {
+      "source": "Thermodynamics",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Thermodynamics"
+    },
+    {
+      "source": "Mathematics III",
+      "trash_copy": ".trash/duplicate-cleanup-20260721-200450/Mathematics III"
+    }
+  ]
+}

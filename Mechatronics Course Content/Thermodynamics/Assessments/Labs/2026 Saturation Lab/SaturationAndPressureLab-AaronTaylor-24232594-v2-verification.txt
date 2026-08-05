@@ -1,0 +1,33 @@
+Corrected saturation-lab Version 2 verification
+================================================
+
+Title:           Saturation Temperature and Pressure Report 2026
+Author:          Aaron Taylor
+Pages:           6
+Encrypted:       no
+Page size:       595.28 x 841.89 pts (A4)
+File size:       2540880 bytes
+PDF version:     1.5
+
+Checks:
+- v2_tex_exists: True
+- v2_pdf_exists: True
+- direct_table_graph_path: True
+- old_interpolated_graph_not_used: True
+- direct_fit_values_present: True
+- interpolation_statement_present: True
+- comparison_before_interpolation: True
+- figure_before_error_table: True
+- six_pages: True
+- no_layout_log_issues: True
+- old_tex_unchanged_since_discovery: True
+- old_pdf_unchanged_since_discovery: True
+
+Fit source:
+- Experimental fit: T = 37.633 P^0.2146
+- Direct Table A-5 fit: T = 31.019 P^0.2557
+- Fifteen direct Table A-5 points plotted from 150 to 600 kPa.
+- Interpolation retained only for the nine point-specific Tth/error calculations.
+
+Layout issues: none
+Visual inspection: all six pages checked; compact first page preserved, graph precedes error table, no clipping or trailing orphan page.

@@ -1,0 +1,4 @@
+samples=5000
+message_max=5
+am_max_abs=5
+figure28_peak_frequency=0.300003051758

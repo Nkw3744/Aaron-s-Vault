@@ -1,0 +1,8 @@
+Corrected comparison-graph verification
+=======================================
+
+Experimental fit: A=37.63305925, n=0.21457331, R2=0.99894617
+Direct Table A-5 fit: A=31.01909846, n=0.25566977, R2=0.99982723
+Direct table points plotted: 15
+Interpolation is retained only for the nine error-table Tth values.
+All numerical assertions passed.Exit code: 0

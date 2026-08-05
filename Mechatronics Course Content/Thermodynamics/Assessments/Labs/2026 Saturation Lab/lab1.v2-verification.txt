@@ -1,0 +1,19 @@
+Lab 1 Version 2 PDF verification
+================================
+
+Title:           Saturation Temperature and Pressure Report 2026
+Author:          Aaron
+Pages:           9
+Encrypted:       no
+Page size:       595.28 x 841.89 pts (A4)
+File size:       7468556 bytes
+PDF version:     1.5
+
+LaTeX source exists: True (17395 bytes)
+Rendered PDF exists: True (7468556 bytes)
+Extracted text characters: 15483
+Embedded image objects: 7
+Required-content checks: {'Synopsis': True, 'Aim': True, 'Theory': True, 'Equipment': True, 'Method': True, 'Results': True, 'Discussion': True, 'Conclusion': True, 'Primary Evidence': True, 'Reproducibility': True, 'References': True, '37.633': True, '0.2146': True, '−4.32': True, '6.47': True}
+Layout log issues (overfull/underfull/missing glyph/undefined reference): none
+Visual inspection: all 9 rendered pages checked; figures upright, readable and unclipped.
+Numerical verification: analysis-verification.txt reports all assertions passed.

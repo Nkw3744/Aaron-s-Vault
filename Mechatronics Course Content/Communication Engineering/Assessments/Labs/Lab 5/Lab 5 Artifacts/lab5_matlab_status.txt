@@ -1,0 +1,5 @@
+samples=5000
+message_max=5
+am_max_abs=5
+spectrum_peak=0.300003051758
+carrier_frequency=0.3

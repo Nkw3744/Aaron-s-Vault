@@ -1,0 +1,209 @@
+<!doctype html><html><head><meta charset='utf-8'><title>ENEL700 Lab 5 Report</title><style>
+@page { size: A4; margin: 18mm 17mm 19mm 17mm; }
+html { font-family: Arial, Helvetica, sans-serif; color: #17202a; }
+body { max-width: 100%; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 22pt; color: #123c69; border-bottom: 2px solid #2f6f9f; padding-bottom: 8px; }
+h2 { font-size: 16pt; color: #174f78; margin-top: 24px; break-after: avoid; }
+h3 { font-size: 12.5pt; color: #21618c; margin-top: 18px; break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+img { display: block; max-width: 100%; max-height: 228mm; margin: 10px auto 4px auto; break-inside: avoid; }
+p:has(img) { text-align: center; font-size: 9pt; color: #455a64; break-inside: avoid; }
+pre { white-space: pre-wrap; background: #f4f7f9; border: 1px solid #d5dde2; padding: 9px; border-radius: 4px; font-size: 9pt; break-inside: avoid; }
+code { font-family: "DejaVu Sans Mono", monospace; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9pt; break-inside: avoid; }
+th, td { border: 1px solid #aeb6bf; padding: 6px; vertical-align: top; }
+th { background: #d9eaf5; color: #123c69; }
+blockquote { border-left: 4px solid #2f6f9f; margin-left: 0; padding-left: 12px; color: #455a64; }
+</style></head><body><h1>ENEL700 Lab 5 Report — Amplitude Modulation Using MATLAB</h1>
+<p>Return to Communication Engineering Overview · Lab instructions: Lab 5 working note · Source: ENEL700 Lab Book 2026, pages 30–38 · Accessible text: ENEL700-Lab-5-Full-Transcription</p>
+<h2>Abstract</h2>
+<p>This work replicated the signal processing and output figures from ENEL700 Lab 5, <em>Amplitude Modulation Using Simulink</em>. The supplied laboratory procedure defines a 5,000-sample two-arch message signal, a unit-amplitude carrier at normalized frequency 0.3, and an AM double-sideband suppressed-carrier (AM-DSB/SC) signal formed by multiplication. Headless Simulink initialization did not complete within bounded safety limits, so the same signals were generated and analysed directly in MATLAB. The resulting message waveform, modulated waveform, output spectrum, and three stacked spectra matched the forms shown in manual Figures 23, 27, 28, and 29. The measured modulated-sideband/message peak ratio was 0.4984, corresponding to −3.0245 dB under the manual's <code>10*log10</code> convention, in close agreement with the expected 0.5 and −3 dB.</p>
+<h2>1. Objective</h2>
+<p>The purpose of Lab 5 is to become familiar with MATLAB and Simulink through an amplitude-modulation example. The practical objectives are to:</p>
+<ul>
+<li>create a 5,000-sample message waveform;</li>
+<li>multiply the message by a sinusoidal carrier to form AM-DSB/SC;</li>
+<li>inspect the time-domain waveform and output spectrum;</li>
+<li>write the Question 1 <code>sigspec.m</code> spectrum function;</li>
+<li>use <code>sigspec.m</code> and <code>subplot</code> to compare the message, carrier, and modulated spectra;</li>
+<li>verify the expected one-half linear scaling, equivalent to approximately −3 dB under the lab's logarithmic convention.</li>
+</ul>
+<h2>2. Source reconstruction</h2>
+<p>Manual pages 30–38 were rendered and visually transcribed page-by-page because the Lab 5 section of the PDF is image-based and does not contain searchable text. The complete accessible transcription is stored in ENEL700-Lab-5-Full-Transcription. It confirms that Question 2 depends on both the initial model setup and Question 1's supplied spectrum function.</p>
+<p>The relevant sequence is:</p>
+<ol>
+<li>Define the message <code>bumps</code> in MATLAB.</li>
+<li>Configure the carrier as a time-based Sine Wave with frequency <code>2*pi*0.3</code>, phase <code>pi/2</code>, and sample time <code>1</code>.</li>
+<li>Multiply the message and carrier.</li>
+<li>Export the modulated signal as <code>am</code>.</li>
+<li>Complete the Question 1 <code>sigspec.m</code> function using a Hamming window, zero-padded FFT, <code>fftshift</code>, and normalized frequency from −0.5 to 0.5.</li>
+<li>For Question 2, export the carrier and use the same <code>sigspec.m</code> function in three subplot axes.</li>
+</ol>
+<h2>3. Theory</h2>
+<p>For discrete sample index (n), the carrier used by the manual is</p>
+<pre><code class="language-text">c[n] = \sin(2\pi(0.3)n + \pi/2).
+</code></pre>
+<p>The message is the two-arch sequence</p>
+<pre><code class="language-matlab">bump = sqrt(1250^2-([0:2499]-1250).^2) / 250;
+bumps = [bump bump];
+</code></pre>
+<p>The AM-DSB/SC output is</p>
+<pre><code class="language-text">s[n] = m[n]c[n].
+</code></pre>
+<p>Multiplication by a sinusoidal carrier shifts the baseband message spectrum to positive and negative carrier frequencies. Since</p>
+<pre><code class="language-text">\cos(2\pi f_c n) = \frac{1}{2}e^{j2\pi f_c n}+\frac{1}{2}e^{-j2\pi f_c n},
+</code></pre>
+<p>each shifted copy has one-half of the original linear spectral magnitude. With the laboratory function's <code>10*log10</code> magnitude convention,</p>
+<pre><code class="language-text">10\log_{10}(0.5) \approx -3.01\text{ dB}.
+</code></pre>
+<h2>4. MATLAB method</h2>
+<p>The direct MATLAB replication used the same parameters as the manual:</p>
+<ul>
+<li>message length: 5,000 samples;</li>
+<li>message maximum amplitude: 5;</li>
+<li>carrier amplitude: 1;</li>
+<li>normalized carrier frequency: 0.3;</li>
+<li>carrier phase: (\pi/2);</li>
+<li>sample interval: 1;</li>
+<li>modulated output: <code>message .* carrier</code>.</li>
+</ul>
+<h3>4.1 Manual Figure 28 spectrum method</h3>
+<p>The output spectrum equivalent used the manual's Blackman-window and <code>20*log10</code> procedure with <code>NFFT = 2^16</code>.</p>
+<h3>4.2 Question 1 <code>sigspec.m</code></h3>
+<p>The completed sigspec follows the supplied Question 1 processing sequence:</p>
+<ul>
+<li>force signals into columns;</li>
+<li>apply a Hamming window;</li>
+<li>use a zero-padded FFT size of <code>2^(ceil(log2(len))+2)</code>;</li>
+<li>centre the spectrum with <code>fftshift</code>;</li>
+<li>use normalized frequency <code>[-0.5, 0.5)</code>;</li>
+<li>plot linear magnitude for <code>flag=0</code>;</li>
+<li>plot <code>10*log10</code> magnitude for <code>flag=1</code>.</li>
+</ul>
+<p>The manual starter labels the y-axis “Magnitude (dB)” even for the linear branch. The completed function corrects only that label: the linear branch is labelled “Linear magnitude.” The numerical algorithm remains the manual's method.</p>
+<h2>5. Results</h2>
+<h3>5.1 Message information — manual Figure 23 equivalent</h3>
+<p>The generated message contains exactly 5,000 finite real samples. It forms two arches, rises to amplitude 5, and returns close to zero at the midpoint and end.</p>
+<p><img alt="Figure 1. MATLAB equivalent of manual Figure 23: 5,000-sample message information." src="figure23_message_information.png" /></p>
+<h3>5.2 AM-DSB/SC waveform — manual Figure 27 equivalent</h3>
+<p>The full output shows rapid carrier oscillation bounded by the two-arch envelope, with maximum absolute amplitude 5. This matches the expected output of multiplying the message by a unit-amplitude carrier.</p>
+<p><img alt="Figure 2. MATLAB equivalent of manual Figure 27: full AM-DSB/SC output waveform." src="figure27_am_output_waveform.png" /></p>
+<p>The zoomed result makes the carrier oscillations and positive/negative message envelope easier to inspect.</p>
+<p><img alt="Figure 3. Zoomed AM waveform with the positive and negative message envelopes." src="figure27_am_output_waveform_zoom.png" /></p>
+<h3>5.3 Output spectrum — manual Figure 28 equivalent</h3>
+<p>The dominant positive-frequency spectral peak was measured at normalized frequency <code>0.300003051758</code>, matching the configured carrier frequency of 0.3.</p>
+<p><img alt="Figure 4. MATLAB equivalent of manual Figure 28: output spectrum shifted to 0.3." src="figure28_output_spectrum.png" /></p>
+<h2>6. Question 1 — spectrum function</h2>
+<p>The supplied starter code was completed as sigspec. The function successfully produced centred linear and logarithmic spectra for vectors supplied as either rows or columns. Optional frequency and spectrum outputs were retained for numerical verification; calling the function without outputs still performs the required plot.</p>
+<h2>7. Question 2 — three spectra</h2>
+<p>Question 2 requires three signals in the same figure window but in separate subplot axes:</p>
+<ol>
+<li><strong>Modulating signal:</strong> baseband spectrum centred at normalized frequency 0.</li>
+<li><strong>Carrier signal:</strong> narrow symmetric peaks at approximately −0.3 and +0.3.</li>
+<li><strong>Modulated signal:</strong> shifted copies of the message spectrum centred around −0.3 and +0.3, with no separate unsuppressed carrier term.</li>
+</ol>
+<h3>7.1 Logarithmic spectra</h3>
+<p><img alt="Figure 5. MATLAB equivalent of manual Figure 29: three stacked spectra using sigspec(signal,1)." src="figure29_output_spectra_log.png" /></p>
+<h3>7.2 Linear spectra</h3>
+<p><img alt="Figure 6. Companion three-stacked linear spectra using sigspec(signal,0)." src="figure29_output_spectra_linear.png" /></p>
+<h3>7.3 Scaling measurement</h3>
+<p>The Hamming-windowed, zero-padded spectra produced:</p>
+<ul>
+<li>message-spectrum peak: reference value;</li>
+<li>average positive/negative modulated-sideband peak divided by message peak: <code>0.498366330964</code>;</li>
+<li>expected linear ratio: <code>0.5</code>;</li>
+<li>measured logarithmic difference: <code>−3.02451305776 dB</code>;</li>
+<li>expected logarithmic difference: approximately <code>−3.01 dB</code>;</li>
+<li>measured carrier peak frequency: <code>0.299987792969</code>.</li>
+</ul>
+<p>The small difference from exactly 0.5 is consistent with finite-length sampling, windowing, and FFT-bin placement. The result supports the expected AM-DSB/SC scaling.</p>
+<h2>8. Validation against the laboratory manual</h2>
+<table>
+<thead>
+<tr>
+<th>Manual requirement</th>
+<th>MATLAB replication result</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5,000-sample two-arch message</td>
+<td>5,000 samples, amplitude 0–5</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Unit-amplitude carrier at normalized frequency 0.3</td>
+<td>Peak measured at 0.299988/0.300003 depending on FFT method</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>AM waveform follows message envelope</td>
+<td>Full and zoomed plots visually verified</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Output spectrum shifted to 0.3</td>
+<td>Dominant peak at 0.300003</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Question 1 uses Hamming, zero-padding, <code>fftshift</code></td>
+<td>Completed <code>sigspec.m</code> uses the supplied sequence</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Three stacked spectra</td>
+<td>Message, carrier, and modulated spectra produced</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Modulated spectrum is half the message magnitude</td>
+<td>Ratio 0.498366</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Log difference is about −3 dB</td>
+<td>−3.0245 dB</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+<h2>9. Completing the laboratory exactly in Simulink — Aaron-assisted handoff</h2>
+<p>The signal processing and required output figures are certified, but the current work is a MATLAB signal-domain replication rather than an executed Simulink block model. MATLAB itself works normally and reports a valid Simulink licence; however, headless <code>load_system('simulink')</code> did not return within a 30-second safety limit, and a minimal model attempt did not return within 60 seconds. Both were terminated automatically to avoid leaving an unattended prompt or process.</p>
+<p>To complete the procedure exactly as written in the manual, Aaron would need to help at Tornado with the GUI-dependent stage:</p>
+<ol>
+<li>Open the MATLAB desktop and launch Simulink manually.</li>
+<li>Respond to any first-run, licence, update, graphics, or external-application dialogue that appears. Credentials, MFA codes, and passwords should remain private and be entered only by Aaron.</li>
+<li>If AUT has supplied a newer Lab 5 or Simulink instruction link than the older links printed on manual page 30, open or provide that current source so its block names and steps can be checked before submission.</li>
+<li>Confirm that the current release can locate the required blocks or their modern equivalents:
+   - Signal From Workspace
+   - Sine Wave
+   - Product
+   - Scope
+   - To Workspace</li>
+<li>Build or verify <code>lab5.slx</code> with the exact parameters recorded in ENEL700-Lab-5-Full-Transcription.</li>
+<li>Add the second To Workspace block required by Question 2 and name the carrier output clearly.</li>
+<li>Run the model with stop time 5000 and a fixed-step solver.</li>
+<li>Save screenshots of the actual block diagram and Scope display, and export the real message, carrier, and modulated workspace arrays.</li>
+<li>Rerun run_lab5_question2_three_spectra using those exported arrays instead of the direct MATLAB equivalents, then compare the results with this report.</li>
+</ol>
+<p>This handoff would certify the Simulink GUI implementation itself. The present report already certifies the underlying signal definitions, spectrum function, expected figures, and Question 2 scaling.</p>
+<h2>10. Limitations</h2>
+<ul>
+<li>A <code>.slx</code> model was not produced because unattended Simulink initialization stalled.</li>
+<li>The report figures were generated directly from the manual's signal equations in MATLAB, not captured from the Simulink Scope.</li>
+<li>The mathematical operation is equivalent to the intended Product block, but a future GUI run is still required if assessment evidence must show an actual Simulink diagram and Scope window.</li>
+<li>The manual uses <code>20*log10</code> for Figure 28 but <code>10*log10</code> in the Question 1 <code>sigspec</code> starter. This report preserves both conventions in their respective contexts rather than silently treating them as identical.</li>
+</ul>
+<h2>11. Conclusion</h2>
+<p>The MATLAB replication successfully reproduced the central results of ENEL700 Lab 5. The two-arch message, AM-DSB/SC waveform, carrier-frequency shift, completed spectrum function, and three stacked Question 2 spectra all matched the laboratory instructions. Numerical verification measured the carrier at approximately 0.3 and the sideband scaling at 0.4984 or −3.0245 dB, agreeing closely with theory. The remaining work for a fully literal completion is a supervised Simulink GUI run and capture of the actual block-model and Scope evidence.</p>
+<h2>Appendix — reproducibility files</h2>
+<ul>
+<li>sigspec — completed Question 1 function</li>
+<li>run_lab5_question2_three_spectra — Question 2 execution and assertions</li>
+<li>generate_lab5_report_figures — report figure generator</li>
+<li>lab5_question2_status — certified Question 2 values</li>
+<li>report_figure_status — report figure verification values</li>
+<li>ENEL700-Lab-5-Full-Transcription — accessible transcription of manual pages 30–38</li>
+</ul></body></html>

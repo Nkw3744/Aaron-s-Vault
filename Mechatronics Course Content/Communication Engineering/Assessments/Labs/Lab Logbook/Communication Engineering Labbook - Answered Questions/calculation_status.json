@@ -1,0 +1,44 @@
+{
+  "sampling_rate_hz": 1041.625,
+  "nyquist_bandwidth_hz": 520.8125,
+  "bit_width_us": 120.00480019200768,
+  "frame_width_ms": 0.9600384015360615,
+  "four_bit_word_width_us": 480.0192007680307,
+  "quantisation_levels": 16,
+  "linear_record_count": 16,
+  "linear_min_spacing_v": 0.03799999999999998,
+  "linear_max_spacing_v": 0.6519999999999999,
+  "companded_record_count": 11,
+  "companded_codes_present": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "companded_codes_missing": [
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "companded_nonmonotonic_pairs": [
+    {
+      "from_code": 9,
+      "to_code": 11,
+      "from_voltage_v": -0.003,
+      "to_voltage_v": -0.072
+    }
+  ],
+  "lab5_measured_ratio": 0.498366330964,
+  "lab5_measured_db_manual_convention": -3.02451305776,
+  "lab5_expected_ratio": 0.5,
+  "lab5_expected_db": -3.01029995664
+}

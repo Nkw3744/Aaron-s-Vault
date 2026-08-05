@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: file.backlinks
+      direction: ASC
+    order:
+      - file.name
+      - file.tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 400

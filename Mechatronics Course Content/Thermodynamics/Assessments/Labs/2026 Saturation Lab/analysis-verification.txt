@@ -1,0 +1,11 @@
+Analysis verification
+=====================
+
+Calibration slope: 0.34941176 ohm/degC
+Experimental fit: A=37.63305925, n=0.21457331, R2=0.99894617
+Theoretical fit: A=30.89879391, n=0.25631687, R2=0.99984388
+Mean signed error: -4.322044%
+Mean absolute error: 4.322044%
+Maximum absolute error: 6.470451%
+All numerical assertions passed.
+Exit code: 0

@@ -1,0 +1,4 @@
+method=manual_sigspec_question1
+linear_ratio=0.498366330964
+db_difference=-3.02451305776
+carrier_peak_frequency=0.299987792969
