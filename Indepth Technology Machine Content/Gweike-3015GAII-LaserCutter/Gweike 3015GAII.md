@@ -2,6 +2,8 @@
 
 Return to [[Indepth Technology]].
 
+Generic auxiliary and service reference: [[Technical Reference Index]].
+
 ## Current configuration and work
 
 - Laser power: **3 kW stated**; installed source nameplate still needs to confirm the exact rating and model.

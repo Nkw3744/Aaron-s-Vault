@@ -13,6 +13,10 @@ Central navigation for work knowledge, machine documentation, installation mater
 - [[JQ-2040E|JQ-2040E Laser Cutter]] - Drive-linked CAD drawing
 - [[JQ-2060E|JQ-2060E Laser Cutter]] - local layout PDFs and Drive-linked CAD source files
 
+## Technical Reference
+
+- [[Technical Reference Index]] — generic install and service knowledge for fiber and CO₂ laser cutters, auxiliary equipment (chillers, gas, compressors, extraction, fiber optics, height sensing, pneumatics), and site requirements. Use when you need broad specs or troubleshooting paths; use machine pages for exact installed configuration.
+
 ## Cutting Parameters
 
 - [[Indepth Technology Machine Content/Cutting Parameters Index|Cutting Parameters Index]] — central navigation for reference, commissioning, validated, and superseded machine recipes.

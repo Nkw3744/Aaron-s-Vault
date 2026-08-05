@@ -4,6 +4,8 @@ Return to [[Indepth Technology]].
 
 This index provides one place to find cutting-parameter guidance, commissioning trials, and validated production recipes for InDepth Technology machines. Internet and interpolated settings remain clearly separated from recipes proved on the installed machine.
 
+For generic gas purity, chiller, height-sensor, and auxiliary equipment reference (not machine-specific recipes), see [[Technical Reference Index]].
+
 ## Gweike 3015GAII
 
 Machine page: [[Gweike 3015GAII]]

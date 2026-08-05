@@ -2,6 +2,8 @@
 
 Return to [[Indepth Technology]].
 
+Generic auxiliary and service reference: [[Technical Reference Index]].
+
 ## Checklists and Specifications
 
 - [[Indepth Technology Machine Content/Gweike-4020GA-LaserCutter/Checklists/4020GA_Installation_Checklist.xlsx|4020GA installation checklist snapshot]]
