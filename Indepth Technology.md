@@ -8,6 +8,7 @@ Central navigation for work knowledge, machine documentation, installation mater
 ## Machine Content
 
 - [[Geka Alpha 500|Geka Alpha 500 Punch and Shear]] - manual, diagnostic assumptions, and Drive-linked service media
+- [[FICEP Plasma|FICEP Plasma]] - customer service reports and service records
 - [[Gweike 3015GAII|Gweike 3015GAII Laser Cutter]] - installation and maintenance manuals
 - [[Gweike 4020GA|Gweike 4020GA Laser Cutter]] - checklists, installation manuals, layout, specifications, and references
 - [[JQ-2040E|JQ-2040E Laser Cutter]] - Drive-linked CAD drawing
@@ -29,6 +30,9 @@ Central navigation for work knowledge, machine documentation, installation mater
 ## Shared Installation Resources
 
 - [[Indepth Technology Machine Content/Installation Checklists/LaserCutter_Installation_Checklist.xlsx|General laser-cutter installation checklist]]
+- [[Indepth Technology Machine Content/Installation Checklists/Service Record Template.xlsx|Service record template (installation checklists)]]
+- [[Indepth Technology Machine Content/Service Reports/Templates/Service Record Template.xlsx|Service record template (customer reports)]]
+- [[Indepth Technology Machine Content/Service Reports/Templates/Customer Service Report LaTeX Template.zip|Customer service report LaTeX template]]
 
 ## Incoming Material
 

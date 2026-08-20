@@ -22,6 +22,11 @@ Generic auxiliary and service reference: [[Technical Reference Index]].
 
 - [[Indepth Technology Machine Content/Gweike-4020GA-LaserCutter/Layout/4020GA-floor drawing.PDF|Floor drawing]]
 
+## Service Reports
+
+- [[Indepth Technology Machine Content/Gweike-4020GA-LaserCutter/Service Reports/Alround - Gweike 4020 Laser Cutter Customer Service Report v2.pdf|Alround — customer service report v2]]
+- [[Indepth Technology Machine Content/Gweike-4020GA-LaserCutter/Service Reports/Alround - Gweike 4020 Laser Cutter Service Record.xlsx|Alround — service record]]
+
 ## Drive-Only Material
 
 - [Machine folder](https://drive.google.com/drive/folders/1pJuoJX0M4KtuBAIVdESY2LcPSyq5ax8D)
