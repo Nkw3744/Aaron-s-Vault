@@ -309,6 +309,22 @@ This sequence matters because a numerically tidy interpolation from the wrong re
 
 ## Quick recall
 
+### Exam table decision tree
+
+```mermaid
+flowchart TD
+    A[Two known intensive properties] --> B{On saturation line?}
+    B -->|Yes| C[Use saturation table by known T or P]
+    C --> D{Mixture property or quality known?}
+    D -->|Yes| E[Use y = yf + x yfg]
+    D -->|No| F[State is not fully specified]
+    B -->|No| G{T above Tsat at known P?}
+    G -->|Yes| H[Use superheated table]
+    G -->|No| I[Use compressed-liquid table or justified yf approximation]
+```
+
+Quality exists only inside the dome. A calculated mixture property must lie between its saturated-liquid and saturated-vapour values. Use absolute pressure for gas, saturation and laboratory comparisons.
+
 - A pure substance has fixed chemical composition, even across multiple phases.
 - Saturated liquid is about to boil; saturated vapour is about to condense.
 - Inside the dome, use quality: $y=y_f+xy_{fg}$.

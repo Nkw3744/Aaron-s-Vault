@@ -15,61 +15,81 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[QBH Fiber Delivery Cable]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Water flow to QBH, interlock circuit, and thermoswitch behavior.
+> Water flow to water-cooled QBH, interlock resistance, thermoswitch behavior, and how these sit in the emission enable chain.
 
 ## Water cooling (water-cooled QBH)
 
-| Parameter | Typical |
+| Parameter | Typical (Coherent-class) |
 | --- | --- |
-| Flow | ~2 L/min |
+| Flow | ~2.0 L/min |
 | Max inlet pressure | ~8 bar |
 | Pressure drop | ~0.9 bar at 2 L/min |
-| Temperature | Follow chiller HT/LT assignment — often head loop |
+| Loop assignment | Often HT / head loop — [[Dual-Temperature Chiller Circuits]] |
 
-Connect before first emission. Verify no leaks at quick couplers — slow drips corrode interlock pins.
+Connect and verify leak-free **before** first emission. Slow drips corrode interlock pins and short RF paths.
+
+### Cooling checklist
+
+1. Correct IN/OUT on QBH
+2. Flow visible (if indicator fitted) or measured
+3. No seepage at ferrule after 15 min run
+4. Return temperature plausible vs supply
+5. HT setpoint above dew point — [[Dew Point and Chiller Setpoints]]
+
+Air-cooled QBH/RQB variants exist for lower power only — do not assume air-cool on multi-kW cutters.
 
 ## Interlock circuit
 
-Purpose: prevent laser emission if QBH unmated or cable fault.
+Purpose: inhibit emission if QBH unmated, cable broken, or connector unsafe.
 
 | Check | Method |
 | --- | --- |
-| Resistance | OEM spec ~3.3 kΩ ±5% plus cable length term |
-| Continuity | Multimeter at source interlock pins with cable mated |
-| Pin condition | Dry, unbent, no corrosion |
+| Resistance | ~3.3 kΩ ±5% + cable length term (OEM) |
+| Continuity | Meter at source interlock with cable mated |
+| Pins | Dry, straight, no green corrosion |
+| Mate torque | OEM N·m — loose = intermittent |
 
-Open interlock → emission disabled — often reported as generic laser fault.
+Open interlock → emission disabled — may appear as generic "laser fault" or "interlock" on HMI — [[Fiber Laser Common Alarms]].
 
 ## Thermoswitch
 
-Some cables include ~70 °C ±5 °C switch on connector body. Trip indicates:
+Some cables include ~70 °C ±5 °C switch on the connector.
 
-- Cooling failure
-- Cladding power from bad alignment
-- Hot environment + no flow
+| Trip suggests | Action |
+| --- | --- |
+| No/low water flow | Restore cooling first |
+| Cladding power (alignment/contamination) | Inspect optics; clean — [[Fiber Connector Cleaning and Inspection]] |
+| Hot ambient + marginal flow | Improve cooling / ambient |
 
-Reset often requires cooling below ~30 °C.
+Reset often needs cooling below ~30 °C.
 
-## Integration with machine safety chain
+## Safety chain position
 
-Typical chain: E-stop → door → water flow → interlock → enable
+Typical enable chain (simplified):
 
-Do not bypass interlocks for "testing" without controlled service procedure.
+```
+E-stop → doors → chiller/flow OK → QBH interlock → key/enable → emission
+```
+
+Never jumper QBH interlock for "testing" without controlled OEM procedure and beam-path safety.
 
 ## Troubleshooting
 
-| Fault | Check |
+| Fault | Checks |
 | --- | --- |
-| Interlock alarm, cable OK | Pin wetness; resistance out of spec |
-| QBH hot | Flow; HT setpoint; alignment |
-| Intermittent enable | Loose mate; flex fatigue at connector |
+| Interlock alarm, cable looks seated | Wet pins; resistance OOS; broken conductor in armor |
+| QBH hot | Flow; HT assignment; contamination; bend damage |
+| Intermittent enable when gantry moves | Flex fatigue at connector; drag-chain pinch — [[Fiber Cable Bend Radius and Routing]] |
+| Trip after all-day cutting | Thermal; dirty window raising back-reflection/heat |
 
 ## Related notes
 
-- [[Dual-Temperature Chiller Circuits]]
+- [[QBH Fiber Delivery Cable]]
+- [[Laser Water Chillers]]
 - [[CW Series Chiller Alarm Codes]]
-- [[Fiber Laser Common Alarms]]
+- [[Fiber Laser Commissioning Sequence]]
 
 ## Sources
 
 - Coherent QBH datasheet (cooling and interlock specifications)
+- Field interlock troubleshooting on import fiber packages

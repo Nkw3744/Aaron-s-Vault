@@ -55,9 +55,30 @@ While released water still boils because pressure drop ???
 > [!note] Missing original photographs
 > The original working note also referenced `IMG_2388.jpeg` and `IMG_2387.jpeg`, but those two files are not currently present in the synced vault.
 
+## Conversion-method reconciliation
+
+The evidence supports **two distinct processing contexts**:
+
+1. The manufacturer's documented apparatus method is indicated resistance → Data Sheet 1 bridge correction → Data Sheet 2 temperature.
+2. The photographed whiteboard for Aaron's Tuesday 8–10 laboratory session explicitly records $R_1=109.0\ \Omega$ at $T_1=15\,{}^\circ\mathrm{C}$, $R_2=138.7\ \Omega$ at $T_2=100\,{}^\circ\mathrm{C}$, $\alpha=\Delta R/\Delta T=0.3494$, and the rearrangement used to obtain $T_{exp}$.
+
+The whiteboard and controller photographs are primary evidence of what students were instructed to use during this specific session. The v4 report therefore uses the session-supplied two-point relation, while explicitly disclosing that it differs from the general Armfield Data Sheet 1–2 procedure. The method is no longer described as fabricated, nor is it presented as the manufacturer's standard calibration.
+
+For comparison, v3 retains the manual-based alternative. The difference in derived temperature and error is a conversion-method sensitivity, not a change to Aaron's raw pressure/resistance dataset.
+
 ## Current report versions
 
-- [[SaturationAndPressureLab-AaronTaylor-24232594-v2.pdf]] — corrected Version 2 using direct Table A–5 values in the comparison graph; interpolation is used only for the point-specific error table
-- [[SaturationAndPressureLab-AaronTaylor-24232594-v2.tex]] — editable Version 2 LaTeX source based on the latest compact layout
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v4.pdf]] — current evidence-reconciled report using the conversion explicitly recorded during Aaron's laboratory session
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v4.tex]] — editable v4 LaTeX source
+- [[analyse_saturation_2026_v4.py]] — reproducible v4 calculations and figure generation
+- [[Saturation Lab 2026 Calculations v4.csv]] — processed nine-row v4 dataset
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v3.pdf]] — preserved manufacturer-manual alternative using Data Sheets 1 and 2
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v3.tex]] — editable v3 LaTeX source
+- [[analyse_saturation_2026_v3.py]] — reproducible calculations and figure generation
+- [[Saturation Lab 2026 Calculations v3.csv]] — processed nine-row dataset
+- [[Armfield TH3 PT100 conversion v3.csv]] — resistance-correction and temperature-conversion trace
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v3-verification.txt]] — numerical, compile and visual verification record
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v2.pdf]] — previous Version 2, retained unchanged
+- [[SaturationAndPressureLab-AaronTaylor-24232594-v2.tex]] — previous Version 2 source, retained unchanged
 - [[SaturationAndPressureLab-AaronTaylor-24232594.pdf]] — preceding user-edited PDF retained unchanged
 - [[SaturationAndPressureLab-AaronTaylor-24232594.tex]] — preceding user-edited LaTeX source retained unchanged

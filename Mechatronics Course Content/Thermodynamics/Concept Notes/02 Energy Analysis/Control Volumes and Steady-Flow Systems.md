@@ -14,7 +14,7 @@ source_scope: Lecture 5, Textbook Chapter 5, and current 2026 formula sheet
 > [!info] Course navigation
 > [[Thermodynamics Overview|Subject overview]] - [[Thermodynamics Roadmap|Course roadmap]] - [[Thermodynamics Practice Index|Practice index]] - [[Thermodynamics Reference Index|References]] - Previous: [[Closed-System Energy Analysis]] - Next: [[Second Law of Thermodynamics]]
 >
-> [[L5 Open, Steady Flow Systems.pdf|Lecture 5 slides]] - [[Ch 5 MASS AND ENERGY ANALYSIS OF CONTROL VOLUMES.pdf|Textbook Chapter 5]] - [[Ch5 Questions.pdf|Chapter 5 questions]]
+> [[L5 Open, Steady Flow Systems.pdf|Lecture 5 slides]] - [[Week 5_slides_with solutions-1.pdf|current Week 5 slides]] - [[Ch 5 MASS AND ENERGY ANALYSIS OF CONTROL VOLUMES.pdf|Textbook Chapter 5]] - [[Ch5 Questions.pdf|Chapter 5 questions]] - [[Tutorial Questions Week 5.pdf|current tutorial questions]] - [[Week 5- Solutions-1.pdf|official solutions]]
 
 ## Core idea
 
@@ -302,6 +302,9 @@ Simplify only after evaluating the actual geometry and equipment. Elevation can 
 5. Write the full SFEE, then cross out terms only with physical justification.
 6. Convert velocity/elevation energy units consistently.
 7. Check whether the result matches device behaviour: turbine work out, compressor work in, nozzle acceleration, throttle constant $h$.
+
+> [!important] Open-book exam checklist
+> Choose the control volume; decide steady versus transient; write mass balance first; test whether one-inlet/one-outlet simplification applies; inspect kinetic and potential terms; then use enthalpy as the stream-energy carrier. Filling or emptying a rigid tank is transient even when inlet flow is constant.
 
 ## Quick recall
 

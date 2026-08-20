@@ -73,3 +73,14 @@ Three Communication combined tutorial packs (`8140325`, `8140335`, and `8140415`
 ### Page and announcement coverage
 
 Nine Thermodynamics Pages and 30 Communication Engineering Pages were read successfully. The current ENEL700 Test 1 announcement, assessment inconsistencies, ENME601 live saturation-lab deadline, and relevant course guidance were incorporated into both course overviews and current Canvas information notes.
+
+## 2026-08-20 — Current S2 course pull
+
+The deterministic pull inspected 60 published Pages across the four active courses and found five new Pages, eight changed Pages, nine new/changed assignment records, ten new announcements, and six new Thermodynamics course-file records.
+
+- **56 substantive files imported:** Communication Engineering 3; Data Engineering and AI 13; Mathematics III 18; Thermodynamics 22.
+- **Duplicates skipped:** nine exact vault duplicates, two repeated staged uploads, and one normalized-text vault duplicate.
+- **Other classifications:** 45 ledger-unchanged files, five unavailable/review-only records, and two decorative Data Engineering Homepage images excluded.
+- [[Canvas Pull 2026-08-20 Import Manifest]] records every imported Canvas file ID, Page context, and final vault destination.
+- Important current changes were incorporated into course overview, assessment, practice, and Current Canvas Information notes. No Calendar or Drive writes were made.
+- All 70 staged files passed expected-size, signature, and SHA-256 verification; the 56 final destinations were collision-free and verified after placement.

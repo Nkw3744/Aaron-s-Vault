@@ -6,7 +6,10 @@ ENME601 is organized by durable concepts covering properties, energy analysis, o
 > [[Thermodynamics Roadmap|Course roadmap]] · [[Thermodynamics Practice Index|Practice]] · [[Thermodynamics Assessment Index|Assessments]] · [[Thermodynamics Reference Index|References]] · [[Thermodynamics Current Canvas Information|Current Canvas information]]
 
 > [!important] Current Canvas status
-> The saturation lab is worth 10% and its live submission is due **24 August 2026 at 23:59 NZST**. Week 3 combines the first saturation-lab session with pure-substance properties, interpolation, and ideal-gas tutorials; the current manuals, questions, slides, and solutions are indexed through [[Lab Assignment 2026]] and [[Thermodynamics Practice Index]].
+> The mid-semester test runs **21 August 2026, 6:00–9:15 pm NZST** and is paper-based and open-book; check Canvas for your room allocation. The saturation lab remains due **24 August 2026 at 23:59 NZST**. Weeks 4–6 lecture/tutorial sources and six practice-test files are indexed through [[Thermodynamics Practice Index]] and [[Thermodynamics Assessment Index]].
+
+> [!tip] Open-book exam pack
+> [[Thermodynamics Exam Pack v2|Start with v2]] · [[Thermodynamics-Half-Semester-Resource-v2.pdf|expanded 12-page theory PDF]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|61 rewritten tutorials with answers]] · [[ENME601 Formula Sheet 2026.pdf|formula sheet]] · [[Property Tables 2026.pdf|property tables]]
 
 ## 1. Foundations and Properties
 
@@ -42,5 +45,6 @@ ENME601 is organized by durable concepts covering properties, energy analysis, o
 - [[Thermodynamics Practice Index|Chapter questions, answers, and tutorials]]
 - [[Thermodynamics Reference Index|Additional tables and reference notes]]
 - [[Thermodynamics Current Canvas Information|Current course structure, weekly Pages, assessments, and Canvas links]]
+- [[Thermodynamics Half-Semester Exam Pack|Half-semester theory, complete tutorial booklet, and editable LaTeX sources]]
 
 Return to [[Mechatronics Engineering]].

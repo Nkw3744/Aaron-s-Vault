@@ -15,7 +15,11 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Laser Water Chillers]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Step-by-step decision tree for chiller alarms and no-cool conditions.
+> Step-by-step decision tree for chiller alarms and no-cool conditions — use this when [[CW Series Chiller Alarm Codes]] has told you *what* the alarm means but you need the structured path to actually resolve it.
+
+## How to use this flowchart effectively
+
+Work through exactly one branch at a time, in order, and do not skip a step because it "probably isn't the problem" — the value of a flowchart like this is precisely that it catches the boring, common causes before you spend time on rare, complex ones. Most chiller call-outs resolve at Step 1 or 2 of whichever branch applies; escalation to genuine refrigeration or electronic component failure is comparatively rare.
 
 ## Start
 
@@ -68,6 +72,9 @@ Front fuse (if fitted) — replace after finding cause
 Internal switching supply — technician
 ```
 
+> [!warning] Never just replace a blown fuse and walk away
+> A fuse rarely blows for no reason. If a fuse has failed, look for the underlying cause (a shorted component, a pump seizure drawing excess current) before simply fitting a new fuse and re-energizing — otherwise the replacement fuse is likely to blow again, or worse, something downstream that should have been protected sustains damage first.
+
 ---
 
 ## Branch D — Pump runs, no cooling
@@ -87,6 +94,29 @@ Not E1–E6 — separate interlock:
 3. Raise HT loop or lower RH
 4. Do not disable interlock without risk acceptance
 
+> [!danger] Disabling condensation interlocks
+> Some technicians are tempted to disable a nuisance condensation interlock to "get production moving." This removes a genuine protection against water damage to optics and electronics — only do this as a documented, customer-acknowledged temporary measure while the real fix (dehumidification or setpoint correction) is scheduled, never as a permanent solution.
+
+---
+
+## Branch F — Chiller runs but cutting performance degrades slowly over weeks
+
+Not a hard alarm at all, but worth including because it is a real and common pattern:
+
+```
+Check water clarity/color — see Cooling Water Quality
+    ↓ discolored
+Schedule flush and refill
+    ↓ clear
+Check condenser filter cleanliness
+    ↓ dirty
+Clean filter; re-test performance
+    ↓ clean
+Check setpoint drift — has anyone changed it since commissioning?
+    ↓ unchanged
+Consider refrigerant charge or compressor wear — technician/OEM
+```
+
 ---
 
 ## When to stop and escalate
@@ -95,11 +125,13 @@ Not E1–E6 — separate interlock:
 - Repeated E5/E4 after sensor swap
 - Refrigerant work required
 - Any electrical burn smell
+- Any symptom that returns immediately after a fix that should have resolved it — repeating the same fix a third time without a different diagnosis is a sign to escalate rather than persist
 
 ## Related notes
 
 - [[Cooling Water Quality]]
 - [[Workshop Humidity and Condensation]]
+- [[CW Series Chiller Alarm Codes]]
 
 ## Sources
 

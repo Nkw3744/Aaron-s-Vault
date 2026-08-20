@@ -9,6 +9,13 @@ Return to the [[Thermodynamics Overview|subject overview]] · Use the [[Thermody
 - [[Saturation Lab Data 2026]] - raw laboratory readings, calibration evidence and source photographs
 - [[Previous Test and Exam Problems.pdf|Previous test and exam problems]] · [[Previous Test and Exam Problems - Solutions.pdf|solutions]]
 
+### Mid-semester test
+
+- **When:** 21 Aug 2026, 6:00–9:15 pm NZST
+- **Format:** paper-based and open-book; handwritten and printed notes permitted; property tables supplied
+- **Room:** confirm your student ID in the spreadsheet attached to the Canvas room-allocation announcement
+- **Practice:** six additional tests/solution files are stored in `Assessments/Practice Exams/Mid-Semester Tests`.
+
 Canvas currently lists the Saturation Lab at 10%, the Mid-Semester Test at 30%, the Rankine Steam Cycle Lab at 10%, and the final exam at 50%. See [[Thermodynamics Current Canvas Information]] and [live assignments](https://canvas.aut.ac.nz/courses/23175/assignments) for timing changes.
 
 ## Archived 2025 Lab Material

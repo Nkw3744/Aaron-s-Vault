@@ -1,0 +1,53 @@
+SaturationAndPressureLab-AaronTaylor-24232594-v3 verification
+Generated: 2026-08-14T13:56:42+12:00
+
+Deliverable
+- PDF: SaturationAndPressureLab-AaronTaylor-24232594-v3.pdf
+- LaTeX: SaturationAndPressureLab-AaronTaylor-24232594-v3.tex
+- Reproduction script: analyse_saturation_2026_v3.py
+- Calculations: Saturation Lab 2026 Calculations v3.csv
+- PT100 conversion trace: Armfield TH3 PT100 conversion v3.csv
+
+Source scope
+- Aaron's original nine gauge-pressure readings are preserved: 50, 100, 150, 200, 250, 300, 350, 400, 450 kPa.
+- Aaron's original nine indicated PT100 resistances are preserved: 142.3, 144.8, 146.9, 148.7, 150.1, 151.1, 152.6, 153.8, 154.6 ohm.
+- Atmospheric pressure remains 101.65 kPa.
+- No comparison-report name or distinctive comparison-report values were found in the final PDF text.
+
+Revised PT100 processing
+1. Indicated resistance is corrected by linear interpolation in Armfield TH3 Issue 15 Data Sheet 1 (printed p. 22).
+2. Corrected resistance is converted to temperature by linear interpolation in Data Sheet 2 (printed pp. 23-24).
+3. Interpolating across Data Sheet 2's 2 degC intervals is disclosed in the report as a processing assumption; the manual itself instructs selection of the closest tabulated value.
+
+Independent numerical checks
+- Rows: 9
+- Original pressures preserved: PASS
+- Original indicated resistances preserved: PASS
+- All signed errors negative: PASS
+- Mean signed error: -1.03168%
+- Mean absolute error: 1.03168%
+- Maximum absolute error: 1.88779%
+- Maximum occurs at 401.65 kPa absolute.
+- Experimental fit: T = 31.217646 P^0.2527486; R^2 = 0.99903696
+- Direct Table A-5 fit: T = 31.019098 P^0.2556698; R^2 = 0.99982723
+- Script regression assertions: PASS
+
+Document verification
+- Compiler: Tectonic 0.17.0
+- Compilation: PASS
+- Compiler warnings/errors: none
+- PDF format: A4, 6 pages, unencrypted
+- Text extraction checks: fit coefficients, mean error and maximum error present
+- Visual inspection: all six pages reviewed after final compilation
+- Visible clipping/overlap: none
+- Celsius units visually checked after replacing the malformed text glyph with mathematical degree notation: PASS
+- Figures and tables readable: PASS
+- References fully visible above footer: PASS
+
+Version preservation
+- Original PDF SHA-256: b52ad191431f9c4a2a25036d56df7faeedd19aef1d64e39f866849bc0b6f6eef
+- v2 PDF SHA-256: 51417a7c86beee4af576bc17ad43c9e897f3c144d7a501b2ecf4664774d622f8
+- v3 PDF SHA-256: 421064bf3fbe088fb7a25631c40f316c7de4195ba9ad2fcb7243ed0c5996a3af
+- v3 LaTeX SHA-256: 4f74ca166110176ffc2349f31656546c3a77400c4694aa4543b5631ad3237970
+- v3 script SHA-256: 8190019ba223a6df99a10fb7506edf6f096ec16569a3690193987bc92baf798c
+- v3 calculation CSV SHA-256: 98c50640a0677da4c9ea0341b34f6a3fde47244560b27de9e94501c0485e08c2

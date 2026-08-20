@@ -4,8 +4,8 @@ Return to the [[Data Engineering and AI Overview|subject overview]] · Follow th
 
 ## Week 1 - Data Inspection
 
-- [[Lab 01 - Data Inspection Exercise.pdf|Data inspection exercise]] - apply the Week 1 workflow to a new dataset
-- [[Lab 01 - Palmer Penguins Worked Example.pdf|Palmer Penguins worked example]] - model answer and reusable inspection pattern
+- [[Mechatronics Course Content/Data Engineering and AI/Practice/Labs/Lab 01 - Student Exam Performance/Lab 01 - Data Inspection Exercise.pdf|Data inspection exercise]] - apply the Week 1 workflow to a new dataset
+- [[Mechatronics Course Content/Data Engineering and AI/Practice/Labs/Lab 01 - Student Exam Performance/Lab 01 - Palmer Penguins Worked Example.pdf|Palmer Penguins worked example]] - model answer and reusable inspection pattern
 - [[Mechatronics Course Content/Data Engineering and AI/Practice/Labs/Lab 01 - Student Exam Performance/Lab 1 - Annotated Student Exam Performance.ipynb|Annotated Student Exam Performance notebook]] — executable analysis kept beside its source dataset
 - [[Data Engineering and AI Lab Index|Lab workspace]] — direct access to notebooks, datasets, handouts and the Arrhythmia material
 - Related concept: [[Foundations of Data Engineering and AI]]
@@ -24,3 +24,17 @@ The current Canvas announcement asks students to first run the code on pages 28�
 The verified worked example loads 452 × 280 raw records and produces 448 × 281 cleaned records after removing four internally unreliable combinations. It retains unusual but plausible patients, keeps the untouched raw table available, and demonstrates why outlier flags and sensitivity capping are analytical checks rather than automatic deletion rules. The heart-rate t-test is not significant (`p = 0.1441`), while sex and arrhythmia status are associated in this sample (`χ² = 21.73`, `p ≈ 0.000003`); neither result supports a causal claim.
 
 For revision, pair the Arrhythmia cleaning note with [[Data Visualisation and Inferential Statistics]] so the source-driven analysis sequence stays clear: inspect representation, clean conservatively, visualise the cleaned data, then interpret any test result in context.
+
+## Week 4 — Machine learning techniques
+
+- [[ENGE707 Lab4_AMK.docx|Lab 4 exercise]] · [[ENGE707_Week4_Notes.docx|Week 4 notes]] · [[lecture4.ipynb|lecture notebook]]
+- [[ENGE707 lecture slides-1.pdf|Week 4 lecture slides]]
+
+Run and understand the prior lecture code before continuing. Use the lab and notebook to move from cleaned data into explicit modelling choices rather than treating model fitting as a black box.
+
+## Week 5 — Bio-inspired machine learning
+
+- [[ENGE707-Lab05.pdf|Lab 5 exercise]]
+- [[05-Bio-Inspired Machine Learning-ENGE707-3.pdf|Bio-inspired machine-learning lecture pack]]
+
+The lecture introduces evolutionary ideas and genetic algorithms as optimisation and decision-making methods inspired by natural systems.

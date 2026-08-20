@@ -15,7 +15,7 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Workshop Humidity and Condensation]] · [[Dual-Temperature Chiller Circuits]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Calculating safe chiller temperatures from room humidity — the core anti-condensation rule.
+> Calculating safe chiller temperatures from room humidity — the core anti-condensation rule for fiber heads and QBH.
 
 ## Golden rule
 
@@ -23,17 +23,16 @@ Return to [[Workshop Humidity and Condensation]] · [[Dual-Temperature Chiller C
 
 Includes: cutting head shell, QBH, external optics mounts, cold water hoses in open air.
 
-## Dew point estimate (approximate)
+## Estimating dew point
 
-From T (°C) and RH (%):
+From room T (°C) and RH (%):
 
-- Use psychrometric chart, weather app dew point, or hygrometer with dew point display
-- Example: 30 °C @ 70% RH → dew point ~24 °C
-- HT chiller must then be >26–27 °C minimum on head loop
+- Use psychrometric chart, weather-app dew point, or hygrometer with dew-point display
+- Example: 30 °C @ 70% RH → dew point ~24 °C → HT must be **>26–27 °C** minimum on head loop
 
-Do not guess — measure RH and T at machine each shift in summer.
+Do not guess — measure at the machine each humid shift.
 
-## Recommended setpoints (starting points)
+## Recommended starting setpoints
 
 | Circuit | Summer humid | Winter dry |
 | --- | --- | --- |
@@ -43,33 +42,49 @@ Do not guess — measure RH and T at machine each shift in summer.
 > [!warning] Common mistake
 > Setting **both** loops to 22 °C in summer → head sweats → dew alarm or silent window damage.
 
+Stay within OEM max water temperatures (source over-temp risk if LT too warm).
+
 ## Intelligent chiller modes
 
-Some units raise water temp automatically when ambient dew point rises. Preferable to defeating interlocks. Watch source over-temp margin if water runs warm (>30 °C LT).
+Units that raise water temp with ambient dew point are preferred over defeating interlocks. Watch source over-temp margin if LT runs warm (>30 °C).
 
-## Startup sequence (humid day)
+## Humid-day startup sequence
 
 1. Dehumidifier/AC on 30+ min — [[Dehumidifiers for Laser Rooms]]
-2. Chiller on; verify LT/HT stable
-3. Confirm margin ≥2 °C
+2. Chiller on; LT/HT stable
+3. Confirm margin ≥2–3 °C
 4. Laser control on
 5. Enable emission last
 
-## Shutdown
-
-Disable emission → laser off → chiller may remain on briefly to shed heat — OEM dependent.
+Shutdown: disable emission → laser off → chiller per OEM (sometimes remains on briefly).
 
 ## Dew-point alarm response
 
-1. Do not bypass permanently
-2. Raise HT setpoint OR lower RH
-3. Wait for alarm clear
-4. Log event
+1. Do not permanently bypass
+2. Raise HT **or** lower RH (or both)
+3. Wait for clear; dry any external moisture
+4. Inspect optics before cutting — [[Fiber Connector Cleaning and Inspection]]
+5. Log event
+
+## Quick field worksheet
+
+| Item | Value |
+| --- | --- |
+| Room T (°C) | |
+| RH (%) | |
+| Dew point (°C) | |
+| LT set (°C) | |
+| HT set (°C) | |
+| HT − dew point | must be ≥2–3 °C |
+| Action | |
 
 ## Related notes
 
+- [[Dual-Temperature Chiller Circuits]]
+- [[Workshop Humidity and Condensation]]
 - [[Fiber Laser Common Alarms]]
 - [[Fiber Cable Cooling and Interlocks]]
+- [[CW Series Chiller Alarm Codes]]
 
 ## Sources
 

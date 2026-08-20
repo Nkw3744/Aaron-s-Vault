@@ -11,7 +11,7 @@ ENGE707 is organised around durable concepts, with the week-by-week sequence, la
 > [[Data Engineering and AI Roadmap|Course roadmap]] · [[Data Engineering and AI Practice Index|Practice index]] · [[Data Engineering and AI Lab Index|Lab workspace]] · [[Data Engineering and AI Assessment Index|Assessment index]] · [[Data Engineering and AI Current Canvas Information|Current Canvas information]]
 
 > [!important] Current Canvas updates
-> Register a team of at least two and a project topic by **31 July 2026 at 23:59:59 NZST**; Canvas warns of a 5% final-project penalty for late registration. Project Phase I is due **23 August 2026 at 23:59:59 NZST**. Weeks 2–3 now split into [[Arrhythmia Data Representation and Quality]] and [[Data Visualisation and Inferential Statistics]], so the course can separate cleaning discipline from statistical interpretation.
+> Project Phase I is due **30 August 2026 at 23:59:59 NZST** in the live assignment record; a separate announcement says “August 31” without a time. Attend the Week 6 group-feedback lab with the approved dataset, data-quality findings, cleaning plan, and exploratory analysis ready to discuss. Weeks 4–5 now extend the Arrhythmia work into machine-learning techniques and bio-inspired optimisation; see [[Data Engineering and AI Current Canvas Information]].
 
 ## Current concepts
 
@@ -26,8 +26,8 @@ ENGE707 is organised around durable concepts, with the week-by-week sequence, la
 
 ## Next concepts
 
-1. Machine learning foundations
-2. Bio-inspired machine learning and classifier systems
+1. [[Data Engineering and AI Current Canvas Information#Weeks 4–5 machine learning|Machine learning techniques and current Canvas sources]]
+2. [[Data Engineering and AI Current Canvas Information#Weeks 4–5 machine learning|Bio-inspired machine learning and genetic algorithms]]
 3. Machine learning pipelines and evaluation
 4. Deep learning architectures
 5. Feature engineering and data-centric AI

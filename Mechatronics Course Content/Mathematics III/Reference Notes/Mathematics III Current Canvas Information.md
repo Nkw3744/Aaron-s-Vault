@@ -2,7 +2,7 @@
 source: AUT Canvas
 canvas_course_id: 23164
 course_code: ENGE702_2026_S2
-last_checked: 2026-07-30
+last_checked: 2026-08-20
 ---
 
 # Mathematics III Current Canvas Information
@@ -20,7 +20,7 @@ ENGE702 develops analytical and numerical methods for modelling engineering syst
 
 ## Assessment
 
-- **Assignment 1, including weekly quizzes — 30%:** Canvas lists 24 August 2026. The live assignment records for Quizzes 1–5 currently show **24 August 2026 at 23:59 NZST**.
+- **Assignment 1, including weekly quizzes — 30%:** Assignment 1 Part B and Quizzes 1–5 now share the live due time **28 August 2026 at 23:59:59 NZST**.
 - **Assignment 2, including weekly quizzes — 30%:** the overview lists **16 October 2026**, marked TBC.
 - **Exam — 40%.**
 - Canvas states that all summative assessments must be attempted and the overall course grade must be at least C-.
@@ -57,7 +57,15 @@ The existing Lecture 1–6 slide PDFs and L1–L3 handwritten notes were retaine
 - [[L7_note.pdf|Lecture 7 notes]] · [[L8_note.pdf|Lecture 8 notes]] · [[L9_note.pdf|Lecture 9 notes]] — handwritten pre-class companions to recordings 7–9
 - [[Tutorial 2 Answers.pdf|Tutorial 2 official answers]] · [[Tutorial 2 ENGE702 Worked Solutions.pdf|Tutorial 2 worked solutions]] — use the short answer set to check results and the worked set to inspect method and reasoning
 
-Quiz 3 (Assignment 1 Part A) is published with a live due time of **24 August 2026 at 23:59:59 NZST** ([Canvas assignment](https://canvas.aut.ac.nz/courses/23164/assignments/190817)).
+Quiz 3 (Assignment 1 Part A) is published with a live due time of **28 August 2026 at 23:59:59 NZST** ([Canvas assignment](https://canvas.aut.ac.nz/courses/23164/assignments/190817)).
+
+## Current Weeks 4–6 sequence
+
+- **Week 4:** second-order nonhomogeneous ODEs and forced mass–spring–damper systems. Lecture notes 10–11, the combined lecture pack, and Tutorial 3–4 resources are now local.
+- **Week 5:** eigenvalues, eigenvectors, and systems of first-order ODEs. Prepare recordings/notes 12–14 and Kreyszig sections 4.0–4.1; lecture notes and Tutorial 4 resources are now local.
+- **Week 6:** power-series solutions of ODEs. Prepare recordings/notes 14–15 and Kreyszig sections 6.1, 6.2, 11.1, and 11.2; lecture notes 14–15, the series-solution lecture, and Tutorial 5 resources are now local.
+
+Assignment 1 Part B is a written PDF submission requiring complete working and clear answers. The standard late penalty is 5% of the available mark per 24-hour period, up to five calendar days.
 
 ## Canvas-only material
 

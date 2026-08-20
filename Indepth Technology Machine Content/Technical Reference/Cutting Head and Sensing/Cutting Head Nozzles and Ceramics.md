@@ -15,68 +15,95 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Nozzle types, ceramic insulator, selection by material/thickness, maintenance.
+> Nozzle types, ceramic insulator, selection by thickness, maintenance, spares, and why most "height sensor" calls start here.
 
 ## Nozzle role
 
-- Focuses assist gas jet into kerf
-- Forms capacitive electrode with sheet
-- Must be concentric with beam for cut quality and sensor stability
+Three jobs at once:
+
+1. Shape the assist-gas jet into the kerf
+2. Act as the capacitive electrode for height follow
+3. Protect the beam exit geometry (concentricity with focus)
+
+A worn, loose, or slag-bridged nozzle ruins cut quality **and** height sensing.
 
 ## Common nozzle families
 
-| Type | Use |
+| Type | Typical use |
 | --- | --- |
-| Single layer | N₂/air thin sheet — e.g. 1.5 mm dia for 1–2 mm |
-| Double layer | O₂ thick CS; some high-pressure N₂ |
-| High speed / coated | OEM specific |
+| Single layer | N₂/air thin sheet — e.g. 1.5 mm dia for ~1–2 mm material |
+| Double layer | O₂ thick carbon steel; some high-pressure N₂ |
+| OEM special / coated | High-speed packages — match exact head model |
 
-Match **head model** — thread and seat vary (Raytools, Precitec, WSX, etc.).
+Thread and seat geometry vary (Raytools, Precitec, WSX, etc.). Do not mix brands without confirming compatibility.
 
-Example local: 1.5 mm single layer for 1.2 mm galvanized N₂ — [[Gweike 3015GAII 3 kW CypCut Cutting Parameter Setting]].
+Local example: 1.5 mm single layer for 1.2 mm galvanized N₂ — [[Gweike 3015GAII 3 kW CypCut Cutting Parameter Setting]].
 
 ## Ceramic ring (body)
 
-- Electrical insulator between nozzle and head body
-- **~80% of capacitance faults** from cracked ceramic (field estimate)
-- May include sealing ring — must seat fully or capacitance drifts
+| Fact | Field implication |
+| --- | --- |
+| Insulates nozzle from head body | Crack → short → capacitance MAX / touch alarms |
+| Majority of "sensor" call-outs | Replace ceramic before replacing BCS100 |
+| Sealing ring must seat fully | Partial seat → C drifts when gas blows |
+| Gold contacts must be clean | Oxide/slag → unstable follow |
+
+See [[Height Sensor Alarm Reference]], [[Capacitive Height Sensing BCS100]].
+
+## Selection reminders
+
+| Change | Effect |
+| --- | --- |
+| Larger orifice | More gas flow; different edge; may need more supply Cv |
+| Smaller orifice | Higher jet velocity; clog risk |
+| Wrong type for gas | Poor edge; splash |
+| ANC pocket mismatch | Crash or half-seat — [[Nozzle Change and Shutter Actuators]] |
 
 ## Inspection schedule
 
 | When | Action |
 | --- | --- |
-| Daily start | Visual nozzle orifice; slag |
-| After crash | Replace ceramic; inspect nozzle |
-| Poor edge quality | Check nozzle diameter wear |
+| Daily start | Visual orifice; slag bead |
+| After crash | New ceramic; inspect nozzle, RF cable, window |
+| Poor edge quality | Check wear, diameter, concentricity |
 | Height alarms | Clean/replace nozzle first |
+| After auto nozzle change | Confirm full mechanical seat |
+| Heavy galvanized week | Expect faster fouling — [[Zn and Coated Material Fume Notes]] |
 
-## Cleaning
+## Cleaning and torque
 
-- Brass or wire brush on nozzle exterior only
-- Do not file orifice — changes gas flow and capacitance
-- Replace if orifice bell-mouthed or off-center
+| Do | Don't |
+| --- | --- |
+| Brass/wire brush exterior | File or drill the orifice |
+| Replace bell-mouthed tips | Reuse cracked ceramics "once more" |
+| Firm OEM torque | Pliers on the nozzle face |
+| Alcohol on gold contacts | Oil from over-fed FRL on ceramic |
 
-## Torque
+Under-torque → capacitance drift under blow. Over-torque → cracked ceramic.
 
-Under-torque → capacitance drift during blow and cut.  
-Over-torque → cracked ceramic.
+## Spares kit (service truck)
 
-Use OEM torque spec if available; otherwise firm with proper socket, not pliers on nozzle face.
+- 2× of each common nozzle diameter for the heads you support
+- 2× ceramic bodies (+ seals)
+- 1× SMA/RF cable
+- Protective windows (common sizes)
+- Capacitance cal plate (clean bare steel)
 
-## Spares kit (recommended truck stock)
+## Process links
 
-- 2× common nozzle sizes per head
-- 2× ceramic bodies
-- 1× SMA cable
-- Protective windows
+Gas chemistry and pressure: [[Assist Gas Overview]], [[Autofocus and Proportional Gas Valves]].  
+Window contamination after nozzle splash: [[Fiber Connector Cleaning and Inspection]].
 
 ## Related notes
 
+- [[Capacitive Height Sensing BCS100]]
 - [[Height Sensor Alarm Reference]]
 - [[Assist Gas Overview]]
-- [[Autofocus and Proportional Gas Valves]]
+- [[Nozzle Change and Shutter Actuators]]
+- [[Cutting Parameters Index]]
 
 ## Sources
 
 - Gweike cutting parameter nozzle selection tables
 - Yihai Raytools service practice (ceramic crack prevalence)
+- Field ANC and slag-bridge diagnosis

@@ -11,55 +11,62 @@
       "query": "path:\"Communication Engineering\"",
       "color": {
         "a": 1,
-        "rgb": 3900150
+        "rgb": 15452928
       }
     },
     {
       "query": "path:\"Data Engineering and AI\"",
       "color": {
         "a": 1,
-        "rgb": 9133302
+        "rgb": 2818303
       }
     },
     {
       "query": "path:\"Mathematics III\"",
       "color": {
         "a": 1,
-        "rgb": 6514417
+        "rgb": 16711803
       }
     },
     {
       "query": "path:\"Thermodynamics\"",
       "color": {
         "a": 1,
-        "rgb": 15680580
+        "rgb": 16711680
       }
     },
     {
       "query": "path:\"Embedded Systems\"",
       "color": {
         "a": 1,
-        "rgb": 1096065
+        "rgb": 9722319
       }
     },
     {
       "query": "path:\"Mechanisms\"",
       "color": {
         "a": 1,
-        "rgb": 16096779
+        "rgb": 10181810
+      }
+    },
+    {
+      "query": "path:\"Indepth Technology Machine Content\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 30376
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -1,
-  "nodeSizeMultiplier": 1.77631578947368,
-  "lineSizeMultiplier": 3.16894736842105,
+  "nodeSizeMultiplier": 1.60337810984818,
+  "lineSizeMultiplier": 4.30166918368969,
   "collapse-forces": false,
-  "centerStrength": 0.468421052631579,
-  "repelStrength": 19.5789473684211,
-  "linkStrength": 1,
-  "linkDistance": 30,
-  "scale": 0.6757621765136719,
-  "close": true
+  "centerStrength": 0.608218742548287,
+  "repelStrength": 20,
+  "linkStrength": 0.338526349256816,
+  "linkDistance": 107,
+  "scale": 0.0889892578125,
+  "close": false
 }

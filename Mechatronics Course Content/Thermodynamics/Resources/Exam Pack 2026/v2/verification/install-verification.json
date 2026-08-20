@@ -1,0 +1,14 @@
+{
+  "hashes": {
+    "Thermodynamics-Half-Semester-Resource-v2.tex": true,
+    "Thermodynamics-Tutorial-Booklet-v2.tex": true,
+    "Thermodynamics-Half-Semester-Resource-v2.pdf": true,
+    "Thermodynamics-Tutorial-Booklet-v2.pdf": true
+  },
+  "missing_links": [],
+  "chapters": 6,
+  "question_images": 9,
+  "theory_figures": 4,
+  "v1_preserved": true,
+  "status": "PASS"
+}

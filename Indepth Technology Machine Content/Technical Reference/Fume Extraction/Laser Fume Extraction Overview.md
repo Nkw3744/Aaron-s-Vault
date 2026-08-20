@@ -15,7 +15,7 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> System layout, capture methods, and why extraction is mandatory for metal laser cutting.
+> System layout, capture methods, and why extraction is mandatory for metal (and organic) laser cutting.
 
 > [!danger] Health hazard
 > Metal cutting fume contains fine particulate and oxides. Run extraction whenever the laser cuts; enclosure closed.
@@ -25,10 +25,10 @@ Return to [[Technical Reference Index]]
 | Material | Fume character |
 | --- | --- |
 | Mild steel | Iron oxide particulate |
-| Stainless | Chromium/nickel fine dust |
+| Stainless | Cr/Ni fine dust |
 | Aluminum | Combustible fine dust — fire risk |
-| Galvanized | **Zinc oxide** — special handling — [[Zn and Coated Material Fume Notes]] |
-| Organics (CO₂) | VOCs, odors — carbon stage often required |
+| Galvanized | **ZnO** — [[Zn and Coated Material Fume Notes]] |
+| Organics (CO₂) | VOC/odor — carbon stage |
 
 ## System components
 
@@ -42,47 +42,52 @@ flowchart LR
     table --> duct --> fan --> filter --> exhaust
 ```
 
-1. **Capture** — partitioned downdraft zones under slats
-2. **Transport** — duct or hose to collector
-3. **Fan** — centrifugal for high static pressure
-4. **Filtration** — multi-stage — [[Filter Stages and Maintenance]]
-5. **Discharge** — outside stack or filtered return per EHS
+1. Capture — partitioned downdraft zones  
+2. Transport — duct/hose — [[Ductwork and Static Pressure]]  
+3. Fan — centrifugal for high static  
+4. Filtration — [[Filter Stages and Maintenance]]  
+5. Discharge — outdoor or filtered return per EHS  
 
 ## Design principles
 
-- Capture at source beats room ambient filtration
-- **Static pressure** capability often matters more than free-blowing CFM rating
-- Size for **loaded filters**, not clean-filter catalog number
-- Minimize bends; long runs need larger duct — [[Ductwork and Static Pressure]]
+- Capture at source beats ambient room filtration
+- **Static pressure** capability often matters more than free-blowing CFM
+- Size for **loaded** filters
+- Minimize bends; long runs need larger duct
+- Size volume — [[Dust Collector Sizing]]
 
 ## Installation checklist
 
-1. Confirm OEM spigot size and required airflow at machine
-2. Size collector — [[Dust Collector Sizing]]
-3. Ground ductwork; bonded to machine where spec requires
-4. Damper zones aligned with CNC zone control
-5. Fire detection/suppression per local code for dry dust
-6. Test airflow with doors closed before production
+1. OEM spigot size and required Q/P
+2. Collector sized for materials and table
+3. Bond/ground ductwork
+4. Damper zones aligned with CNC
+5. Fire/spark controls per code
+6. Baseline ΔP, amps, smoke-clear time logged
 
 ## Normal operation
 
-- Fan starts with program or manual interlock
-- Zone dampers open on active cut regions
-- Visible smoke cleared within seconds at viewing window
-- ΔP gauge in acceptable band
+| Check | Pass |
+| --- | --- |
+| Fan on before pierce | Working negative pressure |
+| Zone dampers track cut | Smoke clears quickly |
+| ΔP in band | Filters not blinded |
+| Enclosure closed | Especially on coated sheet |
 
 ## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
-| Smoke in cabinet | Fan off; clogged filter; damper stuck |
-| Weak far zones | Undersized fan; leak in duct |
-| Dust in office | Recirc filter inadequate; negative pressure lost |
+| Smoke in cabinet | Fan; filters; dampers; leaks |
+| Weak far zones | Duct design / balance |
+| Dust in office | Recirc filtration / pressure balance |
+| Odor breakthrough | Carbon stage saturated |
 
 ## Related notes
 
 - [[Fiber Laser Site Requirements]]
-- [[Gweike 3015GAII 3 kW CypCut Cutting Parameter Setting]] — zinc fume callout
+- [[Gweike 3015GAII 3 kW CypCut Cutting Parameter Setting]] — zinc callout
+- [[CO2 vs Fiber Auxiliary Differences]] — VOC emphasis
 
 ## Sources
 

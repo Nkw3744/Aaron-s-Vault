@@ -15,66 +15,71 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Laser Water Chillers]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> What water to fill the chiller with, change intervals, and corrosion control.
+> What water to fill, change intervals, corrosion control, and conductivity awareness.
 
 > [!danger] Never use tap water
-> Minerals scale laser micro-channels; conductivity rises; flow blocks → source failure.
+> Minerals scale micro-channels; conductivity rises; flow blocks → source failure.
 
 ## Approved water types
 
 | Type | Use |
 | --- | --- |
-| Distilled water | Preferred fill |
-| Deionized (DI) water | Preferred fill |
-| Purified / softened water | Acceptable if OEM allows |
-| **Forbidden** | Tap water, mineral water, well water with hardness |
+| Distilled | Preferred fill |
+| Deionized (DI) | Preferred fill |
+| Purified / softened | Only if OEM allows |
+| **Forbidden** | Tap, mineral, hard well water, oily fluids, particulate coolants |
 
-Also forbidden: oily liquids, particulate-laden coolant, undiluted glycol as sole fill without OEM approval.
+CO₂ systems may specify stricter conductivity — [[CO2 Chiller and Gas Requirements]].
 
-## Conductivity (general guidance)
+## Conductivity practice
 
-Many fiber OEMs target low conductivity for direct source cooling. CW-series manuals emphasize purity over a specific number on display. If conductivity meter fitted:
+| Practice | Detail |
+| --- | --- |
+| Baseline at commissioning | Record on machine hub |
+| Rising trend | Contamination/scale → plan change |
+| Meter fitted | Log weekly in harsh environments |
 
-- Record baseline at commissioning
-- Rising trend → contamination or scale → plan change
-
-Some CO₂ systems specify different chemistry — [[CO2 Chiller and Gas Requirements]].
+CW-series manuals emphasize purity even when no live conductivity display exists.
 
 ## Anticorrosive additive
 
-For loops containing **carbon steel** components (some chiller tanks, external heat exchangers):
+For loops with carbon-steel components:
 
-- Add OEM-specified corrosion inhibitor quantity per volume
-- Do not use automotive coolant unless explicitly approved (silicates can gel)
+- Add OEM-specified inhibitor per volume
+- Avoid automotive coolants with silicates unless approved
+
+Winter glycol: [[Antifreeze and Winter Operation]].
 
 ## Change interval
 
 | Practice | Interval hint |
 | --- | --- |
 | Standard shop | ~3 months |
-| High ambient / hard use | Monthly inspect color |
-| After leak or biological growth | Immediate full flush |
+| High ambient / dirty | Monthly visual |
+| After leak / bio growth | Immediate flush |
 
-Procedure:
+### Change procedure
 
-1. Drain loop with laser and chiller off
-2. Flush with clean DI if sediment present
-3. Refill to green zone
-4. Run bleed; check level
-5. Log date on chiller or machine hub
+1. Drain with laser and chiller off
+2. Flush with clean DI if sediment
+3. Refill to green zone (not overfill mark)
+4. Run; bleed; recheck level after loop fills
+5. Log date
 
 ## Fill level
 
-Use sight gauge **green zone** — middle to upper. "FULL" mark often means overfill when loop is empty. After connecting machine, recheck — volume drops as hoses fill.
+Sight gauge **green zone** — middle to upper. After connecting machine, volume drops as hoses fill — top up again.
 
-## Water in laser source (catastrophic)
+## Catastrophic water in source
 
-If outer glass on fiber module shows water: **do not power laser**. Source replacement likely. See BRM Lasers chiller support notes on tube inspection.
+Outer glass wet on some modules → do not power laser; source replacement likely.
 
 ## Related notes
 
-- [[Antifreeze and Winter Operation]]
+- [[Laser Water Chillers]]
 - [[Chiller Troubleshooting Flowchart]]
+- [[CW Series Chiller Alarm Codes]]
+- [[Dual-Temperature Chiller Circuits]]
 
 ## Sources
 

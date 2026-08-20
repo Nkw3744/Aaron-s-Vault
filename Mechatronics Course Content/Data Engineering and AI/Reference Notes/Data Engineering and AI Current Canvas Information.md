@@ -2,7 +2,7 @@
 source: AUT Canvas
 canvas_course_id: 23615
 course_code: ENGE707_2026_S2
-last_checked: 2026-07-30
+last_checked: 2026-08-20
 ---
 
 # Data Engineering and AI Current Canvas Information
@@ -22,15 +22,15 @@ Recommended tools include Python, NumPy, Pandas, scikit-learn, Git/GitHub, Matpl
 
 ## Assessment and project registration
 
-- **Project Phase I — 30%:** the current [live submission](https://canvas.aut.ac.nz/courses/23615/assignments/195248) is due **23 August 2026 at 23:59:59 NZST**, matching the assessment overview's date.
+- **Project Phase I — 30%:** the current [live submission](https://canvas.aut.ac.nz/courses/23615/assignments/195248) is due **30 August 2026 at 23:59:59 NZST**. The 9 August announcement says “August 31” without a time; use the live assignment timestamp unless teaching staff clarifies the discrepancy.
 - **Final project report, demo, and presentation — 30%:** 11 October 2026 on the overview page.
 - **ML/Kaggle competition — 40%:** 18 October 2026 on the overview page.
 
 Project work must be completed in groups of at least two; individual projects are not permitted. Register the team and topic through the [group-registration assignment](https://canvas.aut.ac.nz/courses/23615/assignments/195242) by **31 July 2026 at 23:59:59 NZST**. The 23 and 29 July announcements warn that late registration incurs a **5% deduction from the final project mark**. Team members may come from different lab streams, and marks are based on each student's individual contribution.
 
-dsdsd
-
 The 17 July assessment announcement clarifies that each 30-mark project phase consists of 25 report marks and 5 lab-performance marks. Phase 1 lab marks are earned across Labs 2–6; Phase 2 across Labs 7–11. These marks are based on demonstrated lab performance/results checked by teaching assistants, not merely submitting lab files.
+
+The Week 6 feedback announcement asks every group member to attend the same lab session prepared to explain the approved topic and dataset, problem statement, data structure and quality issues, cleaning and transformation plan, exploratory analysis, and any blockers. Use one shared GitHub repository per group; every member must be a collaborator and make at least two direct commits each week.
 
 ## Week 1 and Lab 1
 
@@ -53,6 +53,12 @@ The [Data Representation and Data Engineering Page](https://canvas.aut.ac.nz/cou
 - [[Data Engineering and AI Lab Index|Lab workspace and missing-file note]] — records the three named Week 2–3 teaching originals that are not currently present in the synced vault
 - [[Arrhythmia Data Representation and Quality]] — durable concept note for provenance, schema, cleaning, missingness, and plausibility checks
 - [[Data Visualisation and Inferential Statistics]] — durable concept note for plots, uncertainty, assumptions, and statistical interpretation after cleaning
+
+## Weeks 4–5 machine learning
+
+- **Week 4:** move from the cleaned Arrhythmia dataset into rule-based and statistical machine-learning approaches, coding along from the prior lecture output. The imported lab, notes, slides, and notebook are retained together under `Practice/Labs/Canvas Source Materials/Week 04` and `Source Material/Lectures/Week 04`.
+- **Week 5:** bio-inspired machine learning introduces evolutionary ideas and genetic algorithms for learning, adaptation, optimisation, and decision-making. The current lab and lecture pack are retained under the Week 05 source folders.
+- Two PNGs embedded only as Homepage decoration were deliberately excluded.
 
 ## Sources
 

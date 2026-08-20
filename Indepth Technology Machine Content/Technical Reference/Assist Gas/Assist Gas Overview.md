@@ -15,20 +15,18 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Choosing O₂, N₂, or air; purity and pressure planning; piping overview.
+> Choosing O₂, N₂, or air; purity and pressure planning; gas path overview. Start here before the gas-specific deep notes.
 
 > [!warning] Dynamic pressure matters
-> Regulator gauge at rest ≠ pressure under cut flow. Measure at the head during a pierce or cut.
+> Regulator gauge at rest ≠ pressure under cut flow. Measure at the head during pierce/cut.
 
 ## Three assist gases
 
-| Gas | Typical use | Edge quality | Notes |
+| Gas | Typical use | Edge quality | Deep note |
 | --- | --- | --- | --- |
-| Oxygen (O₂) | Mild/carbon steel | Oxidized, exothermic assist | Faster on thick CS; not for bright SS |
-| Nitrogen (N₂) | Stainless, aluminum, bright CS | Clean, minimal oxide | High purity and pressure |
-| Compressed air | Thin CS, cost-sensitive | Some oxidation | Requires dry oil-free chain |
-
-Deep dives: [[Oxygen Assist Gas]], [[Nitrogen Assist Gas]], [[Compressed Air Cutting]].
+| Oxygen (O₂) | Mild/carbon steel | Oxidized, exothermic | [[Oxygen Assist Gas]] |
+| Nitrogen (N₂) | Stainless, Al, bright CS | Clean, minimal oxide | [[Nitrogen Assist Gas]] |
+| Compressed air | Thin CS, cost-sensitive | Some oxidation | [[Compressed Air Cutting]] |
 
 ## Purity requirements (typical OEM)
 
@@ -36,18 +34,17 @@ Deep dives: [[Oxygen Assist Gas]], [[Nitrogen Assist Gas]], [[Compressed Air Cut
 | --- | --- |
 | O₂ | >99.6% |
 | N₂ (cutting) | ≥99.99% |
-| N₂ (laser cavity purge, if used) | 99.999% class |
-| Air (cutting) | Dry, oil ≤0.01 mg/m³ class after filtration |
+| Air (cutting) | Dry, oil-free after filtration |
 
 ## Pressure ranges (indicative)
 
 | Gas | Supply | Regulated cut range (typical) |
 | --- | --- | --- |
-| O₂ | Cylinder/dewar/bulk | 0.05–1.2 MPa (0.5–12 bar) |
-| N₂ | Dewar/bulk/PSA+booster | 0.2–3.0 MPa (2–30 bar) |
-| Air | Screw compressor + treatment | Up to ~3.0 MPa max on many heads |
+| O₂ | Cylinder/dewar/bulk | 0.05–1.2 MPa |
+| N₂ | Dewar/bulk/PSA+booster | 0.2–3.0 MPa |
+| Air | Screw + treatment | Up to ~3.0 MPa on many heads |
 
-Regulators: [[Gas Regulators and PRVs]].
+Regulators: [[Gas Regulators and PRVs]]. Pipework: [[Gas Pipework and Fittings]].
 
 ## Gas path diagram
 
@@ -61,7 +58,7 @@ flowchart LR
     supply --> prv --> solenoid --> prop --> head
 ```
 
-Proportional valve control: [[Autofocus and Proportional Gas Valves]].
+Proportional control: [[Autofocus and Proportional Gas Valves]].
 
 ## Material selection quick guide
 
@@ -74,33 +71,33 @@ Proportional valve control: [[Autofocus and Proportional Gas Valves]].
 | Galvanized | N₂ preferred; fume caution — [[Zn and Coated Material Fume Notes]] |
 | Copper/brass | N₂; reflectivity caution |
 
-Machine recipes: [[Cutting Parameters Index]].
+Recipes: [[Cutting Parameters Index]].
 
 ## Installation checklist
 
-1. Identify gas types machine will use; label lines at source and head
-2. Size regulators for **input** pressure (N₂ HP often 15 MPa class in)
-3. Use copper or stainless hard line near head; avoid low-grade hose on HP N₂
-4. Install check valves and filters where OEM specifies
-5. Leak test at 1.1× working pressure with soap or electronic detector
-6. Purge lines before first cut after gas change
-7. Never fully empty cylinders — keep residual pressure above atmospheric
+1. Identify gases; label lines both ends
+2. Size regulators for **input** pressure
+3. Copper/stainless hard line near head
+4. Filters/check valves per OEM
+5. Leak test at 1.1× working
+6. Purge after gas changes
+7. Never fully empty cylinders — keep residual
 
 ## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
-| Edge oxidation on SS | N₂ purity, pressure under flow |
+| Edge oxidation on SS | N₂ purity/pressure |
 | Blow-out on pierce | Pressure too high for thickness |
-| Yellow/black SS edge | Contaminated N₂ or wrong gas selected in layer |
-| Pressure unstable | Regulator undersized; booster tank empty |
-| Oil on lens (air cut) | Filtration chain — [[Air Filtration Stages]] |
+| Yellow/black SS edge | Contaminated N₂ / wrong layer gas |
+| Pressure unstable | Undersized regulator/supply |
+| Oil on lens (air cut) | [[Air Filtration Stages]] |
 
 ## Related notes
 
-- [[Gas Pipework and Fittings]]
 - [[PSA Nitrogen Generators]]
 - [[Compressor Sizing by Laser Power]]
+- [[Fiber Laser Power Classes]]
 
 ## Sources
 

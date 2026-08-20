@@ -1,0 +1,149 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[margin=14mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,xcolor,enumitem,fancyhdr,hyperref,pdfpages}
+\usepackage[most]{tcolorbox}
+\definecolor{blue}{HTML}{2D6A8A}\definecolor{pale}{HTML}{EEF5F8}\definecolor{warn}{HTML}{8A4B08}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\parindent}{0pt}\setlength{\parskip}{3pt}\setlist{nosep,leftmargin=*}
+\newtcolorbox{method}[1]{colback=pale,colframe=blue,boxrule=.5pt,arc=1mm,title=#1,fonttitle=\bfseries}
+\pagestyle{fancy}\fancyhf{}\lhead{ENME601 Thermodynamics}\rhead{Tutorial Booklet Weeks 1--6}\cfoot{\thepage}
+\newcommand{\sourcepages}[2]{\clearpage\phantomsection\addcontentsline{toc}{subsection}{#1}\includepdf[pages=-,pagecommand={}]{#2}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{27mm}
+{\Huge\bfseries Thermodynamics Tutorial Booklet\par}\vspace{4mm}
+{\Large Weeks 1--6: Questions, Official Working and Figures\par}\vspace{12mm}
+{\large Compact open-book companion with step-by-step method notes and the complete locally held tutorial source pages\par}
+\vfill
+\begin{method}{Document convention}
+Each week begins with an expanded method guide. It is followed by the original question pages and official worked-solution pages, preserving question wording, numerical data, tables, diagrams and handwritten/slide figures. Where the current local set contains only a solution deck (Week 1), that limitation is stated rather than inventing a missing question sheet.
+\end{method}
+\vfill 20 August 2026
+\end{titlepage}
+\tableofcontents\newpage
+
+\section{How to write a full thermodynamics solution}
+\begin{enumerate}
+\item \textbf{Given/find:} list state data, units and requested outputs.
+\item \textbf{Boundary:} draw a closed system or control volume and interaction arrows.
+\item \textbf{Assumptions:} state steady/transient, adiabatic, rigid, ideal gas, incompressible, negligible kinetic/potential changes, etc.
+\item \textbf{State model:} classify phase and choose the correct table or equation of state.
+\item \textbf{Governing laws:} write mass balance first for control volumes; write the full energy balance before simplifying.
+\item \textbf{Substitution:} carry units, use absolute pressure/temperature where required, and show interpolation.
+\item \textbf{Answer check:} sign, magnitude, phase bounds, conservation and device behaviour.
+\end{enumerate}
+\begin{method}{Fast unit rules}
+$1\,\mathrm{kPa\,m^3}=1\,\mathrm{kJ}$. Velocity energy $V^2/2$ in SI is J/kg and must be divided by 1000 before combining with kJ/kg. Use kelvin for gas-law and Carnot temperature ratios. Convert gauge pressure before property/gas calculations.
+\end{method}
+
+\section{Week 1 --- basic properties and state concepts}
+\begin{method}{Expanded working pattern}
+\begin{enumerate}
+\item Convert all dimensions and volumes to SI.
+\item Density: $\rho=m/V$.
+\item Specific volume: $v=V/m=1/\rho$.
+\item Specific weight: $\gamma=\rho g$.
+\item For pressure, distinguish absolute, gauge and vacuum values.
+\item For every classification question, name the system boundary and decide whether mass can cross.
+\end{enumerate}
+The current local 2026 Week 1 file is a 14-page solutions/teaching deck. It includes the prompts, definitions and worked material visible on the source pages; no separate clean 2026 question PDF was found locally.
+\end{method}
+\sourcepages{Week 1 current solutions and teaching pages}{build/tutorial-inputs/week1-solutions.pdf}
+
+\section{Week 2 --- energy, work, power and ideal-gas foundations}
+\begin{method}{Expanded working pattern for Questions 1--10}
+\begin{enumerate}
+\item Start from $E=U+KE+PE$ or $E_{in}-E_{out}=\Delta E$; do not jump directly to a shortcut formula.
+\item Kinetic-energy and acceleration problems: $\Delta KE=m(V_2^2-V_1^2)/2$ and divide by elapsed time for power.
+\item Heating problems: justify the material model before using $mc\Delta T$.
+\item Spring: $W=\tfrac12k(x_2^2-x_1^2)$; rotational shaft: $\dot W=\tau\omega$; lifting: $\dot W=mg\dot z$.
+\item Closed piston-cylinder: draw heat/work directions and apply $Q-W=\Delta U+\Delta KE+\Delta PE$.
+\item Preserve the printed-data warning in Question 4: the literal modulus and likely intended steel modulus produce different results; neither should be silently substituted.
+\end{enumerate}
+The included worked-solutions document already expands all ten current questions with assumptions, units, source captures and final-answer checks.
+\end{method}
+\sourcepages{Week 2 original questions}{build/tutorial-inputs/week2-questions.pdf}
+\sourcepages{Week 2 expanded worked solutions}{build/tutorial-inputs/week2-solutions.pdf}
+
+\section{Week 3 --- pure substances, interpolation and ideal gases}
+\begin{method}{Expanded working pattern for Questions 1--14}
+\begin{enumerate}
+\item Write the two known intensive properties and compare with $T_{sat}(P)$ or $P_{sat}(T)$.
+\item Select saturated-by-temperature, saturated-by-pressure, superheated or compressed-liquid data only after phase classification.
+\item In a mixture use $y=y_f+xy_{fg}$ and check $0\le x\le1$ and $y_f\le y\le y_g$.
+\item Interpolate as $y=y_1+(X-X_1)(y_2-y_1)/(X_2-X_1)$; show both bracketing rows.
+\item For ideal-gas Q9--Q14, convert gauge pressure and Celsius first, then use $PV=mRT$ or the fixed-mass two-state relation.
+\item Rigid tank means $V=$ constant; a valve-connected or evacuated partition problem requires total mass/volume accounting before applying the final state equation.
+\end{enumerate}
+The official material is split into Q1--Q8 (pure substances) and Q9--Q14 (ideal gases); the interpolation handout is included before the answer sets.
+\end{method}
+\sourcepages{Week 3 original question list}{build/tutorial-inputs/week3-questions.pdf}
+\sourcepages{Week 3 interpolation method}{build/tutorial-inputs/week3-interpolation.pdf}
+\sourcepages{Week 3 official solutions Q1--Q8}{build/tutorial-inputs/week3-q1-q8.pdf}
+\sourcepages{Week 3 official solutions Q9--Q14}{build/tutorial-inputs/week3-q9-q14.pdf}
+
+\section{Week 4 --- boundary work and closed systems}
+\begin{method}{Expanded working pattern for Questions 1--12}
+\begin{enumerate}
+\item Sketch the $P$--$V$ path and calculate $W_b=\int P\,dV$; use signed area for multi-segment paths.
+\item Constant pressure: $W_b=P(V_2-V_1)$; rigid tank: $W_b=0$; isothermal ideal gas: $W_b=mRT\ln(V_2/V_1)$.
+\item For a stated path such as $P=aV+b$, integrate the actual relation rather than using an average pressure without proof.
+\item For water or R-134a, obtain $u_1,u_2,v_1,v_2$ from the correct tables; then use $Q-W=\Delta U$.
+\item Spring-loaded piston paths normally have pressure varying linearly with volume; the work is the trapezoidal area when that linearity is established.
+\item Solids/liquids use $\Delta U\simeq mc\Delta T$ under an incompressible model; state heat-loss assumptions.
+\item Ideal-gas property changes: $\Delta U=mc_v\Delta T$ and $\Delta H=mc_p\Delta T$; do not swap $c_v$ and $c_p$.
+\end{enumerate}
+All twelve source questions and the official Q1--Q4, Q5--Q8 and Q9--Q12 worked pages follow.
+\end{method}
+\sourcepages{Week 4 original questions}{build/tutorial-inputs/week4-questions.pdf}
+\sourcepages{Week 4 official solutions Q1--Q4}{build/tutorial-inputs/week4-q1-q4.pdf}
+\sourcepages{Week 4 official solutions Q5--Q8}{build/tutorial-inputs/week4-q5-q8.pdf}
+\sourcepages{Week 4 official solutions Q9--Q12}{build/tutorial-inputs/week4-q9-q12.pdf}
+
+\section{Week 5 --- mass and energy analysis of control volumes}
+\begin{method}{Expanded working pattern for Questions 1--10}
+\begin{enumerate}
+\item Draw the control volume and label every inlet/outlet, $\dot Q$, $\dot W$, height and speed.
+\item Write mass balance first. At steady state $\sum\dot m_{in}=\sum\dot m_{out}$; for filling/emptying use the transient balance.
+\item Use $\dot V=V_{avg}A$ and $\dot m=\rho\dot V=\dot V/v$.
+\item Write the full SFEE, then justify dropping heat, work, kinetic or potential terms.
+\item Nozzle/diffuser: enthalpy trades with velocity; turbine/compressor: enthalpy trades mainly with shaft work.
+\item Throttle: $h_1=h_2$ under the usual assumptions. Mixing chamber and heat exchanger require both stream mass rates and enthalpies.
+\item For ideal-gas air, use $h_2-h_1\simeq c_p(T_2-T_1)$ only when the constant/average-$c_p$ approximation is justified.
+\end{enumerate}
+The current question sheet contains ten questions; the 31-page official solution set retains all diagrams, table values and intermediate calculations.
+\end{method}
+\sourcepages{Week 5 original questions}{build/tutorial-inputs/week5-questions.pdf}
+\sourcepages{Week 5 official worked solutions}{build/tutorial-inputs/week5-solutions.pdf}
+
+\section{Week 6 --- second law, heat engines and refrigeration}
+\begin{method}{Expanded working pattern for Questions 1--5}
+\begin{enumerate}
+\item Identify the device and desired output before selecting a performance measure.
+\item Heat engine: $W_{net,out}=Q_H-Q_L$ and $\eta_{th}=W_{net,out}/Q_H$.
+\item Refrigerator: $COP_R=Q_L/W_{net,in}$; heat pump: $COP_{HP}=Q_H/W_{net,in}=COP_R+1$.
+\item For rate problems, use the same equations with dotted quantities and consistent time units.
+\item Carnot limits require kelvin: $\eta_{rev}=1-T_L/T_H$, $COP_{R,rev}=T_L/(T_H-T_L)$, $COP_{HP,rev}=T_H/(T_H-T_L)$.
+\item Check feasibility: $\eta<1$, COP may exceed 1, and no real device may exceed the reversible limit for the same reservoirs.
+\end{enumerate}
+The original one-page Q1--Q5 prompt sheet and the full official worked tutorial follow.
+\end{method}
+\sourcepages{Week 6 original questions}{build/tutorial-inputs/week6-questions.pdf}
+\sourcepages{Week 6 official worked solutions}{build/tutorial-inputs/week6-solutions.pdf}
+
+\section{Final method index}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{.21\textwidth}X}
+\toprule
+Method & Governing relation / check\\\midrule
+Density/specific volume & $\rho=m/V$, $v=1/\rho$\\
+Ideal gas & $PV=mRT$, absolute $P,T$\\
+Quality & $y=y_f+xy_{fg}$; only inside dome\\
+Interpolation & bracket in correct table before calculating\\
+Closed-system energy & $Q-W=\Delta U+\Delta KE+\Delta PE$\\
+Boundary work & $W_b=\int P\,dV$\\
+Mass flow & $\dot m=\rho V_{avg}A$\\
+Steady-flow energy & $\dot Q-\dot W=\dot m[\Delta h+\Delta(V^2/2)+g\Delta z]$\\
+Throttle & $h_1=h_2$ under usual assumptions\\
+Heat-engine efficiency & $\eta=W_{net,out}/Q_H$\\
+Refrigerator/heat-pump COP & $COP_R=Q_L/W_{in}$, $COP_{HP}=Q_H/W_{in}$\\\bottomrule
+\end{tabularx}
+\end{document}

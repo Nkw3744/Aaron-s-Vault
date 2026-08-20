@@ -1,0 +1,49 @@
+SaturationAndPressureLab-AaronTaylor-24232594-v4 verification
+Generated: 2026-08-14T16:17:28+12:00
+
+Evidence reconciliation
+- Raw whiteboard gauge pressures: 50, 100, 150, 200, 250, 300, 350, 400, 450 kPa
+- Raw whiteboard resistances: 142.3, 144.8, 146.9, 148.7, 150.1, 151.1, 152.6, 153.8, 154.6 ohm
+- Atmospheric pressure: 101.65 kPa
+- Session whiteboard points: 109.0 ohm at 15 degC; 138.7 ohm at 100 degC
+- Session alpha: 0.3494117647 ohm/degC
+- Report explicitly distinguishes the session-supplied relationship from the manufacturer's Data Sheet 1 -> Data Sheet 2 procedure
+
+Numerical verification
+- Rows: 9
+- Experimental fit: A=37.6330592462, n=0.2145733100, R2=0.9989461658
+- Direct Table A-5 fit: A=31.0190984555, n=0.2556697667, R2=0.9998272294
+- Mean signed error: -4.3220438343%
+- Mean absolute error: 4.3220438343%
+- Maximum absolute error: 6.4704513740%
+- All script assertions: PASS
+
+Compile and visual verification
+- Tectonic isolated build: PASS
+- Build warnings/errors/overfull/undefined/missing-character checks: none
+- PDF pages: 6
+- Page size: A4
+- All six pages visually inspected: PASS
+- Celsius symbols: PASS
+- Visible clipping or overlap: none
+- References and footer clearance: PASS
+- Syed-specific data absent: PASS
+- Error section explicitly compares the session conversion (-4.32% mean signed error) with the Armfield Data Sheet 1 -> Data Sheet 2 conversion (-1.03%): PASS
+- Report states that apparent error depends partly on conversion choice and cannot be attributed entirely to apparatus behaviour: PASS
+- Calibration section identifies that all measured resistances exceed the upper whiteboard point, making the session conversion an extrapolation: PASS
+- Indicated-versus-corrected endpoint ambiguity, endpoint rounding, display resolution and 15 degC reference uncertainty discussed: PASS
+- Method sensitivity quantified as approximately +0.75 degC at the first point and +8.32 degC at the final point for the manual conversion: PASS
+- Results correctly described as sensitivity cases rather than statistical uncertainty limits: PASS
+
+Version preservation
+- v2 PDF unchanged: 51417a7c86beee4af576bc17ad43c9e897f3c144d7a501b2ecf4664774d622f8
+- v3 PDF unchanged: 421064bf3fbe088fb7a25631c40f316c7de4195ba9ad2fcb7243ed0c5996a3af
+
+v4 hashes
+- PDF SHA-256: 01b19ffd0d638016baf14effde72213f862f4b77859d70afc88e88f6a4bcfa1b
+- LaTeX SHA-256: 4887ff3aaaa153ec4f39fdbfb73a0972125827ef4edee4b0e4375b8c91558024
+- Script SHA-256: c77efbe64d16d7827dcb4b6625e604a3b34dd15cdf97f1c5b8356355318a3a35
+- CSV SHA-256: dd67b7d621832d4377e07e105d9dd0f03fd9ce45596edb53d077ed52e34757f6
+
+Verification scope
+- Focused ad-hoc verification only; no canonical project test suite exists for this report package.

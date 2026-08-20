@@ -2,7 +2,7 @@
 source: AUT Canvas
 canvas_course_id: 23148
 course_code: ENEL700_2026_S2
-last_checked: 2026-07-30
+last_checked: 2026-08-20
 ---
 
 # Communication Engineering Current Canvas Information
@@ -56,6 +56,9 @@ Keep a **hardcopy logbook** during every lab. Record measured data, waveforms, o
 - [[ENEL700 Lab Book 2026.pdf]] — current four-lab logbook/manual
 - [[ENEL700 Maths Formulae Tables.pdf]] — compact mathematical reference linked from course resources
 - [[FM and PM Frequency Deviation.pdf]] — focused frequency-deviation reference
+- [[AM-vs-FM.pdf]] — concise comparison of amplitude and frequency modulation
+- [[Mid-Rise-vs-Mid-Tread.docx]] — quantiser convention reference
+- [[ADC-different-types.docx]] — analogue-to-digital converter type reference
 
 All 12 lecture PDFs and the individual tutorial questions/answers were retained under their existing cleaner vault names because the current Canvas copies matched exactly or by strong extracted-content comparison.
 
@@ -67,4 +70,4 @@ All 12 lecture PDFs and the individual tutorial questions/answers were retained 
 
 ## Provenance
 
-All 30 published Communication Engineering Pages were inspected through Aaron's authenticated student session. Imports were verified by Canvas ID, source size, SHA-256, and extracted-content comparison against existing vault files.
+All 30 published Communication Engineering Pages were inspected through Aaron's authenticated student session. The 20 August pull found one changed Lab and Course Resources Page and three new substantive reference files. Imports were verified by Canvas ID, source size, SHA-256, and extracted-content comparison against existing vault files.

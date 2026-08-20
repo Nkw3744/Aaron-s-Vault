@@ -12,6 +12,8 @@
 | [[Figure 5 - Controller calibration.jpeg]] | Instrument evidence | PT100 resistance display and 138.7 Ω = 100 °C label |
 | [[Figure 1 - TH3 apparatus.jpeg]] | Apparatus evidence | Actual boiler, loop, viewing port, gauge, valves and wiring |
 | [[Lab Assignment 2025.pdf]] | Prior high-performing structural benchmark | Concise section order and expected reporting scope; numerical results were not reused |
+| [[SaturationAndPressureLab-AaronTaylor-24232594-v4-verification.txt]] | v4 verification record | Independent numerical, compilation and visual checks for the evidence-reconciled report |
+| [[Saturation Temperature and Pressure Report 2026-v4]] | Duplicate report packaging | Substantive content is already owned by [[Saturation Temperature and Pressure Report 2026]]; retained as the versioned companion note |
 
 ## Requirement coverage
 

@@ -1,0 +1,69 @@
+{
+  "weeks": {
+    "1": {
+      "questions": 10,
+      "systems": 10,
+      "assumptions": 10,
+      "boxes": 10,
+      "display_open": 49,
+      "display_close": 49
+    },
+    "2": {
+      "questions": 10,
+      "systems": 10,
+      "assumptions": 10,
+      "boxes": 15,
+      "display_open": 67,
+      "display_close": 67
+    },
+    "3": {
+      "questions": 14,
+      "systems": 14,
+      "assumptions": 14,
+      "boxes": 14,
+      "display_open": 14,
+      "display_close": 14
+    },
+    "4": {
+      "questions": 12,
+      "systems": 12,
+      "assumptions": 12,
+      "boxes": 12,
+      "display_open": 67,
+      "display_close": 67
+    },
+    "5": {
+      "questions": 10,
+      "systems": 10,
+      "assumptions": 10,
+      "boxes": 10,
+      "display_open": 80,
+      "display_close": 80
+    },
+    "6": {
+      "questions": 5,
+      "systems": 5,
+      "assumptions": 5,
+      "boxes": 5,
+      "display_open": 32,
+      "display_close": 32
+    }
+  },
+  "errors": [],
+  "theory": {
+    "pages": 12,
+    "bytes": 1508733,
+    "a4": true,
+    "encrypted": true,
+    "rewritten_questions": 0
+  },
+  "tutorial": {
+    "pages": 47,
+    "bytes": 2232939,
+    "a4": true,
+    "encrypted": true,
+    "rewritten_questions": 61
+  },
+  "question_images": 9,
+  "status": "PASS"
+}

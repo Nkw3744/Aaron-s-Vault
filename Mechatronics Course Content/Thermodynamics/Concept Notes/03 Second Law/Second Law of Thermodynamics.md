@@ -11,7 +11,7 @@ source: L6 The Second Law of Thermodynamics.pdf
 > [!info] Course navigation
 > [[Thermodynamics Overview|Subject overview]] - [[Thermodynamics Roadmap|Course roadmap]] - [[Thermodynamics Practice Index|Practice index]] - [[Thermodynamics Reference Index|References]] - Previous: [[Control Volumes and Steady-Flow Systems]]
 >
-> [[L6 The Second Law of Thermodynamics.pdf|Lecture 6 slides]] - [[Ch 6 THE SECOND LAW OF THERMODYNAMICS.pdf|Textbook Chapter 6]]
+> [[L6 The Second Law of Thermodynamics.pdf|Lecture 6 slides]] - [[Ch 6 THE SECOND LAW OF THERMODYNAMICS.pdf|Textbook Chapter 6]] - [[Tute 1_questions-1.pdf|current Week 6 questions]] - [[Week 6 - tutorial 1-2.pdf|official solutions]]
 
 ## Core idea
 
@@ -284,6 +284,29 @@ The Carnot expression shows that raising $T_H$ or lowering $T_L$ increases the f
 | Heat engine | $W_{net,out}$ | $Q_H$ | $\eta_{th}=W_{net,out}/Q_H$ |
 | Refrigerator | $Q_L$ | $W_{net,in}$ | $COP_R=Q_L/W_{net,in}$ |
 | Heat pump | $Q_H$ | $W_{net,in}$ | $COP_{HP}=Q_H/W_{net,in}$ |
+
+## Open-book formula map
+
+$$
+\eta_{th}=\frac{W_{net,out}}{Q_H}=1-\frac{Q_L}{Q_H},\qquad
+COP_R=\frac{Q_L}{W_{net,in}},\qquad
+COP_{HP}=\frac{Q_H}{W_{net,in}}=COP_R+1
+$$
+
+$$
+\eta_{th,rev}=1-\frac{T_L}{T_H},\qquad
+COP_{R,rev}=\frac{T_L}{T_H-T_L},\qquad
+COP_{HP,rev}=\frac{T_H}{T_H-T_L}
+$$
+
+```mermaid
+flowchart LR
+    H[Hot reservoir TH] -->|QH| E[Heat engine]
+    E -->|Wnet,out| W[Useful work]
+    E -->|QL| L[Cold reservoir TL]
+```
+
+COP may exceed one; heat-engine efficiency cannot. A real device cannot exceed the Carnot limit between the same absolute reservoir temperatures.
 
 ## Quick recall
 

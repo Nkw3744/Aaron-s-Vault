@@ -15,67 +15,80 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> How capacitive height follow works (BCS100 and similar), calibration, and hardware path.
+> How capacitive height follow works (BCS100 and similar), signal path, calibration, grounding, and network basics.
 
 ## Principle
 
-Measures capacitance between **nozzle** (electrode) and **sheet** (grounded workpiece). Controller converts capacitance → distance → Z servo follow during cut.
+Measures capacitance between **nozzle** (electrode) and **sheet** (grounded workpiece). Controller converts C → distance → Z servo follow so cut height stays constant over warped sheet.
 
-Not laser triangulation — purely electrical field.
+Not optical triangulation — purely electric field. Paint, rust, and isolation break the measurement.
 
 ## Signal path
 
 ```
-Nozzle → ceramic ring → SMA/RF cable → pre-amplifier box on head → BCS100 controller → Z drive
+Nozzle → ceramic ring → SMA/RF cable → pre-amp on head → BCS100 → Z drive / CNC
 ```
 
-Components:
+| Part | Role | Common failure |
+| --- | --- | --- |
+| Nozzle | Electrode tip | Slag bead, loose, wrong dia |
+| Ceramic | Insulator | Crack (~most "sensor" faults) |
+| SMA/RF | HF signal | Break, intermittent on flex |
+| Pre-amp | Amplify | Moisture, impact |
+| BCS100 | Cal, follow, network | Config/IP/EMI |
 
-| Part | Role |
-| --- | --- |
-| Nozzle | Electrode tip; must be concentric |
-| Ceramic ring | Insulator; cracks cause shorts |
-| SMA (RF) cable | High-frequency signal; fragile |
-| Pre-amp box | Amplifies weak signal |
-| BCS100 | Calibration, follow, network to CNC |
-
-Family reference: BCS100 appears in Gweike 3015GAII manual family.
+Family note: BCS100 appears in Gweike 3015GAII manuals — verify installed unit.
 
 ## Calibration procedure (generic)
 
 1. Clean nozzle face and ceramic — no slag bridge
-2. Firm nozzle torque per OEM
-3. Move to center of **clean flat metal** plate (bare steel best)
-4. Run "floating head calibration" / one-key cal in software
-5. Check stability rating — should be Excellent/Good
-6. Test follow at traverse speed before full power cut
+2. Torque nozzle per OEM
+3. Move to centre of **clean flat bare metal**
+4. Run floating-head / one-key calibration
+5. Stability rating Excellent/Good
+6. Test follow at traverse before full-power cut
 
-Recalibrate after: nozzle change, ceramic change, crash, large temperature swing.
+Recalibrate after: nozzle/ceramic change, crash, ANC cycle issues, large temperature swing.
 
-## Key parameters (controller)
+## Key parameters
 
 | Parameter | Notes |
 | --- | --- |
 | Cut height | Often 0.5–1.0 mm band; material dependent |
 | Lift height | Safe traverse Z |
-| Follow gain | Match to machine dynamics |
-| DIF value | Diagnostic; >30 may indicate poor contact (Smart cut FAQ) |
+| Follow gain | Match machine dynamics |
+| DIF | Diagnostic; large values can mean poor contact |
 
-Do not set follow height below 0.5 mm without OEM approval — pierce splash risk.
+Do not set follow height below ~0.5 mm without OEM approval.
 
 ## Grounding requirement
 
-Sheet → slats → bed → machine ground must be low impedance. Poor ground → unstable capacitance, wandering height.
+```
+Nozzle → sheet → slats → bed → PE
+```
+
+Detail: [[Grounding and EMC Isolation]]. Poor ground → unstable C → [[Height Sensor Alarm Reference]].
 
 ## Network (BCS100 Ethernet)
 
-- IP in same subnet as CNC motion controller
-- Timeout alarms if cable fault — check IP and physical link
+- Same IP subnet as CNC
+- Timeout alarms: cable, IP, EMI
+- After board swap: restore OEM config
+
+## Daily / shift checks
+
+| Check | Pass |
+| --- | --- |
+| Nozzle clean | No bead |
+| Follow on scrap | Smooth, no jump |
+| No new alarms | — |
 
 ## Related notes
 
 - [[Height Sensor Alarm Reference]]
 - [[Cutting Head Nozzles and Ceramics]]
+- [[Nozzle Change and Shutter Actuators]]
+- [[Fiber Laser Common Alarms]]
 
 ## Sources
 

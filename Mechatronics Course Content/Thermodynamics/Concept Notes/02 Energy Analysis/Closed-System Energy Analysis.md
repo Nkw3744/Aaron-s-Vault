@@ -11,7 +11,7 @@ source: L4 Energy Analysis of Closed Systems.pdf
 > [!info] Course navigation
 > [[Thermodynamics Overview|Subject overview]] - [[Thermodynamics Roadmap|Course roadmap]] - [[Thermodynamics Practice Index|Practice index]] - [[Thermodynamics Reference Index|References]] - Previous: [[Properties and Phase Change of Pure Substances]] - Next: [[Control Volumes and Steady-Flow Systems]]
 >
-> [[L4 Energy Analysis of Closed Systems.pdf|Lecture 4 slides]] - [[Ch 4 ENERGY ANALYSIS OF CLOSED SYSTEMS.pdf|Textbook Chapter 4]] - [[Ch4 Questions.pdf|Chapter 4 questions]] - [[Ch4 Answers.pdf|answers]]
+> [[L4 Energy Analysis of Closed Systems.pdf|Lecture 4 slides]] - [[Week 4_slides_with solutions-2.pdf|current Week 4 slides]] - [[Ch 4 ENERGY ANALYSIS OF CLOSED SYSTEMS.pdf|Textbook Chapter 4]] - [[Ch4 Questions.pdf|Chapter 4 questions]] - [[Ch4 Answers.pdf|answers]] - [[Tutorial Question Week 4.pdf|current tutorial]] - [[Q1-Q4.pdf|Q1–Q4]] - [[Q5-Q8.pdf|Q5–Q8]] - [[Q9-Q12.pdf|Q9–Q12]]
 
 ## Core idea
 
@@ -206,7 +206,7 @@ $$
 Total changes are:
 
 $$
-\Delta U=mc_{v,avg}\Delta T,qquad
+\Delta U=mc_{v,avg}\Delta T,\qquad
 \Delta H=mc_{p,avg}\Delta T
 $$
 
@@ -270,6 +270,18 @@ $$
 | Isothermal ideal gas | $mRT\ln(V_2/V_1)$ |
 | Polytropic ideal gas, $n\neq1$ | $(P_2V_2-P_1V_1)/(1-n)$ |
 | Reversible adiabatic ideal gas | Polytropic result with $n=k$ |
+
+## Open-book exam workflow
+
+1. Confirm that the mass is fixed and draw the closed-system boundary.
+2. Mark heat and every work mode; a rigid tank removes only moving-boundary work.
+3. Select the substance model: property-table pure substance, ideal gas, or incompressible material.
+4. Determine $W_b$ from the actual process path; do not infer it from end states alone.
+5. Write $Q-W=\Delta U+\Delta KE+\Delta PE$ before simplifying.
+6. Check that expansion/compression signs and heat direction agree with the physical process.
+
+> [!warning] Do not confuse process labels
+> Constant pressure does not imply isothermal. Isothermal does not imply constant pressure. Adiabatic does not imply $PV^k=\text{constant}$ unless the ideal-gas process is also reversible/quasi-equilibrium.
 
 ## Quick recall
 

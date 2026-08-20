@@ -198,6 +198,14 @@ Use enough figures during intermediate work, then report a final precision consi
 - A process has a path; a cycle returns to the initial state.
 - Use Kelvin and absolute pressure in thermodynamic equations.
 
+## Open-book exam checklist
+
+1. Choose and draw the boundary before selecting an equation.
+2. Classify the model as a closed system, control volume, or isolated system.
+3. Separate intensive properties from extensive and specific quantities.
+4. Convert gauge pressure to absolute pressure and Celsius to kelvin when a relation requires absolute values.
+5. Remember that steady does not mean spatially uniform, and heat/work are interactions rather than stored properties.
+
 ## Practice prompts
 
 1. Classify a sealed tank, open mug, thermos, compressor, and piston-cylinder.

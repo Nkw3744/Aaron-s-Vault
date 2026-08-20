@@ -1,0 +1,573 @@
+% Week 3 – Thermo resource chapter
+\section*{Week 3}
+\addcontentsline{toc}{section}{Week 3}
+
+\section*{Q1}
+\textbf{Rewritten question.} For water at $100\,^{\circ}\mathrm{C}$, determine the saturation pressure and the saturated-liquid specific volume, internal energy, and enthalpy.
+
+\textbf{Vague note.} Saturation-state lookup for water.
+
+\textbf{System/boundary.} Closed pure-substance system at saturation; boundary is the water sample.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Water is saturated liquid at $100\,^{\circ}\mathrm{C}$.
+  \item Steam-table values are used directly.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $T = 100\,^{\circ}\mathrm{C}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $P_{\mathrm{sat}}$, $v_f$, $u_f$, $h_f$
+\end{itemize}
+
+\textbf{Table choice.} Saturated water temperature table.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $P_{\mathrm{sat}} = 101.42\ \mathrm{kPa}$
+  \item $v_f = 0.001043\ \mathrm{m^3/kg}$
+  \item $u_f = 419.06\ \mathrm{kJ/kg}$
+  \item $h_f = 419.17\ \mathrm{kJ/kg}$
+\end{itemize}
+
+\[\boxed{P_{\mathrm{sat}} = 101.42\ \mathrm{kPa},\ v_f = 0.001043\ \mathrm{m^3/kg},\ u_f = 419.06\ \mathrm{kJ/kg},\ h_f = 419.17\ \mathrm{kJ/kg}}\]
+
+\textbf{Trap.} Do not use atmospheric pressure; this is a saturation-table lookup.
+
+\textbf{Source page.} week3-questions.pdf, Q1; official worked values from the local source page.
+
+\section*{Q2}
+\textbf{Rewritten question.} For R-134a at $500\ \mathrm{kPa}$, determine the saturation temperature and the saturated-vapour specific volume, internal energy, and enthalpy.
+
+\textbf{Vague note.} Saturated R-134a state from pressure.
+
+\textbf{System/boundary.} Closed pure-substance system at saturation.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item R-134a is saturated vapour at the stated pressure.
+  \item Tables are read at the saturation pressure.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $P = 500\ \mathrm{kPa}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $T_{\mathrm{sat}}$, $v_g$, $u_g$, $h_g$
+\end{itemize}
+
+\textbf{Table choice.} Saturated R-134a pressure table.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $T_{\mathrm{sat}} = 15.71\,^{\circ}\mathrm{C}$
+  \item $v_g = 0.041168\ \mathrm{m^3/kg}$
+  \item $u_g = 238.77\ \mathrm{kJ/kg}$
+  \item $h_g = 259.36\ \mathrm{kJ/kg}$
+\end{itemize}
+
+\[\boxed{T_{\mathrm{sat}} = 15.71\,^{\circ}\mathrm{C},\ v_g = 0.041168\ \mathrm{m^3/kg},\ u_g = 238.77\ \mathrm{kJ/kg},\ h_g = 259.36\ \mathrm{kJ/kg}}\]
+
+\textbf{Trap.} Pressure is given, so use the saturation-pressure table, not the temperature table.
+
+\textbf{Source page.} week3-questions.pdf, Q2; official worked values from the local source page.
+
+\section*{Q3}
+\textbf{Rewritten question.} Using linear interpolation, estimate the saturation pressure of water at $222.5\,^{\circ}\mathrm{C}$.
+
+\textbf{Vague note.} Interpolate saturation pressure between nearby table entries.
+
+\textbf{System/boundary.} Saturated water property lookup; no control-volume balance needed.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Pressure varies linearly between the two nearest tabulated temperatures.
+  \item Table values at $220\,^{\circ}\mathrm{C}$ and $225\,^{\circ}\mathrm{C}$ are accurate.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $T = 222.5\,^{\circ}\mathrm{C}$
+  \item $(220\,^{\circ}\mathrm{C},\ 2319.6\ \mathrm{kPa})$
+  \item $(225\,^{\circ}\mathrm{C},\ 2549.7\ \mathrm{kPa})$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $P_{\mathrm{sat}}$
+\end{itemize}
+
+\textbf{Table choice.} Saturated water temperature table plus interpolation.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $P_{\mathrm{sat}} = 2434.65\ \mathrm{kPa}$
+\end{itemize}
+
+\[\boxed{P_{\mathrm{sat}} = 2434.65\ \mathrm{kPa}}\]
+
+\textbf{Trap.} Interpolate on temperature, not pressure, and keep units in kPa.
+
+\textbf{Source page.} week3-interpolation.pdf; official interpolated result provided by the user.
+
+\section*{Q4}
+\textbf{Rewritten question.} For superheated steam at $0.3\ \mathrm{MPa}$ and $325\,^{\circ}\mathrm{C}$, determine specific volume, internal energy, and enthalpy by interpolation.
+
+\textbf{Vague note.} Superheated-steam interpolation at fixed pressure.
+
+\textbf{System/boundary.} Closed steam sample in the superheated region.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Linear interpolation in temperature is acceptable at $0.3\ \mathrm{MPa}$.
+  \item The table values at $300\,^{\circ}\mathrm{C}$ and $400\,^{\circ}\mathrm{C}$ bracket the target state.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $P = 0.3\ \mathrm{MPa}$
+  \item $T = 325\,^{\circ}\mathrm{C}$
+  \item At $300\,^{\circ}\mathrm{C}$: $v=0.87535\ \mathrm{m^3/kg}$, $u=2807\ \mathrm{kJ/kg}$, $h=3069.6\ \mathrm{kJ/kg}$
+  \item At $400\,^{\circ}\mathrm{C}$: $v=1.03155\ \mathrm{m^3/kg}$, $u=2966\ \mathrm{kJ/kg}$, $h=3275.5\ \mathrm{kJ/kg}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $v$, $u$, $h$
+\end{itemize}
+
+\textbf{Table choice.} Superheated steam table at $0.3\ \mathrm{MPa}$ plus interpolation.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $v = 0.9144\ \mathrm{m^3/kg}$
+  \item $u = 2846.75\ \mathrm{kJ/kg}$
+  \item $h = 3121.075\ \mathrm{kJ/kg}$
+\end{itemize}
+
+\[\boxed{v = 0.9144\ \mathrm{m^3/kg},\ u = 2846.75\ \mathrm{kJ/kg},\ h = 3121.075\ \mathrm{kJ/kg}}\]
+
+\textbf{Trap.} Interpolate each property separately using the same temperature fraction.
+
+\textbf{Source page.} week3-questions.pdf, Q4; official worked values from the local source page.
+
+\section*{Q5}
+\textbf{Rewritten question.} For saturated water at $90\,^{\circ}\mathrm{C}$ with specific volume $2\ \mathrm{m^3/kg}$, determine the quality.
+
+\textbf{Vague note.} Quality from a two-phase specific-volume relation.
+
+\textbf{System/boundary.} Closed saturated-water mixture.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The state is a saturated mixture.
+  \item $v = v_f + x(v_g-v_f)$ applies.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $T = 90\,^{\circ}\mathrm{C}$
+  \item $v = 2\ \mathrm{m^3/kg}$
+  \item $v_f = 0.001036\ \mathrm{m^3/kg}$
+  \item $v_g = 2.3593\ \mathrm{m^3/kg}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $x$
+\end{itemize}
+
+\textbf{Table choice.} Saturated water temperature table.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $x = 0.847339$
+\end{itemize}
+
+\[\boxed{x = 0.847339}\]
+
+\textbf{Trap.} The quality formula uses the saturated-mixture relation, not ideal-gas behavior.
+
+\textbf{Source page.} week3-questions.pdf, Q5; official worked values from the local source page.
+
+\section*{Q6}
+\textbf{Rewritten question.} At $400\ \mathrm{kPa}$ and $200\,^{\circ}\mathrm{C}$, identify the phase of water and the correct property table. Then state the table to use if pressure stays at $400\ \mathrm{kPa}$ but temperature drops to $100\,^{\circ}\mathrm{C}$.
+
+\textbf{Vague note.} Phase identification and table selection.
+
+\textbf{System/boundary.} Water in a piston-cylinder device.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Compare temperature to saturation temperature at the same pressure.
+  \item Use standard steam tables for phase identification.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $P = 400\ \mathrm{kPa}$
+  \item $T_1 = 200\,^{\circ}\mathrm{C}$
+  \item $T_2 = 100\,^{\circ}\mathrm{C}$ at the same pressure
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item Phase at $200\,^{\circ}\mathrm{C}$ and the correct table
+  \item Phase/table at $100\,^{\circ}\mathrm{C}$ and the correct table
+\end{itemize}
+
+\textbf{Table choice.} Compare against saturation temperature at $400\ \mathrm{kPa}$.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item At $400\ \mathrm{kPa}$, $T_{\mathrm{sat}} = 143.61\,^{\circ}\mathrm{C}$, so $200\,^{\circ}\mathrm{C}$ is superheated and the superheated steam table should be used.
+  \item At $400\ \mathrm{kPa}$ and $100\,^{\circ}\mathrm{C}$, the water is compressed liquid and the compressed-liquid table should be used.
+\end{itemize}
+
+\[\boxed{\text{Superheated at }200\,^{\circ}\mathrm{C};\ \text{compressed liquid at }100\,^{\circ}\mathrm{C}}\]
+
+\textbf{Trap.} The decision comes from $T$ versus $T_{\mathrm{sat}}$ at the same pressure, not from pressure alone.
+
+\textbf{Source page.} week3-questions.pdf, Q6; official worked values from the local source page.
+
+\section*{Q7}
+\textbf{Rewritten question.} A rigid container holds $10\ \mathrm{kg}$ of water with total volume $1.115\ \mathrm{m^3}$ at $150\,^{\circ}\mathrm{C}$. It is heated until the pressure reaches $2000\ \mathrm{kPa}$. Determine the initial pressure, the initial quality, and the final temperature.
+
+\textbf{Vague note.} Rigid-tank heating through the saturation dome into the superheated region.
+
+\textbf{System/boundary.} Closed rigid container; no boundary work because volume is fixed.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Mass is constant.
+  \item Volume is constant.
+  \item Initial state is a saturated mixture at $150\,^{\circ}\mathrm{C}$.
+  \item Final state is superheated at $2\ \mathrm{MPa}$.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $m = 10\ \mathrm{kg}$
+  \item $V = 1.115\ \mathrm{m^3}$
+  \item $T_1 = 150\,^{\circ}\mathrm{C}$
+  \item $P_2 = 2000\ \mathrm{kPa}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $P_1$, $x_1$, $T_2$
+\end{itemize}
+
+\textbf{Table choice.} Saturated water temperature table at $150\,^{\circ}\mathrm{C}$, then superheated steam table at $2\ \mathrm{MPa}$.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $v = V/m = 0.1115\ \mathrm{m^3/kg}$
+  \item $P_1 = 476.16\ \mathrm{kPa}$
+  \item $x_1 = 0.282095$
+  \item $T_2 = 282.095\,^{\circ}\mathrm{C}$
+\end{itemize}
+
+\[\boxed{P_1 = 476.16\ \mathrm{kPa},\ x_1 = 0.282095,\ T_2 = 282.095\,^{\circ}\mathrm{C}}\]
+
+\textbf{Trap.} Rigid container means use constant specific volume; do not apply a constant-pressure path to the first state.
+
+\textbf{Source page.} week3-q1-q8.pdf, Q7; saturation and superheated-table extraction from the provided PDF/OCR, with the initial pressure read from the $150\,^{\circ}\mathrm{C}$ saturation entry.
+
+\section*{Q8}
+\textbf{Rewritten question.} A piston-cylinder device contains $0.6\ \mathrm{kg}$ of steam at $300\,^{\circ}\mathrm{C}$ and $0.5\ \mathrm{MPa}$. It is cooled at constant pressure until one-half of the mass condenses. Determine the final temperature and the volume change.
+
+\textbf{Vague note.} Constant-pressure cooling into a saturated mixture.
+
+\textbf{System/boundary.} Closed piston-cylinder system with moving boundary; pressure stays fixed.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Pressure is constant throughout the process.
+  \item Half the mass condenses, so final quality is $x_2 = 0.5$.
+  \item Steam-table values are used for the initial superheated state and final saturated state.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $m = 0.6\ \mathrm{kg}$
+  \item $P = 0.5\ \mathrm{MPa}$
+  \item $T_1 = 300\,^{\circ}\mathrm{C}$
+  \item Half the mass condenses $
+    \Rightarrow x_2 = 0.5$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $T_2$
+  \item $\Delta V = V_2 - V_1$
+\end{itemize}
+
+\textbf{Table choice.} Superheated steam table at $0.5\ \mathrm{MPa}$ for state 1, then saturated water table at $0.5\ \mathrm{MPa}$ for state 2.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $T_2 = 151.83\,^{\circ}\mathrm{C}$
+  \item $V_1 \approx 0.6\,(0.521\ \mathrm{m^3/kg}) \approx 0.313\ \mathrm{m^3}$
+  \item $V_2 \approx 0.6\,[v_f + 0.5(v_g-v_f)] \approx 0.109\ \mathrm{m^3}$
+  \item $\Delta V \approx -0.204\ \mathrm{m^3}$
+\end{itemize}
+
+\[\boxed{T_2 = 151.83\,^{\circ}\mathrm{C},\ \Delta V \approx -0.204\ \mathrm{m^3}}\]
+
+\textbf{Trap.} The final temperature is the saturation temperature at $0.5\ \mathrm{MPa}$; the final quality is fixed by the condensation statement.
+
+\textbf{Source page.} week3-q1-q8.pdf, Q8; final temperature from the saturation table at $0.5\ \mathrm{MPa}$. The volume-change figure is from the table-based state calculation, with OCR ambiguity in the source superheated entry.
+
+\section*{Q9}
+\textbf{Rewritten question.} A $3\ \mathrm{m^3}$ oxygen tank has a gauge pressure of $600\ \mathrm{kPa}$ at $28\,^{\circ}\mathrm{C}$. Determine the mass of oxygen.
+
+\textbf{Vague note.} Ideal-gas mass from gauge pressure.
+
+\textbf{System/boundary.} Closed gas tank.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Oxygen behaves as an ideal gas.
+  \item Absolute pressure is used.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $V = 3\ \mathrm{m^3}$
+  \item $P_{\mathrm{gage}} = 600\ \mathrm{kPa}$
+  \item $P_{\mathrm{atm}} = 97\ \mathrm{kPa}$
+  \item $T = 28\,^{\circ}\mathrm{C} = 301.15\ \mathrm{K}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $m_{\mathrm{O_2}}$
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas relation with oxygen gas constant.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $P_{\mathrm{abs}} = 697\ \mathrm{kPa}$
+  \item $m_{\mathrm{O_2}} = 26.7259\ \mathrm{kg}$
+\end{itemize}
+
+\[\boxed{m_{\mathrm{O_2}} = 26.7259\ \mathrm{kg}}\]
+
+\textbf{Trap.} Use absolute pressure, not gauge pressure, in $Pv=mRT$.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q9; official worked values from the local source page.
+
+\section*{Q10}
+\textbf{Rewritten question.} An automobile tire of volume $0.5\ \mathrm{m^3}$ is inflated to $250\ \mathrm{kPa}$ gauge at $25\,^{\circ}\mathrm{C}$. Determine the mass of air.
+
+\textbf{Vague note.} Ideal-gas mass from gauge pressure and standard atmosphere.
+
+\textbf{System/boundary.} Closed air volume in the tire.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Air behaves as an ideal gas.
+  \item Standard atmospheric pressure applies.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $V = 0.5\ \mathrm{m^3}$
+  \item $P_{\mathrm{gage}} = 250\ \mathrm{kPa}$
+  \item $P_{\mathrm{atm}} = 101.325\ \mathrm{kPa}$
+  \item $T = 25\,^{\circ}\mathrm{C} = 298.15\ \mathrm{K}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $m_{\mathrm{air}}$
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas relation with air gas constant.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $P_{\mathrm{abs}} = 351.325\ \mathrm{kPa}$
+  \item $m_{\mathrm{air}} = 2.0529\ \mathrm{kg}$
+\end{itemize}
+
+\[\boxed{m_{\mathrm{air}} = 2.0529\ \mathrm{kg}}\]
+
+\textbf{Trap.} Gauge pressure must be converted to absolute pressure before applying the ideal-gas equation.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q10; official worked values from the local source page.
+
+\section*{Q11}
+\textbf{Rewritten question.} A spherical balloon with diameter $10\ \mathrm{m}$ contains helium at $25\,^{\circ}\mathrm{C}$ and $250\ \mathrm{kPa}$ gauge. Determine the mole number and mass of helium.
+
+\textbf{Vague note.} Ideal gas in a spherical container.
+
+\textbf{System/boundary.} Closed helium balloon.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The balloon is a perfect sphere.
+  \item Helium behaves as an ideal gas.
+  \item Absolute pressure is used.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $d = 10\ \mathrm{m}$
+  \item $T = 25\,^{\circ}\mathrm{C} = 298.15\ \mathrm{K}$
+  \item $P_{\mathrm{gage}} = 250\ \mathrm{kPa}$
+  \item $P_{\mathrm{atm}} = 101.325\ \mathrm{kPa}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $n_{\mathrm{He}}$, $m_{\mathrm{He}}$
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas relation with helium molecular data.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $V = 523.5988\ \mathrm{m^3}$
+  \item $P_{\mathrm{abs}} = 351.325\ \mathrm{kPa}$
+  \item $m_{\mathrm{He}} = 297.069\ \mathrm{kg}$
+  \item $n_{\mathrm{He}} \approx 74.21\ \mathrm{kmol}$
+\end{itemize}
+
+\[\boxed{m_{\mathrm{He}} = 297.069\ \mathrm{kg},\ n_{\mathrm{He}} \approx 74.21\ \mathrm{kmol}}\]
+
+\textbf{Trap.} Use the balloon volume from sphere geometry before the gas law.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q11; official worked values from the local source page.
+
+\section*{Q12}
+\textbf{Rewritten question.} An ideal gas initially at $900\,^{\circ}\mathrm{C}$ expands from a partitioned rigid tank into vacuum, then is heated until the pressure returns to its initial value. Find the final temperature.
+
+\textbf{Vague note.} Free expansion followed by constant-volume heating.
+
+\textbf{System/boundary.} Closed ideal-gas system in a rigid tank.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Ideal-gas behavior.
+  \item The tank is rigid.
+  \item Final pressure equals initial pressure.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $T_1 = 900\,^{\circ}\mathrm{C} = 1173.15\ \mathrm{K}$
+  \item Expansion from one part to the full tank gives $V_2 = 4V_1$
+  \item $P_3 = P_1$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $T_3$
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas relation between states.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $T_3 = 4692.60\ \mathrm{K}$
+\end{itemize}
+
+\[\boxed{T_3 = 4692.60\ \mathrm{K}}\]
+
+\textbf{Trap.} The free expansion changes volume, so the final heating must account for the $4\times$ total volume.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q12; official worked values from the local source page.
+
+\section*{Q13}
+\textbf{Rewritten question.} A $2\ \mathrm{m^3}$ tank of air at $10\,^{\circ}\mathrm{C}$ and $300\ \mathrm{kPa}$ is connected to a second tank that contains $3\ \mathrm{kg}$ of air at $35\,^{\circ}\mathrm{C}$ and $100\ \mathrm{kPa}$. After the valve is opened, the combined system reaches thermal equilibrium at $25\,^{\circ}\mathrm{C}$. Determine the second tank volume and the final absolute pressure.
+
+\textbf{Vague note.} Two-tank ideal-gas mixing with final thermal equilibrium.
+
+\textbf{System/boundary.} Combined closed system of both tanks.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Air behaves as an ideal gas.
+  \item Final temperature equals ambient temperature.
+  \item Total mass is conserved.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item Tank 1: $V_1 = 2\ \mathrm{m^3}$, $T_1 = 10\,^{\circ}\mathrm{C}$, $P_1 = 300\ \mathrm{kPa}$ gauge
+  \item Tank 2: $m_2 = 3\ \mathrm{kg}$, $T_2 = 35\,^{\circ}\mathrm{C}$, $P_2 = 100\ \mathrm{kPa}$
+  \item Final temperature: $T_f = 25\,^{\circ}\mathrm{C}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item $V_2$, $P_f$
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas equation of state for both tanks.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $V_2 = 1.3179\ \mathrm{m^3}$
+  \item $P_f = 332.1055\ \mathrm{kPa\ abs}$
+\end{itemize}
+
+\[\boxed{V_2 = 1.3179\ \mathrm{m^3},\ P_f = 332.1055\ \mathrm{kPa\ abs}}\]
+
+\textbf{Trap.} The final pressure must be reported as absolute pressure.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q13; official worked values from the local source page.
+
+\section*{Q14}
+\textbf{Rewritten question.} Air in a piston-cylinder starts at $0.04\ \mathrm{m^3}$, $50\,^{\circ}\mathrm{C}$, and $500\ \mathrm{kPa}$ abs. Heat added is $60\ \mathrm{kJ}$ and the final temperature is $600\,^{\circ}\mathrm{C}$. With constant pressure and constant specific heats, determine the required paddle-wheel work added to the air.
+
+\textbf{Vague note.} First-law balance with shaft work at constant pressure.
+
+\textbf{System/boundary.} Closed air system in a piston-cylinder with paddle-wheel work.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Air behaves as an ideal gas with constant specific heats.
+  \item Pressure remains constant.
+  \item The reported paddle-wheel work is work done on the air.
+\end{itemize}
+
+\textbf{Given.}
+\begin{itemize}
+  \item $V_1 = 0.04\ \mathrm{m^3}$
+  \item $T_1 = 50\,^{\circ}\mathrm{C}$
+  \item $P = 500\ \mathrm{kPa\ abs}$
+  \item $Q_{\mathrm{in}} = 60\ \mathrm{kJ}$
+  \item $T_2 = 600\,^{\circ}\mathrm{C}$
+\end{itemize}
+
+\textbf{Find.}
+\begin{itemize}
+  \item Paddle-wheel work input
+\end{itemize}
+
+\textbf{Table choice.} Ideal-gas energy relation with constant specific heats.
+
+\textbf{Answer.}
+\begin{itemize}
+  \item $m = 0.2156\ \mathrm{kg}$
+  \item $\Delta U = 119.199\ \mathrm{kJ}$
+  \item Paddle-wheel work input $= 59.199\ \mathrm{kJ}$
+\end{itemize}
+
+\[\boxed{W_{\mathrm{paddle,in}} = 59.199\ \mathrm{kJ}}\] 
+
+\textbf{Trap.} The arithmetic in the source has a small caveat; the energy balance still gives the stated result.
+
+\textbf{Source page.} week3-q9-q14.pdf, Q14; official worked values from the local source page.

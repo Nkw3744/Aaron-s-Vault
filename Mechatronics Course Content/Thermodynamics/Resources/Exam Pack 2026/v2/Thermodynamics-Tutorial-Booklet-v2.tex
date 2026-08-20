@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=16mm,headsep=5mm,footskip=8mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,graphicx,xcolor,enumitem,fancyhdr,hyperref,float,caption}
+\usepackage[most]{tcolorbox}
+\definecolor{navy}{HTML}{17324D}\definecolor{blue}{HTML}{2D6A8A}\definecolor{pale}{HTML}{EEF5F8}\definecolor{warn}{HTML}{8A4B08}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setlist{nosep,leftmargin=*}
+\pagestyle{fancy}\fancyhf{}\lhead{ENME601 Thermodynamics}\rhead{Tutorial Booklet v2}\cfoot{\thepage}
+\newtcolorbox{method}[1][]{colback=pale,colframe=blue,boxrule=.5pt,arc=1mm,title=#1,fonttitle=\bfseries}
+\newtcolorbox{caution}[1][]{colback=yellow!8,colframe=warn,boxrule=.5pt,arc=1mm,title=#1,fonttitle=\bfseries}
+\newcommand{\questionfigure}[2]{\begin{figure}[H]\centering\includegraphics[width=.88\textwidth,height=.43\textheight,keepaspectratio]{question-images/#1}\caption*{\small #2}\end{figure}}
+\newcommand{\weekstart}[2]{\clearpage\phantomsection\addcontentsline{toc}{section}{#1 --- #2}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{24mm}
+{\Huge\bfseries Thermodynamics Tutorial Booklet v2\par}\vspace{5mm}
+{\Large Weeks 1--6 --- Rewritten Questions and Expanded Solutions\par}\vspace{11mm}
+{\large Every recoverable question is written out with the answer beside it, including system type, boundary, assumptions, property model, equations, substitutions, source caveats and necessary figures.\par}
+\vfill
+\begin{method}[How to use this booklet]
+Read the rewritten question first. Before looking at the arithmetic, identify the boundary and write the unsimplified mass and energy balances. The ``vague/source note'' records ambiguities rather than silently repairing them. Numerical properties are tied to the current local tutorial tables and official solution pages; use the separate 2026 property tables during the exam for any fresh calculation.
+\end{method}
+\vfill 20 August 2026
+\end{titlepage}
+\tableofcontents\newpage
+\section{A repeatable answer structure}
+\begin{enumerate}
+\item \textbf{System and boundary:} closed system/control mass, open control volume, or isolated system.
+\item \textbf{Given and find:} convert litres, centimetres, gauge pressure and Celsius before substitution.
+\item \textbf{Assumptions:} steady/transient, adiabatic, rigid, ideal gas, incompressible, negligible kinetic/potential change, quasi-equilibrium.
+\item \textbf{State model:} classify the phase and select a saturation, superheated, compressed-liquid or ideal-gas table.
+\item \textbf{Governing laws:} mass balance first for open systems, then the full energy balance.
+\item \textbf{Working:} show table values, interpolation, units and sign convention.
+\item \textbf{Check:} conservation, bounds, sign, physical direction and plausible magnitude.
+\end{enumerate}
+\begin{caution}[Notation]
+This booklet uses $Q>0$ into the system and $W>0$ by the system unless a question asks directly for work input. A boxed positive compressor-work value is therefore reported as a required input magnitude.
+\end{caution}
+\weekstart{Week 1}{Basic properties, pressure and hydrostatics}
+\input{chapters/week1.tex}
+\weekstart{Week 2}{Energy, work, power and ideal-gas foundations}
+\input{chapters/week2.tex}
+\weekstart{Week 3}{Pure substances, interpolation and ideal gases}
+\input{chapters/week3.tex}
+\weekstart{Week 4}{Boundary work and closed-system energy}
+\input{chapters/week4.tex}
+\weekstart{Week 5}{Mass and energy analysis of control volumes}
+\input{chapters/week5.tex}
+\weekstart{Week 6}{Second law, engines and refrigeration}
+\input{chapters/week6.tex}
+\clearpage
+\section{Final exam checks}
+\begin{itemize}
+\item The tutorial set contains 61 rewritten questions: Week 1 (10), Week 2 (10), Week 3 (14), Week 4 (12), Week 5 (10), Week 6 (5).
+\item Quality $x$ is only valid inside a two-phase saturation region and must lie from 0 to 1.
+\item A rigid tank has no moving-boundary work, but it may still receive heat or shaft/electrical work.
+\item A filling or emptying tank is transient even if its inlet flow rate is constant.
+\item A throttle is approximately isenthalpic, not isothermal or isentropic.
+\item Carnot equations and ideal-gas equations require absolute temperature; ideal-gas pressure must be absolute.
+\end{itemize}
+\end{document}

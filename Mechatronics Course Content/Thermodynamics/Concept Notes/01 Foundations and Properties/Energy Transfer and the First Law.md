@@ -311,6 +311,18 @@ An ideal-gas approximation is best at relatively low pressure and high temperatu
 
 ## Quick recall
 
+### Exam device map
+
+| Problem cue | First energy term to inspect |
+| --- | --- |
+| Closed piston-cylinder | moving-boundary work and $\Delta U$ |
+| Shaft, pump, compressor, stirrer | shaft-work direction and power |
+| Speed change | $\Delta KE=m(V_2^2-V_1^2)/2$ |
+| Elevation change | $\Delta PE=mg(z_2-z_1)$ |
+| Spring | $W_{spring}=\tfrac12k(x_2^2-x_1^2)$ |
+
+Start from the complete first-law balance. Use $Q=mc\Delta T$ only after justifying a sensible-heating property model with no phase change.
+
 - $E=U+KE+PE$.
 - Heat is caused by temperature difference; work is every other energy transfer not carried by mass.
 - Heat and work are path functions, not properties.

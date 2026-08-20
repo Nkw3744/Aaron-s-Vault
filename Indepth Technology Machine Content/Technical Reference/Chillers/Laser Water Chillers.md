@@ -15,15 +15,15 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Chiller role, connection, fill, and normal operation for fiber and CO₂ lasers.
+> Chiller role, connection, fill, normal operation, and entry points to dual-loop, water quality, and alarm notes.
 
 ## Function
 
 Removes heat from:
 
-- Laser source ( resonator / fiber module)
+- Laser source (resonator / fiber module)
 - Cutting head optics and QBH (often separate loop)
-- Sometimes delivery fiber cooling circuit
+- Sometimes delivery-fiber cooling
 
 Without stable cooling: power drift, over-temp alarms, source shutdown.
 
@@ -31,59 +31,59 @@ Without stable cooling: power drift, over-temp alarms, source shutdown.
 
 | Model class | Typical laser match |
 | --- | --- |
-| CW-5000 / CW-5200 | 0.5–2 kW class |
-| CW-6000 / CW-6100 / CW-6200 | 2–6 kW; dual temp |
-| OEM branded industrial | 8 kW+ |
+| CW-5000 / CW-5200 | ~0.5–2 kW class |
+| CW-6000 / CW-6100 / CW-6200 | ~2–6 kW; dual temp |
+| OEM industrial | 8 kW+ |
 
-Alarm detail: [[CW Series Chiller Alarm Codes]].
+Alarms: [[CW Series Chiller Alarm Codes]]. Flowchart: [[Chiller Troubleshooting Flowchart]].
 
 ## Connection convention
 
 **Chiller OUT → machine IN** (cold to load)  
 **Machine OUT → chiller IN** (warm return)
 
-Verify arrow stickers on both chiller and laser labels — some OEMs reverse terminology in manuals.
+Verify stickers — some manuals reverse wording. Dual-loop: [[Dual-Temperature Chiller Circuits]].
 
 ## Fill and commissioning
 
-1. Use distilled or deionized water — [[Cooling Water Quality]]
-2. Fill to middle/top of green on sight gauge — not "FULL" overfill mark
-3. Run pump; bleed air at high points in laser loop
-4. Check level again after loop fills
-5. Set temperature setpoints — [[Dual-Temperature Chiller Circuits]], [[Dew Point and Chiller Setpoints]]
-6. Run 30 min before enabling laser emission
-
-## Normal operation
-
-- Pump runs continuously when chiller powered
-- Compressor fan cycles on load
-- Water temp stable ±1–3 °C of setpoint depending on controller
-- No leaks at QBH water lines or quick couplers
+1. Distilled/DI water — [[Cooling Water Quality]]
+2. Fill to green zone (not overfill mark)
+3. Run pump; bleed air
+4. Recheck level after loop fills
+5. Set LT/HT for season and dew point — [[Dew Point and Chiller Setpoints]]
+6. Run 30+ min before emission
+7. Winter: glycol/heat plan — [[Antifreeze and Winter Operation]]
 
 ## Hose and routing
 
 | Parameter | Typical OEM hint |
 | --- | --- |
-| Max hose length | ≤10 m total run |
-| Avoid | Kinks, sharp bends, crushing in door tracks |
-| Insulation | Optional on return line in humid shops |
+| Max hose length | ≤10 m |
+| Avoid | Kinks, door crush, sharp bends |
+| Insulation | Helpful on returns in humid shops |
 
-## Troubleshooting entry
+## Normal operation
 
-[[Chiller Troubleshooting Flowchart]] · [[CW Series Chiller Alarm Codes]]
-
-## CO₂ note
-
-CO₂ lasers often use lower water temperature setpoints and different chemistry — [[CO2 Chiller and Gas Requirements]].
-
-## Related notes
-
-- [[Antifreeze and Winter Operation]]
-- [[Fiber Laser Commissioning Sequence]]
+| Observation | Meaning |
+| --- | --- |
+| Pump continuous when powered | Normal |
+| Compressor/fans cycle on load | Normal |
+| Stable ±1–3 °C of setpoint | Healthy control |
+| No leaks at QBH couplers | OK |
 
 ## Local context
 
-Water chiller plug-in documented on [[Gweike 3015GAII]] work history.
+Chiller plug-in on [[Gweike 3015GAII]] work history.
+
+## CO₂ note
+
+Different setpoints/chemistry possible — [[CO2 Chiller and Gas Requirements]].
+
+## Related notes
+
+- [[Fiber Laser Commissioning Sequence]]
+- [[Ambient Temperature Limits]]
+- [[Workshop Humidity and Condensation]]
 
 ## Sources
 

@@ -15,59 +15,78 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Workshop Humidity and Condensation]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Sizing and placing dehumidification when HVAC alone cannot hold RH ≤60%.
+> Sizing and placing dehumidification when HVAC alone cannot hold RH ≤60%, or when dew-point alarms persist despite correct chiller setpoints.
 
 ## When needed
 
-- Coastal or tropical humid climates
+- Coastal / tropical humidity
 - No dedicated laser-room AC
-- Repeated dew-point alarms despite correct chiller setpoints
-- Open shop floor with large roller doors (humidity spikes)
+- Repeated dew-point or condensation events
+- Open fab with roller doors (RH spikes)
+- Summer production with HT already at OEM max
 
-Lowering RH 20% can drop dew point ~5–8 °C — significant margin for head cooling.
+Lowering RH ~20% can drop dew point ~5–8 °C — large safety margin for head/QBH cooling.
 
 ## Types
 
-| Type | Best for |
+| Type | Best for | Notes |
+| --- | --- | --- |
+| Refrigerant dehumidifier | General workshops | 20–50 L/day class common |
+| Desiccant industrial | Large volume / low dew point | Higher capital |
+| HVAC integrated | New builds | Best long-term |
+| Cabinet mini unit | Electrical enclosure only | ~0.5 L/day+; not whole room |
+
+## Placement rules
+
+| Do | Don't |
 | --- | --- |
-| Refrigerant dehumidifier | General workshop; 20–30 L/day class common |
-| Desiccant industrial | Large volume; low dew point needs |
-| HVAC integrated | New builds; best long-term |
-| Cabinet mini dehumidifier | Electrical enclosure only (~0.5 L/day+) |
-
-## Placement
-
-- **Laser air intake zone** — local dry bubble if full room enclosure impossible
-- Not blowing directly on open QBH (dust movement)
-- Drain hose to fixed outlet; do not rely on manual emptying during weekend shutdown
-- Keep away from cutting zone spark path
+| Create a dry bubble at laser air intake | Blow dust directly across open QBH |
+| Pipe condensate to drain | Rely on full bucket over weekends |
+| Keep clear of spark/slag paths | Block chiller condenser airflow |
+| Combine with closed machine doors | Expect one small unit to dry a whole open bay |
 
 ## Sizing (rough)
 
-| Room volume | Starting hint |
+| Space | Starting hint |
 | --- | --- |
-| 50 m³ laser cell | 20–30 L/day rated unit |
-| 100 m³ | 30–50 L/day or HVAC |
-| Full open workshop | Room dehumidification often insufficient — build laser enclosure |
+| ~50 m³ enclosed laser cell | 20–30 L/day rated |
+| ~100 m³ | 30–50 L/day or HVAC |
+| Open workshop | Often need enclosure + local unit; room-only may fail |
 
-Combine with [[Ambient Temperature Limits]] — dehumidifiers add heat.
+Dehumidifiers add heat — coordinate with [[Ambient Temperature Limits]].
 
 ## Operation with chiller
 
-1. Run dehumidifier before laser enable in summer
-2. Confirm RH stable before emission
-3. HT loop still must be above dew point — dehumidifier is additive, not replacement
+1. Start dehumidifier/AC before laser enable on humid days
+2. Confirm RH and dew point margin — [[Dew Point and Chiller Setpoints]]
+3. Set HT loop above dew point + 2–3 °C
+4. Emission last
+5. Leave dehumidifier on overnight in muggy spells if safe/drained
 
 ## Maintenance
 
-- Clean filters monthly
-- Check drain line for algae block
-- Monitor RH meter daily log
+| Task | Interval |
+| --- | --- |
+| Clean air filter | Monthly (sooner if dusty) |
+| Check drain for algae/block | Weekly |
+| Verify RH meter calibration | Seasonal |
+| Empty/verify pump | Daily if no hard drain |
+
+## Troubleshooting
+
+| Symptom | Action |
+| --- | --- |
+| RH won't fall | Undersized; open doors; wet processes nearby |
+| Unit ices up | Low ambient; dirty filter; OEM defrost issue |
+| Water on floor | Drain fail — risk for electrics |
+| Still get head sweat | HT still too low; or local RH at head higher than room average |
 
 ## Related notes
 
-- [[Dew Point and Chiller Setpoints]]
+- [[Workshop Humidity and Condensation]]
+- [[Dual-Temperature Chiller Circuits]]
 - [[Fiber Laser Site Requirements]]
+- [[Dew Point and Chiller Setpoints]]
 
 ## Sources
 

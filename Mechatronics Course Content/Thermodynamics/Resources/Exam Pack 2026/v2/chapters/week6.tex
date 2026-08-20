@@ -1,0 +1,249 @@
+\section*{Week 6}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} A steam power plant delivers an actual power output of $150\,\text{MW}$. It consumes coal at a rate of $60\,\text{tons/h}$, and the coal heating value is $30{,}000\,\text{kJ/kg}$. Determine the overall efficiency of the plant.
+
+\textbf{Vague note.} "Overall efficiency" means actual useful power out divided by the ideal thermal power available from the fuel.
+
+\textbf{Device/system type and reservoir boundary.} Steady-flow power plant; treat the plant as the control volume. Fuel energy enters from the hot reservoir side, and useful power leaves at the shaft/electrical output boundary.
+
+\textbf{Assumptions.} Coal mass flow is uniform; heating value is fully available as thermal input; moisture and other losses are neglected for the ideal thermal input calculation; steady operation.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\dot W_{\text{out}}=150\,\text{MW}$, coal rate $=60\,\text{tons/h}$, heating value $=30{,}000\,\text{kJ/kg}$.
+  \item Find: overall efficiency $\eta$.
+\end{itemize}
+
+\textbf{First-law relation.}
+\[
+\eta = \frac{\dot W_{\text{out}}}{\dot Q_{\text{in}}}
+\qquad\text{with}\qquad
+\dot Q_{\text{in}} = \dot m_{\text{coal}}\,HV
+\]
+
+\textbf{Efficiency / COP / Carnot equation.} For a power plant, use efficiency $\eta$.
+
+\textbf{Sequential working with units and time conversions.}
+\[
+60\,\text{tons/h} = 60{,}000\,\text{kg/h} = \frac{60{,}000}{3600}\,\text{kg/s} = 16.6667\,\text{kg/s}
+\]
+\[
+\dot Q_{\text{in}} = (16.6667\,\text{kg/s})(30{,}000\,\text{kJ/kg}) = 500{,}000\,\text{kJ/s} = 500\,\text{MW}
+\]
+\[
+\eta = \frac{150\,\text{MW}}{500\,\text{MW}} = 0.30
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\eta = 0.30 = 30\%}
+\]
+
+\textbf{Feasibility / trap note.} The coal energy rate is much larger than the electrical output; 30\% is plausible for a steam plant. Do not confuse tons/h with kg/s.
+
+\textbf{Exact source pages.} Question sheet p.~1; solution p.~1--2.
+
+\subsection*{Q2}
+\textbf{Rewritten question.} A heat pump used to heat a house has a COP of 2.5, meaning it delivers $2.5\,\text{kWh}$ of heat to the house for each $1\,\text{kWh}$ of electricity it consumes. Is this a violation of the first law of thermodynamics? Explain.
+
+\textbf{Vague note.} The COP statement sounds larger than 1, but for a heat pump the delivered heat includes both the input work and heat absorbed from the outside air.
+
+\textbf{Device/system type and reservoir boundary.} Closed cycle/steady cyclic device; hot reservoir is the house interior and cold reservoir is the outside air. The compressor work crosses the system boundary into the cycle.
+
+\textbf{Assumptions.} Steady cyclic operation; negligible kinetic and potential energy changes; no mass crosses the boundary.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\mathrm{COP}_{\mathrm{HP}}=2.5$.
+  \item Find: whether the first law is violated.
+\end{itemize}
+
+\textbf{First-law relation.}
+\[
+\dot Q_H = \dot Q_L + \dot W_{\text{in}}
+\]
+For a heat pump,
+\[
+\mathrm{COP}_{\mathrm{HP}} = \frac{\dot Q_H}{\dot W_{\text{in}}}
+\]
+
+\textbf{Efficiency / COP / Carnot equation.} Heat pump COP is allowed to exceed 1 because it measures heat delivered per unit work input, not work output per heat input.
+
+\textbf{Sequential working with units and time conversions.} Take $1\,\text{kWh}$ of electrical input.
+\[
+\dot W_{\text{in}} = 1\,\text{kWh}, \qquad \dot Q_H = 2.5\,\text{kWh}
+\]
+Then
+\[
+\dot Q_L = \dot Q_H - \dot W_{\text{in}} = 2.5 - 1.0 = 1.5\,\text{kWh}
+\]
+So the cycle moves $1.5\,\text{kWh}$ from outdoors into the house in addition to the $1\,\text{kWh}$ of work input.
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\text{No. The first law is not violated; the heat pump adds }1.5\,\text{kWh}\text{ from the outside air.}}
+\]
+
+\textbf{Feasibility / trap note.} The trap is assuming the delivered heat must equal the electrical input. It does not; the outside air supplies the rest.
+
+\textbf{Exact source pages.} Question sheet p.~1; solution p.~3.
+
+\subsection*{Q3}
+\textbf{Rewritten question.} A refrigerator has a power input of $450\,\text{W}$ and a COP of 1.5. It is to cool five watermelons of mass $10\,\text{kg}$ each from $28^\circ\text{C}$ to $8^\circ\text{C}$. Treat the watermelons as water with $c=4.2\,\mathrm{kJ/(kg\,^{\circ}C)}$. How long will the cooling take, and is the result realistic or optimistic?
+
+\textbf{Vague note.} The cooling load is the sensible heat removed from the melons, while the refrigerator extracts heat at a rate set by its COP.
+
+\textbf{Device/system type and reservoir boundary.} Refrigerator cycle; cold reservoir is the watermelon load inside the cabinet, hot reservoir is the room air, and compressor work enters the cycle.
+
+\textbf{Assumptions.} Watermelons are modeled as pure water; their temperature is uniform; refrigerator COP is constant; cabinet air thermal mass is negligible.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\dot W_{\text{in}}=450\,\text{W}$, $\mathrm{COP}_R=1.5$, $m=5\times 10=50\,\text{kg}$, $T_1=28^\circ\text{C}$, $T_2=8^\circ\text{C}$, $c=4.2\,\mathrm{kJ/(kg\,^{\circ}C)}$.
+  \item Find: time $t$.
+\end{itemize}
+
+\textbf{First-law relation.}
+\[
+\mathrm{COP}_R = \frac{\dot Q_L}{\dot W_{\text{in}}}
+\qquad\Rightarrow\qquad
+\dot Q_L = \mathrm{COP}_R\,\dot W_{\text{in}}
+\]
+and for the watermelon cooling load,
+\[
+Q = mc\Delta T
+\]
+
+\textbf{Efficiency / COP / Carnot equation.} For a refrigerator, use $\mathrm{COP}_R=\dot Q_L/\dot W_{\text{in}}$.
+
+\textbf{Sequential working with units and time conversions.}
+\[
+\dot Q_L = 1.5\times 450\,\text{W} = 675\,\text{W} = 0.675\,\text{kJ/s}
+\]
+\[
+Q = (50\,\text{kg})(4.2\,\mathrm{kJ/(kg\,^{\circ}C)})(28-8)^\circ\text{C}
+= 4200\,\text{kJ}
+\]
+\[
+t = \frac{Q}{\dot Q_L} = \frac{4200\,\text{kJ}}{0.675\,\text{kJ/s}} = 6222.22\,\text{s}
+\]
+\[
+6222.22\,\text{s} = \frac{6222.22}{60}\,\text{min} = 103.70\,\text{min} \approx 1.73\,\text{h}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{t \approx 6.22\times 10^3\,\text{s} \approx 104\,\text{min} \approx 1.73\,\text{h}}
+\]
+
+\textbf{Feasibility / trap note.} This is optimistic because real watermelons are not pure water and the cooling is not perfectly uniform; the actual time will usually be longer.
+
+\textbf{Exact source pages.} Question sheet p.~1; solution p.~5--6.
+
+\subsection*{Q4}
+\textbf{Rewritten question.} Refrigerant-134a enters the condenser of a residential heat pump at $800\,\text{kPa}$ and $35^\circ\text{C}$ at a rate of $0.018\,\text{kg/s}$ and leaves at $800\,\text{kPa}$ as a saturated liquid. If the compressor consumes $1.2\,\text{kW}$ of power, determine (a) the COP of the heat pump and (b) the rate of heat absorption from the outside air.
+
+\textbf{Vague note.} The condenser analysis gives the heat delivered to the house; then the cycle first law gives the outside-air heat absorption.
+
+\textbf{Device/system type and reservoir boundary.} Residential heat pump cycle; condenser is the hot-side heat exchanger, evaporator is the cold-side heat exchanger, and the compressor work crosses the boundary into the cycle.
+
+\textbf{Assumptions.} Steady flow through the condenser; negligible kinetic and potential energy changes; no shaft work in the condenser itself; property values are taken from R-134a tables.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\dot m=0.018\,\text{kg/s}$, $P_1=800\,\text{kPa}$, $T_1=35^\circ\text{C}$, $P_2=800\,\text{kPa}$, saturated liquid at exit, $\dot W_{\text{in}}=1.2\,\text{kW}$.
+  \item Find: (a) $\mathrm{COP}_{\mathrm{HP}}$, (b) $\dot Q_L$.
+\end{itemize}
+
+\textbf{First-law relation.}
+For the condenser,
+\[
+\dot Q_H = \dot m\,(h_1-h_2)
+\]
+and for the full heat-pump cycle,
+\[
+\dot Q_H = \dot Q_L + \dot W_{\text{in}}
+\]
+so
+\[
+\mathrm{COP}_{\mathrm{HP}} = \frac{\dot Q_H}{\dot W_{\text{in}}},
+\qquad
+\dot Q_L = \dot Q_H - \dot W_{\text{in}}
+\]
+
+\textbf{Efficiency / COP / Carnot equation.} Heat pump COP is $\dot Q_H/\dot W_{\text{in}}$.
+
+\textbf{Sequential working with units and time conversions.} From the R-134a tables at $800\,\text{kPa}$:
+\[
+h_1 \approx 272.7\,\text{kJ/kg}\quad\text{(slightly superheated at }35^\circ\text{C)}
+\]
+\[
+h_2 \approx 95.5\,\text{kJ/kg}\quad\text{(saturated liquid)}
+\]
+Then
+\[
+\dot Q_H = (0.018\,\text{kg/s})(272.7-95.5)\,\text{kJ/kg}
+= 3.19\,\text{kW}
+\]
+\[
+\mathrm{COP}_{\mathrm{HP}} = \frac{3.19\,\text{kW}}{1.2\,\text{kW}} = 2.66
+\]
+\[
+\dot Q_L = 3.19\,\text{kW} - 1.2\,\text{kW} = 1.99\,\text{kW}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\mathrm{COP}_{\mathrm{HP}} \approx 2.66, \qquad \dot Q_L \approx 1.99\,\text{kW}}
+\]
+
+\textbf{Feasibility / trap note.} The key trap is that the condenser outlet is saturated liquid, so the condenser enthalpy drop must be found from property tables; the COP is based on heat delivered, not compressor power alone.
+
+\textbf{Exact source pages.} Question sheet p.~1; solution p.~7--13.
+
+\subsection*{Q5}
+\textbf{Rewritten question.} A Carnot heat engine operates between a source at $1000\,\text{K}$ and a sink at $300\,\text{K}$. If heat is supplied at a rate of $800\,\text{kJ/min}$, determine (a) the thermal efficiency and (b) the power output of the engine.
+
+\textbf{Vague note.} Carnot means reversible, so the maximum possible efficiency is set only by the two reservoir temperatures.
+
+\textbf{Device/system type and reservoir boundary.} Reversible heat engine; hot reservoir at $1000\,\text{K}$, cold reservoir at $300\,\text{K}$, and work leaves across the shaft boundary.
+
+\textbf{Assumptions.} Carnot/reversible cycle; steady cyclic operation; negligible kinetic and potential energy changes.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $T_H=1000\,\text{K}$, $T_L=300\,\text{K}$, $\dot Q_H=800\,\text{kJ/min}$.
+  \item Find: (a) $\eta_{\text{th}}$, (b) $\dot W_{\text{out}}$.
+\end{itemize}
+
+\textbf{First-law relation.}
+\[
+\eta_{\text{th}} = 1-\frac{\dot Q_L}{\dot Q_H} = \frac{\dot W_{\text{out}}}{\dot Q_H}
+\]
+For a Carnot engine,
+\[
+\eta_{\text{Carnot}} = 1-\frac{T_L}{T_H}
+\]
+
+\textbf{Efficiency / COP / Carnot equation.}
+\[
+\eta_{\text{Carnot}} = 1-\frac{300}{1000} = 0.70
+\]
+
+\textbf{Sequential working with units and time conversions.}
+\[
+800\,\text{kJ/min} = \frac{800}{60}\,\text{kJ/s} = 13.3333\,\text{kW}
+\]
+\[
+\dot W_{\text{out}} = \eta_{\text{th}}\,\dot Q_H = 0.70\times 13.3333\,\text{kW} = 9.3333\,\text{kW}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\eta_{\text{th}}=70\%, \qquad \dot W_{\text{out}}\approx 9.33\,\text{kW}}
+\]
+
+\textbf{Feasibility / trap note.} The efficiency is not based on the heat input rate alone; it is limited by the hot and cold reservoir temperatures. The 70\% value is the Carnot maximum, not a guarantee for a real engine.
+
+\textbf{Exact source pages.} Question sheet p.~2; solution p.~14--15.

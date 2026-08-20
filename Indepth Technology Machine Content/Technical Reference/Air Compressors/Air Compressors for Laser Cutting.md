@@ -6,7 +6,7 @@ type: technical-reference
 category: air-compressors
 applies_to: [fiber-laser]
 source_reviewed: 2026-08-05
-source_scope: Arcus installation guide, BLMA gas guidelines
+source_scope: Arcus installation guide, BLMA gas guidelines, field air-cut packages
 status: generic reference — verify against nameplate and project drawing
 ---
 
@@ -15,17 +15,26 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Planning shop air for laser air-cutting assist — not the same as a 7 bar tools-only compressor.
+> Planning or diagnosing shop air for **laser air-cutting assist** — a different duty from a 7 bar tools-only compressor.
+
+> [!danger] Oil and water destroy optics
+> Cutting air must be dry and essentially oil-free by the time it reaches the head. A tools compressor without dryer and fine filtration is not "close enough."
 
 ## Requirements summary
 
 | Item | Typical for laser air cutting |
 | --- | --- |
-| Type | Rotary screw, oil-free or well-treated oil-injected with filtration |
-| Pressure | ≥1.6 MPa (16 bar) discharge class |
-| Treatment | Dryer + multi-stage filtration to 0.01 µm |
-| Receiver | Stabilizes flow; reduces duty cycle |
-| Dedicated | Best practice: laser-dedicated treated line |
+| Type | Rotary screw (oil-free preferred, or oil-injected with full treatment) |
+| Discharge pressure | ≥1.6 MPa (16 bar) class common |
+| Treatment | Refrigerated dryer + multi-stage filtration to ~0.01 µm |
+| Receiver | Stabilizes pierce peaks; reduces short-cycling |
+| Branch | Dedicated treated line to laser preferred |
+
+Deep dives: [[Screw vs Piston Compressors]], [[Refrigerated Dryers]], [[Air Filtration Stages]], [[Compressor Sizing by Laser Power]], [[Compressed Air Cutting]].
+
+## Why 16 bar class?
+
+Many fiber air-cut recipes need **10–16+ bar at the nozzle under flow**. After dryer/filter ΔP and pipe loss, compressor discharge must be higher than nozzle pressure. A 7–8 bar tools plant cannot feed high-pressure air cutting without a booster (unusual) or abandoning air cut for N₂.
 
 ## System block diagram
 
@@ -40,40 +49,69 @@ flowchart LR
     comp --> sep --> tank --> dryer --> filt --> laser
 ```
 
+## Dual role: air cutting + PSA feed
+
+The same screw plant often feeds:
+
+1. Laser cutting air (high pressure after treatment)
+2. [[PSA Nitrogen Generators]] (moderate pressure feed air)
+
+Size for **sum of peaks** or schedule mutual exclusion — [[Compressor Sizing by Laser Power]]. Contaminated feed air poisons PSA CMS beds as well as laser windows.
+
 ## Installation checklist
 
-1. Size kW and flow — [[Compressor Sizing by Laser Power]]
-2. Screw vs piston — [[Screw vs Piston Compressors]]
-3. Install refrigerated dryer sized for **actual** FAD at pressure dew point target (+3 °C PDP common)
-4. Filters after dryer, not before
-5. Auto drains on separator, dryer, filters
-6. Hard pipe from treatment to laser; slope to drains
-7. Do not route laser air through welder or sandblast drops
-8. Electrical: often on **separate** circuit from laser — [[Laser Electrical Supply Requirements]]
+1. Select screw vs piston — [[Screw vs Piston Compressors]]
+2. Size kW and FAD at working pressure — [[Compressor Sizing by Laser Power]]
+3. Place compressor in ventilated room; heat load is large
+4. Receiver after separator; correctly sized safety valve
+5. Refrigerated dryer matched to FAD — [[Refrigerated Dryers]]
+6. Filters after dryer, correct order — [[Air Filtration Stages]]
+7. Auto drains on separator, dryer, filters — piped to waste
+8. Hard pipe main; slope to drains; short flexible at machine
+9. Electrical: separate circuit from laser preferred — [[Laser Electrical Supply Requirements]]
+10. Label laser branch; no sandblast/paint drops upstream of fine filters
+11. Commission: measure dynamic pressure during pierce; inspect first filter bowls after 8 h run
 
-## Normal operation
+## Normal operation — what good looks like
 
-- Receiver cycles at moderate rate under production
-- Dryer outlet temp near ambient + PDP spec
-- Filter ΔP gauges in green; drain bowls dry
+| Observation | Meaning |
+| --- | --- |
+| Moderate load/unload or VFD speed changes | Sized about right |
+| Dryer condensate regular | Drying working |
+| Filter ΔP in green | Elements healthy |
+| Laser inlet bowl dry | Train OK |
+| Stable cut pressure under flow | Supply adequate |
 
 ## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
-| Laser window oil burn | Filtration bypass or wrong filter install order |
-| Pressure low at head | Undersized compressor; leaks; long small-bore pipe |
-| Water in filters | Dryer failure; no drain |
-| Compressor overheats | Poor ventilation; duty cycle exceeded |
+| Window oil burn / haze | Filtration order, bypass, separator — stop cutting |
+| Pressure low at head | FAD, leaks, small-bore pipe, dryer ΔP |
+| Water in bowls | Dryer, drains, ambient overload |
+| Compressor overheat | Cooler dirty; room hot; duty exceeded |
+| Short-cycle idle | Leaks on control or cutting branch |
+| Cut quality pulses | Piston compressor or tiny receiver |
+
+## Service intervals (indicative)
+
+| Item | Hint |
+| --- | --- |
+| Drain checks | Daily humid / weekly dry |
+| Cooler clean | Monthly dusty |
+| Oil/separator (oil-injected) | OEM hours |
+| Dryer condenser | Monthly |
+| Coalescing / fine elements | ΔP or 1000–4000 h class |
 
 ## Related notes
 
 - [[Compressed Air Cutting]]
-- [[Refrigerated Dryers]]
-- [[Air Filtration Stages]]
-- [[FRL Units and Shop Air Plumbing]] — shop air ≠ cutting air unless fully treated
+- [[Nitrogen Assist Gas]] — alternative when air plant inadequate
+- [[FRL Units and Shop Air Plumbing]] — control air ≠ cutting air
+- [[Fiber Laser Power Classes]]
 
 ## Sources
 
 - Arcus CNC laser installation (compressed air section)
 - BLMA gas connection guidelines
+- Field air-cutting package practice

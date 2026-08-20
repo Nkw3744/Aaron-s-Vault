@@ -1,0 +1,562 @@
+\section*{Week 5}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} An air compressor compresses $6\,\text{L}$ of air at $120\,\text{kPa}$ and $20^\circ\text{C}$ to $1000\,\text{kPa}$ and $400^\circ\text{C}$. Determine the flow work, in $\text{kJ/kg}$, required by the compressor.
+
+\textbf{Vague note.} For an ideal gas, the specific flow work is $Pv=RT$; the compressor requirement is the change between the exit and inlet flow-work terms.
+
+\textbf{Control-volume / system type.} Steady-flow compressor control volume; one inlet and one exit. Flow work crosses the boundary with the mass stream.
+
+\textbf{Assumptions.} Air behaves as an ideal gas; kinetic and potential energy changes are irrelevant for flow work; steady operation.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $P_1=120\,\text{kPa}$, $T_1=293.15\,\text{K}$, $P_2=1000\,\text{kPa}$, $T_2=673.15\,\text{K}$, $R_{\text{air}}=0.2870\,\mathrm{kJ/(kg\,K)}$.
+  \item Find: specific flow work required by the compressor.
+\end{itemize}
+
+\textbf{Mass balance.} For steady single-inlet/single-exit flow, $\dot m_{\text{in}}=\dot m_{\text{out}}$.
+
+\textbf{Full SFEE then simplification.}
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+after canceling the negligible kinetic/potential terms and using ideal-gas flow work,
+\[
+w_{\text{flow, req}} = P_2v_2-P_1v_1 = R(T_2-T_1)
+\]
+
+\textbf{Table values.} Use the ideal-gas gas constant for air from Table A-1: $R=0.2870\,\mathrm{kJ/(kg\,K)}$.
+
+\textbf{Sequential working with units.}
+\[
+\Delta T = 673.15-293.15 = 380.00\,\text{K}
+\]
+\[
+w_{\text{flow, req}} = (0.2870\,\mathrm{kJ/(kg\,K)})(380.00\,\text{K}) = 109.06\,\text{kJ/kg}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{w_{\text{flow, req}} = 109.06\,\text{kJ/kg}}
+\]
+
+\textbf{Trap.} Do not use the literal inlet volume $6\,\text{L}$ in the final specific flow-work answer; the requested quantity is per kilogram and depends on temperature via the ideal-gas relation.
+
+\textbf{Source pages.} Question sheet p.~1; solution p.~1.
+
+\subsection*{Q2}
+\textbf{Rewritten question.} Air enters a $1\,\text{m}^2$ inlet of an aircraft engine at $100\,\text{kPa}$ and $20^\circ\text{C}$ with a velocity of $180\,\text{m/s}$. Determine the volume flow rate, in $\text{m}^3/\text{s}$, at the engine's inlet and the mass flow rate, in $\text{kg/s}$, at the engine's exit.
+
+\textbf{Vague note.} The inlet volumetric flow rate comes from $\dot V = AV$; the exit mass flow rate is the same as the inlet mass flow rate for steady flow.
+
+\textbf{Control-volume / system type.} Steady-flow engine control volume with one inlet and one exit.
+
+\textbf{Assumptions.} Air is an ideal gas; steady operation; one-dimensional inlet; negligible accumulation inside the engine.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $A_1=1.0\,\text{m}^2$, $V_1=180\,\text{m/s}$, $P_1=100\,\text{kPa}$, $T_1=293.15\,\text{K}$, $R=0.2870\,\mathrm{kJ/(kg\,K)}$.
+  \item Find: $\dot V_1$, $\dot m_2$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}=\dot m
+\]
+
+\textbf{Full SFEE then simplification.} This problem is a mass-flow calculation, so the SFEE is not required beyond steady-flow continuity; the mass rate is enough.
+
+\textbf{Table values.} For air as an ideal gas,
+\[
+\rho_1 = \frac{P_1}{RT_1}
+\]
+with $R=0.2870\,\mathrm{kJ/(kg\,K)} = 0.2870\,\mathrm{kPa\,m^3/(kg\,K)}$.
+
+\textbf{Sequential working with units.}
+\[
+\dot V_1 = A_1V_1 = (1.0\,\text{m}^2)(180\,\text{m/s}) = 180\,\text{m}^3/\text{s}
+\]
+\[
+\rho_1 = \frac{100\,\text{kPa}}{(0.2870\,\mathrm{kPa\,m^3/(kg\,K)})(293.15\,\text{K})} = 1.18858\,\text{kg/m}^3
+\]
+\[
+\dot m_2=\dot m_1=\rho_1\dot V_1=(1.18858\,\text{kg/m}^3)(180\,\text{m}^3/\text{s})=213.94\,\text{kg/s}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{\dot V_1 = 180\,\text{m}^3/\text{s}, \qquad \dot m_2 = 213.94\,\text{kg/s}}
+\]
+
+\textbf{Trap.} The exit mass flow rate is not found from the exit area here; the engine is a steady control volume, so the same mass rate passes through inlet and exit.
+
+\textbf{Source pages.} Question sheet p.~1; solution p.~1.
+
+\subsection*{Q3}
+\textbf{Rewritten question.} Refrigerant-134a enters the compressor of a refrigeration system as saturated vapor at $0.14\,\text{MPa}$ and leaves as superheated vapor at $0.8\,\text{MPa}$ and $60^\circ\text{C}$ at a rate of $0.06\,\text{kg/s}$. Determine the rates of energy transfers by mass into and out of the compressor. Assume kinetic and potential energies are negligible.
+
+\textbf{Vague note.} The compressor changes the refrigerant enthalpy; with negligible KE and PE, the mass-energy transfer rate is $\dot m h$ at each port.
+
+\textbf{Control-volume / system type.} Steady-flow compressor control volume.
+
+\textbf{Assumptions.} Steady operation; one inlet and one exit; negligible kinetic and potential energy changes; R-134a is a pure substance.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\dot m=0.06\,\text{kg/s}$, inlet $P_1=0.14\,\text{MPa}$ saturated vapor, outlet $P_2=0.8\,\text{MPa}$, $T_2=60^\circ\text{C}$.
+  \item Find: $\dot E_{\text{mass,in}}$, $\dot E_{\text{mass,out}}$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}=0.06\,\text{kg/s}
+\]
+
+\textbf{Full SFEE then simplification.}
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+With negligible kinetic and potential energy changes, the rate of energy transfer by mass is simply
+\[
+\dot E_{\text{mass}}=\dot m h
+\]
+
+\textbf{Table values.} From the official solution pages:
+\[
+ h_1 = 239.19\,\text{kJ/kg}, \qquad h_2 = 296.82\,\text{kJ/kg}
+\]
+
+\textbf{Sequential working with units.}
+\[
+\dot E_{\text{mass,in}} = \dot m h_1 = (0.06\,\text{kg/s})(239.19\,\text{kJ/kg}) = 14.3514\,\text{kW}
+\]
+\[
+\dot E_{\text{mass,out}} = \dot m h_2 = (0.06\,\text{kg/s})(296.82\,\text{kJ/kg}) = 17.8092\,\text{kW}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{\dot E_{\text{mass,in}} = 14.3514\,\text{kW}, \qquad \dot E_{\text{mass,out}} = 17.8092\,\text{kW}}
+\]
+
+\textbf{Trap.} The compressor adds energy to the refrigerant; do not reverse the inlet and outlet enthalpies.
+
+\textbf{Source pages.} Question sheet p.~1; solution p.~2--6.
+
+\subsection*{Q4}
+\textbf{Rewritten question.} Air enters a $16\,\text{cm}$-diameter pipe steadily at $200\,\text{kPa}$ and $20^\circ\text{C}$ with a velocity of $5\,\text{m/s}$. Air is heated as it flows, and it leaves the pipe at $180\,\text{kPa}$ and $40^\circ\text{C}$. Determine (a) the volume flow rate of air at the inlet, (b) the mass flow rate of air, and (c) the velocity and volume flow rate at the exit.
+
+\textbf{Vague note.} Continuity gives the same mass flow rate through the pipe; ideal-gas density converts between $\dot V$ and $\dot m$.
+
+\textbf{Control-volume / system type.} Steady-flow pipe control volume with one inlet and one exit.
+
+\textbf{Assumptions.} Air is an ideal gas; steady flow; single inlet and exit; constant pipe diameter; negligible storage.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $D=0.16\,\text{m}$, $V_1=5\,\text{m/s}$, $P_1=200\,\text{kPa}$, $T_1=293.15\,\text{K}$, $P_2=180\,\text{kPa}$, $T_2=313.15\,\text{K}$.
+  \item Find: (a) $\dot V_1$, (b) $\dot m$, (c) $V_2$ and $\dot V_2$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}=\dot m
+\]
+
+\textbf{Full SFEE then simplification.} Not needed for the continuity calculation; only mass conservation and the ideal-gas relation are required.
+
+\textbf{Table values.} Use $R_{\text{air}}=0.2870\,\mathrm{kJ/(kg\,K)}$.
+
+\textbf{Sequential working with units.}
+\[
+A_1=\frac{\pi D^2}{4}=\frac{\pi(0.16\,\text{m})^2}{4}=0.0201062\,\text{m}^2
+\]
+\[
+\dot V_1=A_1V_1=(0.0201062\,\text{m}^2)(5\,\text{m/s})=0.100531\,\text{m}^3/\text{s}
+\]
+\[
+\rho_1=\frac{P_1}{RT_1}=\frac{200\,\text{kPa}}{(0.2870)(293\,\text{K})}=2.37838\,\text{kg/m}^3
+\]
+\[
+\dot m=\rho_1\dot V_1=(2.37838\,\text{kg/m}^3)(0.100531\,\text{m}^3/\text{s})=0.23910\,\text{kg/s}
+\]
+At the exit, using $T_2=313\,\text{K}$,
+\[
+\rho_2=\frac{P_2}{RT_2}=\frac{180\,\text{kPa}}{(0.2870)(313\,\text{K})}=2.00376\,\text{kg/m}^3
+\]
+\[
+\dot V_2=\frac{\dot m}{\rho_2}=0.119326\,\text{m}^3/\text{s}
+\]
+\[
+V_2=\frac{\dot V_2}{A_1}=\frac{0.119326\,\text{m}^3/\text{s}}{0.0201062\,\text{m}^2}=5.93477\,\text{m/s}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{\dot V_1 = 0.100531\,\text{m}^3/\text{s},\quad \dot m = 0.23910\,\text{kg/s},\quad \dot V_2 = 0.119326\,\text{m}^3/\text{s},\quad V_2 = 5.93477\,\text{m/s}}
+\]
+
+\textbf{Trap.} Do not forget the diameter must be converted to area before using $\dot V=AV$.
+
+\textbf{Source pages.} Question sheet p.~2; solution p.~7.
+
+\subsection*{Q5}
+\textbf{Rewritten question.} A spherical hot-air balloon is initially filled with air at $120\,\text{kPa}$ and $20^\circ\text{C}$ with an initial diameter of $5\,\text{m}$. Air enters this balloon at $120\,\text{kPa}$ and $20^\circ\text{C}$ with a velocity of $3\,\text{m/s}$ through a $1\,\text{m}$-diameter opening. How many minutes will it take to inflate this balloon to a $17\,\text{m}$ diameter when the pressure and temperature of the air in the balloon remain the same as the air entering the balloon?
+
+\textbf{Vague note.} Since the balloon pressure and temperature stay constant, the added mass is just the density times the change in balloon volume.
+
+\textbf{Control-volume / system type.} Unsteady-flow control volume: the balloon is the control volume, and air mass accumulates inside.
+
+\textbf{Assumptions.} Balloon is a perfect sphere; inlet flow is steady; balloon air remains at the inlet pressure and temperature; air is an ideal gas.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $D_1=5\,\text{m}$, $D_2=17\,\text{m}$, $P=120\,\text{kPa}$, $T=293.15\,\text{K}$, $V_{\text{in}}=3\,\text{m/s}$, inlet diameter $=1\,\text{m}$.
+  \item Find: inflation time $t$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\Delta m = m_2-m_1 = \dot m_{\text{in}}\,t
+\]
+
+\textbf{Full SFEE then simplification.} This is a filling problem, so only the unsteady mass balance is needed; the energy balance is not required to find the inflation time.
+
+\textbf{Table values.} Use $R_{\text{air}}=0.2870\,\mathrm{kJ/(kg\,K)}$.
+
+\textbf{Sequential working with units.}
+\[
+\rho = \frac{P}{RT} = \frac{120\,\text{kPa}}{(0.2870)(293.15\,\text{K})} = 1.42548\,\text{kg/m}^3
+\]
+\[
+V_1=\frac{\pi}{6}(5\,\text{m})^3=65.4498\,\text{m}^3,\qquad
+V_2=\frac{\pi}{6}(17\,\text{m})^3=2572.44\,\text{m}^3
+\]
+\[
+A_{\text{in}}=\frac{\pi}{4}(1\,\text{m})^2=0.785398\,\text{m}^2
+\]
+\[
+\dot V_{\text{in}}=A_{\text{in}}V_{\text{in}}=(0.785398)(3)=2.35619\,\text{m}^3/\text{s}
+\]
+\[
+\dot m_{\text{in}}=\rho\dot V_{\text{in}}=(1.42548)(2.35619)=3.36063\,\text{kg/s}
+\]
+\[
+\Delta m = \rho(V_2-V_1) = (1.42548)(2572.44-65.4498)=3575.71\,\text{kg}
+\]
+\[
+t=\frac{\Delta m}{\dot m_{\text{in}}}=\frac{3575.71\,\text{kg}}{3.36063\,\text{kg/s}}=1064.6\,\text{s}=17.74\,\text{min}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{t \approx 17.7\,\text{min}}
+\]
+
+\textbf{Trap.} The balloon volume change is large, but the answer is still based on mass added, not on pressure-volume work.
+
+\textbf{Source pages.} Question sheet p.~2; solution p.~11.
+
+\subsection*{Q6}
+\textbf{Rewritten question.} A $2\,\text{m}^3$ rigid tank initially contains air whose density is $1.18\,\text{kg/m}^3$. The tank is connected to a high-pressure supply line through a valve. The valve is opened, and air is allowed to enter the tank until the density in the tank rises to $5.30\,\text{kg/m}^3$. Determine the mass of air that has entered the tank.
+
+\textbf{Vague note.} Rigid tank means the volume does not change, so the mass added is just the final mass minus the initial mass.
+
+\textbf{Control-volume / system type.} Unsteady rigid-tank control volume.
+
+\textbf{Assumptions.} Tank volume is constant; density is uniform in the tank at each state; no leakage.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $V=2\,\text{m}^3$, $\rho_1=1.18\,\text{kg/m}^3$, $\rho_2=5.30\,\text{kg/m}^3$.
+  \item Find: mass that entered, $m_{\text{in}}$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+ m_{\text{in}} = m_2-m_1
+\]
+
+\textbf{Full SFEE then simplification.} Energy balance is unnecessary for the requested mass gain; the rigid-tank volume and densities are sufficient.
+
+\textbf{Table values.} None.
+
+\textbf{Sequential working with units.}
+\[
+ m_1 = \rho_1V = (1.18\,\text{kg/m}^3)(2\,\text{m}^3)=2.36\,\text{kg}
+\]
+\[
+ m_2 = \rho_2V = (5.30\,\text{kg/m}^3)(2\,\text{m}^3)=10.60\,\text{kg}
+\]
+\[
+ m_{\text{in}} = 10.60-2.36 = 8.24\,\text{kg}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{m_{\text{in}} = 8.24\,\text{kg}}
+\]
+
+\textbf{Trap.} Do not use the supply-line conditions; only the tank densities and fixed volume are needed.
+
+\textbf{Source pages.} Question sheet p.~2; solution p.~13.
+
+\subsection*{Q7}
+\textbf{Rewritten question.} Air at $600\,\text{kPa}$ and $500\,\text{K}$ enters an adiabatic nozzle that has an inlet-to-exit area ratio of $2{:}1$ with a velocity of $120\,\text{m/s}$ and leaves with a velocity of $380\,\text{m/s}$. Determine (a) the exit temperature and (b) the exit pressure of the air.
+
+\textbf{Vague note.} In an adiabatic nozzle, the inlet enthalpy drop pays for the rise in kinetic energy.
+
+\textbf{Control-volume / system type.} Steady-flow nozzle control volume.
+
+\textbf{Assumptions.} Adiabatic; no shaft work; negligible potential-energy change; air is an ideal gas with temperature-dependent enthalpy.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $P_1=600\,\text{kPa}$, $T_1=500\,\text{K}$, $V_1=120\,\text{m/s}$, $V_2=380\,\text{m/s}$, $A_1/A_2=2$.
+  \item Find: $T_2$, $P_2$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}
+\]
+
+\textbf{Full SFEE then simplification.}
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+With $\dot Q=0$, $\dot W_{\text{shaft}}=0$, and negligible $gz$ terms,
+\[
+h_1+\frac{V_1^2}{2}=h_2+\frac{V_2^2}{2}
+\]
+
+\textbf{Table values.} Use Table A-17 for air enthalpy at $T_1=500\,\text{K}$. For the pressure relation, use the ideal-gas law and continuity.
+
+\textbf{Sequential working with units.}
+\[
+h_2=h_1+\frac{V_1^2-V_2^2}{2}
+\]
+With $c_p\approx 1.005\,\mathrm{kJ/(kg\,K)}$ and the standard air-table value at $500\,\text{K}$, this gives
+\[
+T_2 \approx 435.3\,\text{K}
+\]
+The density ratio from continuity and the area ratio gives
+\[
+\frac{\rho_2}{\rho_1}=\frac{A_1V_1}{A_2V_2}=\frac{2\times 120}{380}=0.63158
+\]
+Using $\rho\propto P/T$ for an ideal gas,
+\[
+\frac{P_2}{P_1}=\frac{\rho_2}{\rho_1}\frac{T_2}{T_1}
+=0.63158\left(\frac{435.3}{500}\right)
+\]
+\[
+P_2 \approx 3.30\times 10^2\,\text{kPa}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{T_2 \approx 435\,\text{K}, \qquad P_2 \approx 330\,\text{kPa}}
+\]
+
+\textbf{Trap.} Do not use a constant-$c_p$ shortcut without checking the outlet pressure with continuity and the area ratio.
+
+\textbf{Source pages.} Question sheet p.~3; solution p.~14.
+
+\subsection*{Q8}
+\textbf{Rewritten question.} An adiabatic air compressor compresses $10\,\text{L/s}$ of air at $120\,\text{kPa}$ and $20^\circ\text{C}$ to $1000\,\text{kPa}$ and $300^\circ\text{C}$. Determine (a) the work required by the compressor, in $\text{kJ/kg}$, and (b) the power required to drive the air compressor, in $\text{kW}$.
+
+\textbf{Vague note.} For an adiabatic compressor, the shaft work input equals the enthalpy rise for an ideal-gas model.
+
+\textbf{Control-volume / system type.} Steady-flow compressor control volume.
+
+\textbf{Assumptions.} Adiabatic; negligible KE and PE changes; air is an ideal gas; single inlet and exit.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $\dot V_1=10\,\text{L/s}=0.010\,\text{m}^3/\text{s}$, $P_1=120\,\text{kPa}$, $T_1=293.15\,\text{K}$, $P_2=1000\,\text{kPa}$, $T_2=573.15\,\text{K}$.
+  \item Find: $w_{\text{in}}$, $\dot W_{\text{in}}$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}=\dot m
+\]
+
+\textbf{Full SFEE then simplification.}
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+With $\dot Q=0$ and negligible KE/PE,
+\[
+ w_{\text{in}} = h_2-h_1
+\]
+
+\textbf{Table values.} From the air table, interpolate at $T_1=293.15\,\text{K}$ and read the value at $T_2=573.15\,\text{K}$:
+\[
+ h_1 \approx 293.32\,\text{kJ/kg}, \qquad h_2 \approx 578.88\,\text{kJ/kg}
+\]
+
+\textbf{Sequential working with units.}
+\[
+ w_{\text{in}} = h_2-h_1 = 578.88-293.32 = 285.56\,\text{kJ/kg}
+\]
+\[
+\rho_1=\frac{P_1}{RT_1}=\frac{120}{(0.2870)(293.15)}=1.4263\,\text{kg/m}^3
+\]
+\[
+\dot m = \rho_1\dot V_1=(1.4263)(0.010)=0.01426\,\text{kg/s}
+\]
+\[
+\dot W_{\text{in}} = \dot m\,w_{\text{in}} = (0.01426\,\text{kg/s})(285.56\,\text{kJ/kg}) = 4.08\,\text{kW}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{w_{\text{in}} = 285.56\,\text{kJ/kg}, \qquad \dot W_{\text{in}} = 4.08\,\text{kW}}
+\]
+
+\textbf{Trap.} The compressor work is an input, so the sign convention should not be reported as negative when the question asks for required work.
+
+\textbf{Source pages.} Question sheet p.~3; solution p.~20.
+
+\subsection*{Q9}
+\textbf{Rewritten question.} Refrigerant-134a is throttled from the saturated liquid state at $700\,\text{kPa}$ to a pressure of $160\,\text{kPa}$. Determine the temperature drop during this process and the final specific volume of the refrigerant.
+
+\textbf{Vague note.} Throttling is an isenthalpic process, so the exit state is found by holding $h$ constant and then reading the mixture properties.
+
+\textbf{Control-volume / system type.} Steady-flow throttling valve.
+
+\textbf{Assumptions.} Adiabatic; no shaft work; negligible kinetic and potential energy changes; R-134a is a pure substance.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: inlet saturated liquid at $700\,\text{kPa}$, exit pressure $160\,\text{kPa}$.
+  \item Find: $\Delta T$ and $v_2$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{in}}=\dot m_{\text{out}}
+\]
+
+\textbf{Full SFEE then simplification.}
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+For a throttling valve,
+\[
+ h_1=h_2
+\]
+
+\textbf{Table values.} From the official solution pages:
+\[
+T_1=26.69^\circ\text{C}, \qquad h_1=88.82\,\text{kJ/kg}
+\]
+At $160\,\text{kPa}$, saturation gives
+\[
+T_2=15.6^\circ\text{C}
+\]
+and with the quality computed from the saturated properties,
+\[
+x=0.2712,
+\quad v_f=0.0007435\,\text{m}^3/\text{kg},
+\quad v_g=0.12355\,\text{m}^3/\text{kg}
+\]
+
+\textbf{Sequential working with units.}
+\[
+\Delta T = T_1-T_2 = 26.69-15.6 = 11.09^\circ\text{C}
+\]
+\[
+v_2=v_f+x(v_g-v_f)
+=(0.0007435)+(0.2712)(0.12355-0.0007435)
+=0.0340\,\text{m}^3/\text{kg}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{\Delta T = 11.09^\circ\text{C}, \qquad v_2 = 0.0340\,\text{m}^3/\text{kg}}
+\]
+
+\textbf{Trap.} The exit is a vapour--liquid mixture, not superheated vapour; using saturated-mixture relations is the key step.
+
+\textbf{Source pages.} Question sheet p.~4; solution p.~22.
+
+\subsection*{Q10}
+\textbf{Rewritten question.} Refrigerant-134a at $1\,\text{MPa}$ and $90^\circ\text{C}$ is to be cooled to $1\,\text{MPa}$ and $30^\circ\text{C}$ in a condenser by air. The air enters at $100\,\text{kPa}$ and $27^\circ\text{C}$ with a volume flow rate of $600\,\text{m}^3/\text{min}$ and leaves at $95\,\text{kPa}$ and $60^\circ\text{C}$. Determine the mass flow rate of the refrigerant.
+
+\textbf{Vague note.} The heat lost by the refrigerant equals the heat gained by the air.
+
+\textbf{Control-volume / system type.} Steady-flow heat exchanger with two control volumes: one for R-134a and one for air.
+
+\textbf{Assumptions.} No work transfer; negligible KE and PE changes; R-134a is a pure substance; air is an ideal gas.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: R-134a at $P_3=1\,\text{MPa}$, $T_3=90^\circ\text{C}$, $P_4=1\,\text{MPa}$, $T_4=30^\circ\text{C}$; air at $P_1=100\,\text{kPa}$, $T_1=27^\circ\text{C}=300\,\text{K}$, $\dot V_1=600\,\text{m}^3/\text{min}=10\,\text{m}^3/\text{s}$, $P_2=95\,\text{kPa}$, $T_2=60^\circ\text{C}=333\,\text{K}$.
+  \item Find: $\dot m_{\text{R134a}}$.
+\end{itemize}
+
+\textbf{Mass balance.}
+\[
+\dot m_{\text{air,in}}=\dot m_{\text{air,out}},\qquad
+\dot m_{\text{R,in}}=\dot m_{\text{R,out}}=\dot m_{\text{R134a}}
+\]
+
+\textbf{Full SFEE then simplification.}
+For each stream in the heat exchanger,
+\[
+\dot Q-\dot W_{\text{shaft}}+\dot m\left(h_1+\frac{V_1^2}{2}+gz_1\right)
+=\dot m\left(h_2+\frac{V_2^2}{2}+gz_2\right)
+\]
+With $\dot W_{\text{shaft}}=0$ and negligible KE/PE changes,
+\[
+\dot Q = \dot m(h_2-h_1)
+\]
+For the coupled heat exchanger,
+\[
+\dot Q_{\text{air}} = -\dot Q_{\text{R134a}}
+\]
+
+\textbf{Table values.} For air, use $R=0.2870\,\mathrm{kJ/(kg\,K)}$ and the air enthalpy values from Table A-17 at $300\,\text{K}$ and $333\,\text{K}$. For R-134a, use the official table values from the solution pages:
+\[
+ h_3 \approx 416.03\,\text{kJ/kg}, \qquad h_4 \approx 218.19\,\text{kJ/kg}
+\]
+so that
+\[
+ h_3-h_4 \approx 197.84\,\text{kJ/kg}
+\]
+
+\textbf{Sequential working with units.}
+\[
+\rho_{\text{air},1}=\frac{P_1}{RT_1}=\frac{100\,\text{kPa}}{(0.2870)(300\,\text{K})}=1.16144\,\text{kg/m}^3
+\]
+\[
+\dot m_{\text{air}}=\rho_{\text{air},1}\dot V_1=(1.16144\,\text{kg/m}^3)(10\,\text{m}^3/\text{s})=11.6144\,\text{kg/s}
+\]
+Using the air-table enthalpy rise,
+\[
+\dot Q_{\text{air}}=\dot m_{\text{air}}(h_2-h_1)\approx 115.6\,\text{kW}
+\]
+Therefore, for the refrigerant,
+\[
+\dot Q_{\text{air}} = \dot m_{\text{R134a}}(h_3-h_4)
+\]
+\[
+\dot m_{\text{R134a}} = \frac{115.6\,\text{kW}}{197.84\,\text{kJ/kg}} = 0.584\,\text{kg/s}
+\]
+
+\textbf{Boxed result.}
+\[
+\boxed{\dot m_{\text{R134a}} \approx 0.584\,\text{kg/s}}
+\]
+
+\textbf{Trap.} The air-side heat gain must be computed first; do not try to solve the refrigerant stream alone because the exchanger couples both flows.
+
+\textbf{Source pages.} Question sheet p.~4; solution p.~23.

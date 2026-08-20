@@ -1,0 +1,551 @@
+\section*{Week 4}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} For the 3 kg nitrogen system shown on the P--v diagram, determine the total boundary work for the path $1\to 2\to 3$.
+
+\textbf{Vague/source note.} The figure is diagram-dependent; the working page shows state 1 at $P_1=500\,\text{kPa}$, $v_1=0.5\,\text{m}^3/\text{kg}$, state 2 at $P_2=100\,\text{kPa}$, $v_2=1.0\,\text{m}^3/\text{kg}$, and state 3 at $P_3=400\,\text{kPa}$, $v_3=1.0\,\text{m}^3/\text{kg}$.
+
+\textbf{System and boundary.} Closed system; nitrogen in a piston--cylinder style control mass. Boundary work is the area under the P--v path.
+
+\textbf{Assumptions.} Quasi-equilibrium; sign convention $W_b>0$ for work done by the gas; process $2\to 3$ is constant volume.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=3\,\text{kg}$, $P_1=500\,\text{kPa}$, $v_1=0.5\,\text{m}^3/\text{kg}$, $P_2=100\,\text{kPa}$, $v_2=v_3=1.0\,\text{m}^3/\text{kg}$, $P_3=400\,\text{kPa}$.
+  \item Find: $W_{1\to 3}$.
+\end{itemize}
+
+\textbf{Process / property model.} 
+\[
+W_{1\to 3}=m\int_{v_1}^{v_2} P\,dv + m\int_{v_2}^{v_3} P\,dv
+\]
+For the straight-line segment $1\to 2$, the source page evaluates the area as a triangle plus rectangle: $150\,\text{kJ/kg}$.
+For $2\to 3$ at constant volume, $W_{2\to 3}=0$.
+
+\textbf{Governing equations.}
+\[
+W_{1\to 2}=m\left[\frac{(v_2-v_1)(P_1-P_2)}{2}+(v_2-v_1)P_2\right],\qquad W_{2\to 3}=0
+\]
+
+\textbf{Source table values.} From the worked page: $W_{1\to 2}=150\,\text{kJ/kg}$.
+
+\textbf{Sequential units.}
+\[
+W_{1\to 2,\,\text{total}}=(150\,\text{kJ/kg})(3\,\text{kg})=450\,\text{kJ}
+\]
+\[
+W_{2\to 3,\,\text{total}}=0
+\]
+\[
+W_{1\to 3}=450\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{W_{1\to 3}=450\,\text{kJ}}
+\]
+
+\textbf{Trap.} Do not count any work for $2\to 3$; the vertical line means $dv=0$.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q1-q4.pdf} p. 2.
+
+\questionfigure{week4-q01.png}{Source $P$--$v$ path for Q1; boundary work is the signed area beneath the path.}
+
+\subsection*{Q2}
+\textbf{Rewritten question.} A $2\,\text{m}^3$ sample of saturated liquid water at $220^\circ\text{C}$ is expanded isothermally in a closed system until the final quality is 80\%. Determine the total work produced.
+
+\textbf{Vague/source note.} The working page says the process remains inside the saturation dome, so the pressure stays at $P_{\text{sat}}(220^\circ\text{C})$.
+
+\textbf{System and boundary.} Closed system; moving boundary work only.
+
+\textbf{Assumptions.} Isothermal here means isobaric inside the saturation dome; quasi-equilibrium.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $V_1=2\,\text{m}^3$, $T=220^\circ\text{C}$, $x_2=0.8$.
+  \item Find: $W_b$.
+\end{itemize}
+
+\textbf{Process / property model.} 
+\[
+W_b=P_{\text{sat}}(V_2-V_1),\qquad V_i=m v_i
+\]
+Using saturated-water values at $220^\circ\text{C}$, the source path treats the process as constant-pressure expansion.
+
+\textbf{Governing equations.}
+\[
+m=\frac{V_1}{v_f},\qquad v_2=v_f+x_2(v_g-v_f),\qquad W_b=P_{\text{sat}}m(v_2-v_f)
+\]
+
+\textbf{Source table values.} Saturated water at $220^\circ\text{C}$: $P_{sat}=2319.6\,\text{kPa}$, $v_f=0.00119\,\text{m}^3/\text{kg}$ and $v_g=0.08609\,\text{m}^3/\text{kg}$.
+
+\textbf{Sequential units.}
+\[
+ m=\frac{2}{0.00119}=1680.6723\,\text{kg}
+\]
+\[
+ v_2=0.00119+0.8(0.08609-0.00119)=0.0691132\,\text{m}^3/\text{kg}
+\]
+\[
+ w_b=2319.6(0.0691132-0.00119)=157.5547\,\text{kJ/kg}
+\]
+\[
+ W_b=(1680.6723)(157.5547)=264797.74\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{W_b\approx2.6480\times10^5\,\text{kJ}}
+\]
+
+\textbf{Trap.} Do not treat this as a fixed-temperature ideal-gas problem; the state lies in the two-phase region.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q1-q4.pdf} p. 2.
+
+\subsection*{Q3}
+\textbf{Rewritten question.} Helium occupies $4\,\text{m}^3$ in a piston--cylinder device and is compressed at constant pressure $120\,\text{kPa}$ to $1\,\text{m}^3$. Find the initial temperature, final temperature, and compression work.
+
+\textbf{Vague/source note.} The working page labels this as a constant-pressure compression process and uses the ideal-gas equation.
+
+\textbf{System and boundary.} Closed system; moving boundary work.
+
+\textbf{Assumptions.} Helium behaves as an ideal gas; pressure is constant.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=1\,\text{kg}$, $P=120\,\text{kPa}$, $V_1=4\,\text{m}^3$, $V_2=1\,\text{m}^3$.
+  \item Find: $T_1$, $T_2$, $W_b$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+W_b=P(V_2-V_1),\qquad PV=mRT
+\]
+with $R_{\text{He}}=2.0769\,\mathrm{kJ/(kg\,K)}$.
+
+\textbf{Governing equations.}
+\[
+T_1=\frac{P V_1}{mR},\qquad T_2=\frac{P V_2}{mR}
+\]
+\[
+W_b=P(V_2-V_1)
+\]
+
+\textbf{Source table values.} Helium gas constant: $R=2.0769\,\mathrm{kJ/(kg\,K)}$.
+
+\textbf{Sequential units.}
+\[
+T_1=\frac{120\times 4}{2.0769}=231.1\,\text{K}
+\quad\text{and}\quad
+T_2=\frac{120\times 1}{2.0769}=57.8\,\text{K}
+\]
+\[
+W_b=120(1-4)=-360\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{T_1\approx 231\,\text{K},\; T_2\approx 57.8\,\text{K},\; W_b=-360\,\text{kJ}}
+\]
+
+\textbf{Trap.} The negative sign means work is done on the gas during compression.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q1-q4.pdf} p. 5.
+
+\subsection*{Q4}
+\textbf{Rewritten question.} A gas is compressed from $0.2\,\text{m}^3$ to $0.1\,\text{m}^3$ with $P=aV+b$, where $a=-1500\,\text{kPa/m}^3$ and $b=400\,\text{kPa}$. Find the work by geometry and by integration.
+
+\textbf{Vague/source note.} Diagram-dependent path; no separate property table is needed.
+
+\textbf{System and boundary.} Closed system; moving boundary work.
+
+\textbf{Assumptions.} Quasi-equilibrium and the given linear pressure--volume relation.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $V_1=0.2\,\text{m}^3$, $V_2=0.1\,\text{m}^3$, $a=-1500\,\text{kPa/m}^3$, $b=400\,\text{kPa}$.
+  \item Find: $W_b$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+P(V)=aV+b
+\]
+
+\textbf{Governing equations.}
+\[
+W_b=\int_{V_1}^{V_2}(aV+b)\,dV
+=\frac{a}{2}(V_2^2-V_1^2)+b(V_2-V_1)
+\]
+
+\textbf{Source table values.} None.
+
+\textbf{Sequential units.}
+\[
+W_b=\frac{-1500}{2}(0.1^2-0.2^2)+400(0.1-0.2)
+=22.5-40=-17.5\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{W_b=-17.5\,\text{kJ}}
+\]
+
+\textbf{Trap.} The path is a compression, so the boundary work must come out negative.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q1-q4.pdf} p. 5.
+
+\questionfigure{week4-q04.png}{Linear $P$--$V$ compression path for Q4; the negative signed area is work done on the gas.}
+
+\subsection*{Q5}
+\textbf{Rewritten question.} A $0.8\,\text{m}^3$ rigid tank contains R-134a at $180\,\text{kPa}$ and quality 45\%. Heat is added until the pressure reaches $600\,\text{kPa}$. Find the mass and heat transfer, and place the process on a $P$--$v$ diagram.
+
+\textbf{Vague/source note.} The page is diagram-dependent; the worked page shows a constant-volume line from the saturated mixture state into the superheated region.
+
+\textbf{System and boundary.} Closed rigid tank; no boundary work.
+
+\textbf{Assumptions.} Fixed volume, negligible KE/PE changes, only heat transfer changes internal energy.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $V=0.8\,\text{m}^3$, $P_1=180\,\text{kPa}$, $x_1=0.45$, $P_2=600\,\text{kPa}$.
+  \item Find: $m$, $Q$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+W_b=0,\qquad Q=\Delta U=m(u_2-u_1)
+\]
+
+\textbf{Governing equations.}
+\[
+v_1=v_f+x_1(v_g-v_f),\qquad m=\frac{V}{v_1},\qquad Q=m(u_2-u_1)
+\]
+
+\textbf{Source table values.} From Table A-12 at $180\,\text{kPa}$: $v_f=0.0007485\,\text{m}^3/\text{kg}$, $v_g=0.11049\,\text{m}^3/\text{kg}$, $u_f=34.81\,\text{kJ/kg}$, $u_{fg}=188.2\,\text{kJ/kg}$. Interpolated superheated value at $600\,\text{kPa}$ and constant $v$ gives $u_2\approx 327.2236\,\text{kJ/kg}$.
+
+\textbf{Sequential units.}
+\[
+v_1=0.0007485+0.45(0.11049-0.0007485)=0.050132\,\text{m}^3/\text{kg}
+\]
+\[
+m=\frac{0.8}{0.050132}=15.96\,\text{kg}
+\]
+\[
+u_1=34.81+0.45(188.2)=119.5\,\text{kJ/kg}
+\]
+\[
+Q=15.96(327.2236-119.5)=3315\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{m=15.96\,\text{kg},\qquad Q\approx 3315\,\text{kJ}}
+\]
+
+\textbf{Trap.} Rigid tank means $W_b=0$ even though the pressure changes.
+
+\textbf{Source pages.} Question sheet p. 1; worked pages in \texttt{week4-q5-q8.pdf} pp. 1--2.
+
+\questionfigure{week4-q05.png}{Constant-volume heating path for the rigid R-134a tank in Q5.}
+
+\subsection*{Q6}
+\textbf{Rewritten question.} Steam in a spring-loaded piston--cylinder starts at $95\,\text{kPa}$ with quality 5\% and initial volume $1.2\,\text{m}^3$. It is heated until the volume is $5.5\,\text{m}^3$ and the pressure is $230\,\text{kPa}$. Find the heat transferred and work produced.
+
+\textbf{Vague/source note.} The source page shows a linear spring relation on the $P$--$V$ diagram.
+
+\textbf{System and boundary.} Closed system; moving boundary work against a spring.
+
+\textbf{Assumptions.} Quasi-equilibrium, linear pressure--volume path, negligible KE/PE changes.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $P_1=95\,\text{kPa}$, $x_1=0.05$, $V_1=1.2\,\text{m}^3$, $P_2=230\,\text{kPa}$, $V_2=5.5\,\text{m}^3$.
+  \item Find: $Q$, $W_b$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+W_b=\frac{P_1+P_2}{2}(V_2-V_1)
+\]
+\[
+Q-W_b=\Delta U=m(u_2-u_1)
+\]
+
+\textbf{Governing equations.}
+\[
+m=\frac{V_1}{v_1},\qquad v_1=v_f+x_1(v_g-v_f)
+\]
+\[
+Q=W_b+m(u_2-u_1)
+\]
+
+\textbf{Source table values.} From the steam tables at $95\,\text{kPa}$, the working page uses $v_f=0.001043\,\text{m}^3/\text{kg}$, $v_g=1.78696\,\text{m}^3/\text{kg}$, $u_f=384.36\,\text{kJ/kg}$, $u_g=2503.7\,\text{kJ/kg}$, giving $u_1=513.44\,\text{kJ/kg}$. At $230\,\text{kPa}$ the final state is in the two-phase region with $x_2\approx 0.5349$ and $u_2\approx 1598.05\,\text{kJ/kg}$.
+
+\textbf{Sequential units.}
+\[
+v_1=0.001043+0.05(1.78696-0.001043)=0.0903377\,\text{m}^3/\text{kg}
+\]
+\[
+m=\frac{1.2}{0.0903377}=13.28\,\text{kg}
+\]
+\[
+W_b=\frac{95+230}{2}(5.5-1.2)=698.75\,\text{kJ}
+\]
+\[
+Q=698.75+13.28(1598.05-513.44)=4698.75\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{W_b\approx 698.75\,\text{kJ},\qquad Q\approx 4698.75\,\text{kJ}}
+\]
+
+\textbf{Trap.} The path is not constant pressure; use the straight-line spring work formula.
+
+\textbf{Source pages.} Question sheet p. 1; worked pages in \texttt{week4-q5-q8.pdf} pp. 3--5.
+
+\subsection*{Q7}
+\textbf{Rewritten question.} Steel rods of diameter 10 cm, density $7833\,\text{kg/m}^3$, and $c_p=0.465\,\mathrm{kJ/(kg\,^{\circ}C)}$ move through a $1000^\circ\text{C}$ oven at $3\,\text{m/min}$, entering at $30^\circ\text{C}$ and leaving at $400^\circ\text{C}$. Find the heat-transfer rate to the rods.
+
+\textbf{Vague/source note.} The working page treats this as a steady flow of material through the oven.
+
+\textbf{System and boundary.} Steady-flow control volume around the oven section.
+
+\textbf{Assumptions.} No work, no KE/PE changes, constant $c_p$.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $d=0.10\,\text{m}$, $\rho=7833\,\text{kg/m}^3$, $c_p=0.465\,\mathrm{kJ/(kg\,^{\circ}C)}$, $V=3\,\text{m/min}$, $T_1=30^\circ\text{C}$, $T_2=400^\circ\text{C}$.
+  \item Find: $\dot Q$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+\dot Q=\dot m c_p(T_2-T_1),\qquad \dot m=\rho A V
+\]
+
+\textbf{Source table values.} Cross-sectional area $A=\pi(0.05)^2=0.00785\,\text{m}^2$.
+
+\textbf{Sequential units.}
+\[
+\dot m=7833(0.00785)(3/60)=3.05\,\text{kg/s}
+\]
+\[
+\dot Q=3.05(0.465)(400-30)=525\,\text{kW}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\dot Q\approx 525\,\text{kW}}
+\]
+
+\textbf{Trap.} Use the rods' mass flow rate, not the oven's volume flow rate alone.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q5-q8.pdf} p. 6.
+
+\subsection*{Q8}
+\textbf{Rewritten question.} An egg of diameter 5.5 cm, density $1020\,\text{kg/m}^3$, and $c_p=3.32\,\mathrm{kJ/(kg\,^{\circ}C)}$ is heated from $4^\circ\text{C}$ to $90^\circ\text{C}$ in hot water at $97^\circ\text{C}$. Find the heat transferred.
+
+\textbf{Vague/source note.} The egg is approximated as a uniform sphere.
+
+\textbf{System and boundary.} Closed system; sensible heating only.
+
+\textbf{Assumptions.} Uniform temperature in the egg; no phase change.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $d=5.5\,\text{cm}$, $\rho=1020\,\text{kg/m}^3$, $c_p=3.32\,\mathrm{kJ/(kg\,^{\circ}C)}$, $T_1=4^\circ\text{C}$, $T_2=90^\circ\text{C}$.
+  \item Find: $Q$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+Q=mc_p\Delta T,\qquad m=\rho\frac{4}{3}\pi r^3
+\]
+
+\textbf{Source table values.} $r=0.0275\,\text{m}$.
+
+\textbf{Sequential units.}
+\[
+V=\frac{4}{3}\pi(0.0275)^3=8.71\times 10^{-5}\,\text{m}^3
+\]
+\[
+m=1020V=0.0888\,\text{kg}
+\]
+\[
+Q=0.0888(3.32)(90-4)=25.35\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{Q\approx 25.35\,\text{kJ}}
+\]
+
+\textbf{Trap.} Use the sphere volume, not a cylinder or shell approximation.
+
+\textbf{Source pages.} Question sheet p. 1; worked page in \texttt{week4-q5-q8.pdf} p. 7.
+
+\subsection*{Q9}
+\textbf{Rewritten question.} Steam is held at constant pressure $400\,\text{kPa}$ in a piston--cylinder device. The initial state is $200^\circ\text{C}$ and $V_1=2\,\text{m}^3$. If $3500\,\text{kJ}$ of heat is added, determine the final temperature using enthalpy and the steam tables.
+
+\textbf{Vague/source note.} The source pages confirm a constant-pressure enthalpy analysis; the final temperature comes from superheated-steam table interpolation.
+
+\textbf{System and boundary.} Closed system with a frictionless piston.
+
+\textbf{Assumptions.} Constant pressure, negligible KE/PE, steam tables apply.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $P=400\,\text{kPa}$, $T_1=200^\circ\text{C}$, $V_1=2\,\text{m}^3$, $Q=3500\,\text{kJ}$.
+  \item Find: $T_2$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+Q=m(h_2-h_1)
+\]
+with $m=V_1/v_1$ and $h_2$ obtained from the $400\,\text{kPa}$ superheated table.
+
+\textbf{Governing equations.}
+\[
+m=\frac{V_1}{v_1},\qquad h_2=h_1+\frac{Q}{m}
+\]
+
+\textbf{Source table values.} At $400\,\text{kPa}$ and $200^\circ\text{C}$, $v_1=0.53434\,\text{m}^3/\text{kg}$ and $h_1=2860.9\,\text{kJ/kg}$. At the same pressure, $h(600^\circ\text{C})=3703.3$ and $h(700^\circ\text{C})=3922.8\,\text{kJ/kg}$.
+
+\textbf{Sequential units.}
+\[
+ m=\frac{2}{0.53434}=3.7429\,\text{kg},\qquad h_2=2860.9+\frac{3500}{3.7429}=3796.0038\,\text{kJ/kg}
+\]
+\[
+ T_2=600+\frac{3796.0038-3703.3}{3922.8-3703.3}(700-600)=641.3303^\circ\text{C}
+\]
+
+\textbf{Boxed official answer.}
+\[\boxed{T_2=641.33^\circ\text{C}}\]
+
+\textbf{Trap.} Do not use saturation temperature at 400 kPa; the initial state is already superheated.
+
+\textbf{Source pages.} Question sheet p. 2; worked pages in \texttt{week4-q9-q12.pdf} pp. 1, 13--14.
+
+\subsection*{Q10}
+\textbf{Rewritten question.} For superheated steam near $150\,\text{kPa}$, the specific heat is given by the supplied equation. Determine the enthalpy change from $400^\circ\text{C}$ to $800^\circ\text{C}$ for 4 kg of steam and the average value of $c_p$ over the interval.
+
+\textbf{Vague/source note.} The supplied relation is $c_p(T)=2.07+(T-400)/1480$ in $\text{kJ/(kg}\cdot{}^\circ\text{C)}$, with $T$ in $^\circ\text{C}$.
+
+\textbf{System and boundary.} Closed-system property change at constant pressure.
+
+\textbf{Assumptions.} Superheated steam; the provided $c_p(T)$ relation is valid on the interval.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=4\,\text{kg}$, $T_1=400^\circ\text{C}$, $T_2=800^\circ\text{C}$, $P\approx 150\,\text{kPa}$.
+  \item Find: $\Delta H$, $c_{p,\text{avg}}$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+\Delta h=\int_{T_1}^{T_2} c_p(T)\,dT,\qquad c_{p,\text{avg}}=\frac{1}{T_2-T_1}\int_{T_1}^{T_2} c_p(T)\,dT
+\]
+
+\textbf{Source table values.} Interpolation to $150\,\text{kPa}$ gives $h_1=3277.8\,\text{kJ/kg}$ at $400^\circ\text{C}$ and $h_2=4160.0\,\text{kJ/kg}$ at $800^\circ\text{C}$.
+
+\textbf{Sequential units.}
+\[
+ \Delta H=4(4160.0-3277.8)=3528.8\,\text{kJ}
+\]
+Because the supplied $c_p(T)$ relation is linear,
+\[
+ c_p(400)=2.0700,\quad c_p(800)=2.3403,\quad c_{p,avg}=\frac{2.0700+2.3403}{2}=2.2052\,\text{kJ/(kg K)}.
+\]
+
+\textbf{Boxed official answer.}
+\[\boxed{\Delta H=3528.8\,\text{kJ},\qquad c_{p,avg}=2.2052\,\text{kJ/(kg K)}}\]
+
+\textbf{Trap.} The equation itself is part of the problem data; do not substitute a different correlation.
+
+\textbf{Source pages.} Question sheet p. 2; worked pages in \texttt{week4-q9-q12.pdf} pp. 5--12.
+
+\subsection*{Q11}
+\textbf{Rewritten question.} Determine the enthalpy change for 2 kg of nitrogen heated from 250 K to 1300 K using (a) gas tables and (b) constant specific heat. Use $M=28\,\text{kg/kmol}$.
+
+\textbf{Vague/source note.} The source table excerpt for ideal-gas properties is visible on the worked pages.
+
+\textbf{System and boundary.} Ideal-gas property change.
+
+\textbf{Assumptions.} Nitrogen behaves as an ideal gas; pressure does not affect $\Delta h$.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=2\,\text{kg}$, $T_1=250\,\text{K}$, $T_2=1300\,\text{K}$, $M=28\,\text{kg/kmol}$.
+  \item Find: $\Delta H$ by gas tables and by constant $c_p$.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+\Delta H=m(h_2-h_1)
+\]
+
+\textbf{Governing equations.}
+\[
+\Delta h = h_2-h_1\text{ from ideal-gas tables},\qquad \Delta h\approx c_p\Delta T\text{ for the constant-}c_p\text{ estimate}
+\]
+
+\textbf{Source table values.} The ideal-gas table difference, converted to mass basis, is $\Delta h=1175.1429\,\text{kJ/kg}$. The source's endpoint-average approximation uses $c_p(250)=1.039$ and $c_p(1300)=1.2215\,\text{kJ/(kg K)}$.
+
+\textbf{Sequential units.}
+\[
+ \Delta H_{table}=2(1175.1429)=2350.2857\,\text{kJ}
+\]
+\[
+ c_{p,avg}=\frac{1.039+1.2215}{2}=1.13025\,\text{kJ/(kg K)}
+\]
+\[
+ \Delta H_{const\ c_p}=2(1.13025)(1300-250)=2373.53\,\text{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[\boxed{\Delta H_{table}=2350.29\,\text{kJ},\qquad \Delta H_{const\ c_p}\approx2373.6\,\text{kJ}}\]
+
+\textbf{Trap.} The tabulated enthalpy is molar; convert by dividing by molar mass.
+
+\textbf{Source pages.} Question sheet p. 2; worked pages in \texttt{week4-q9-q12.pdf} pp. 13--14.
+
+\subsection*{Q12}
+\textbf{Rewritten question.} What is the enthalpy change, in kJ/kg, of oxygen as its temperature changes from 300 K to 400 K? Is there any difference if the temperature change were from 900 K to 1000 K?
+
+\textbf{Vague/source note.} The answer is read from the ideal-gas property table for oxygen and then converted to mass basis.
+
+\textbf{System and boundary.} Ideal-gas property change; pressure-independent enthalpy.
+
+\textbf{Assumptions.} Oxygen behaves as an ideal gas.
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $T_1=300\,\text{K}$, $T_2=400\,\text{K}$; compare with $900\,\text{K}$ to $1000\,\text{K}$.
+  \item Find: $\Delta h$ per kg, and whether the interval matters.
+\end{itemize}
+
+\textbf{Process / property model.}
+\[
+\Delta h = \frac{h_2-h_1}{M}
+\]
+with $M_{\mathrm{O_2}}=31.999\,\text{kg/kmol}$.
+
+\textbf{Source table values.} Table A-19 gives $\bar h_{300}=8736$, $\bar h_{400}=11711$, $\bar h_{900}=27928$ and $\bar h_{1000}=31389\,\text{kJ/kmol}$; $M_{O_2}=31.999\,\text{kg/kmol}$.
+
+\textbf{Sequential units.}
+\[
+ \Delta h_{300\to400}=\frac{11711-8736}{31.999}=92.972\,\text{kJ/kg}
+\]
+\[
+ \Delta h_{900\to1000}=\frac{31389-27928}{31.999}=108.160\,\text{kJ/kg}
+\]
+
+\textbf{Boxed official answer.}
+\[\boxed{\Delta h_{300\to400}=92.972\,\text{kJ/kg},\quad \Delta h_{900\to1000}=108.160\,\text{kJ/kg}}\]
+
+\textbf{Trap.} Do not use pressure in the ideal-gas enthalpy change; only temperature matters.
+
+\textbf{Source pages.} Question sheet p. 2; worked pages in \texttt{week4-q9-q12.pdf} pp. 13--14.

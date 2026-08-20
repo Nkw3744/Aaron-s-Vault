@@ -2,7 +2,7 @@
 source: AUT Canvas
 canvas_course_id: 23175
 course_code: ENME601_2026_S2
-last_checked: 2026-07-30
+last_checked: 2026-08-20
 ---
 
 # Thermodynamics Current Canvas Information
@@ -22,7 +22,7 @@ ENME601 applies the First and Second Laws to open and closed systems, engineerin
 | Assessment | Weight | Current timing |
 | --- | ---: | --- |
 | Saturation Lab | 10% | Week 3; live submission due **24 August 2026 at 23:59 NZST** |
-| Mid-Semester Test | 30% | Weeks 6–8; live assignment currently has no due date |
+| Mid-Semester Test | 30% | **21 Aug 2026, 6:00–9:15 pm NZST**; room allocation on Canvas |
 | Rankine Steam Cycle Lab | 10% | Week 8 |
 | Final exam | 50% | Weeks 13–15, scheduled by timetabling |
 
@@ -66,6 +66,15 @@ The Canvas Page says schedule changes will be announced and lab due dates must b
 - [[Q9-Q14 Ideal gas.pdf|Q9–Q14 ideal-gas solutions]] — absolute pressure, gas constants, connected tanks, and energy-balance applications
 
 Attempt the question list before using the solution files. Keep pressure absolute unless a problem explicitly asks for gauge pressure, and verify which saturation or superheated table applies before interpolating.
+
+## Current Weeks 4–6 material
+
+- **Week 4:** closed-system energy analysis, with Week 4 lecture slides and tutorial question/solution sets now local.
+- **Week 5:** control-volume and steady-flow energy analysis, with lecture slides, tutorial questions, guideline slides, and solutions now local.
+- **Week 6:** the Second Law, heat engines, refrigerators, reversibility, and Carnot limits, with lecture and tutorial sources now local.
+- Six mid-semester practice tests/solution files are retained under `Assessments/Practice Exams/Mid-Semester Tests`.
+
+The mid-semester test is a paper-based, open-book test from **6:00 pm to 9:15 pm on Friday 21 August 2026**. Handwritten and printed notes are permitted and property tables will be supplied. Check the Canvas announcement attachment for the assigned room.
 
 ## Canvas-only material
 

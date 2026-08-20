@@ -1,0 +1,397 @@
+\section*{Week 1}
+
+\subsection*{Question 1}
+\textbf{Rewritten question.} The mass of air in a room of dimensions $3\,\text{m} \times 4\,\text{m} \times 25\,\text{m}$ is $350\,\text{kg}$. Determine the density, specific volume, and specific weight.
+
+\textbf{Source wording caveat.} None.
+
+\textbf{System type and boundary.} Closed quantity of air occupying the room volume; boundary is the room enclosure.
+
+\textbf{Assumptions.} Air is treated as a continuum; gravity is uniform at $g=9.81\,\text{m/s}^2$.
+
+\textbf{Given / Find.}
+Given: $m=350\,\text{kg}$, $V=3\times 4\times 25=300\,\text{m}^3$.
+Find: $\rho$, $v$, $\gamma$.
+
+\textbf{Governing equations.}
+\[
+\rho=\frac{m}{V},\qquad v=\frac{1}{\rho},\qquad \gamma=\rho g
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+\rho=\frac{350\,\text{kg}}{300\,\text{m}^3}=1.1667\,\text{kg/m}^3
+\]
+\[
+v=\frac{1}{1.1667\,\text{kg/m}^3}=0.8571\,\text{m}^3/\text{kg}
+\]
+\[
+\gamma=(1.1667\,\text{kg/m}^3)(9.81\,\text{m/s}^2)=11.44\,\text{N/m}^3
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{\rho=1.167\,\text{kg/m}^3,\quad v=0.857\,\text{m}^3/\text{kg},\quad \gamma=11.44\,\text{N/m}^3}
+\]
+
+\textbf{Interpretation / common trap.} Density is mass per volume, not weight per volume; specific weight is $\rho g$, not $g/\rho$.
+
+\textbf{Source page.} Page 5.
+
+\subsection*{Question 2}
+\textbf{Rewritten question.} Complete the missing properties in the table below if $g=9.81\,\text{m/s}^2$ and $V=104\,\text{L}$.
+
+\textbf{Source wording caveat.} The original prompt is a fill-in table; the provided solution deck gives the completed entries but not a fully typeset blank table in text. The recoverable task is the table completion itself.
+
+\textbf{System type and boundary.} Property-conversion exercise for a fixed amount of matter; no process boundary analysis is required.
+
+\textbf{Assumptions.} Use $1\,\text{L}=10^{-3}\,\text{m}^3$ and $W=mg$.
+
+\textbf{Given / Find.}
+Given: $V=104\,\text{L}=0.104\,\text{m}^3$, $g=9.81\,\text{m/s}^2$.
+Find: the consistent set of $(v,\rho,\gamma,m,W)$ for the five cases shown in the source solution.
+
+\textbf{Governing equations.}
+\[
+\rho=\frac{1}{v},\qquad m=\rho V,\qquad W=mg,\qquad \gamma=\rho g
+\]
+
+\textbf{Sequential substitution with units.}
+For each row, the solution deck already provides the computed values. Reconstructing the completed table:
+\[
+\begin{array}{c|ccccc}
+\text{case} & v\,(\text{m}^3/\text{kg}) & \rho\,(\text{kg/m}^3) & \gamma\,(\text{N/m}^3) & m\,(\text{kg}) & W\,(\text{N})\\
+\hline
+(a) & 20.00 & 0.05 & 0.49 & 0.50 & 4.91\\
+(b) & 0.50 & 2.00 & 19.62 & 20.00 & 196.20\\
+(c) & 2.45 & 0.41 & 4.00 & 4.08 & 40.00\\
+(d) & 0.10 & 10.00 & 98.10 & 100.00 & 981.00\\
+(e) & 0.98 & 1.02 & 10.00 & 10.19 & 100.00
+\end{array}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{\text{Completed table as above}}
+\]
+
+\textbf{Interpretation / common trap.} The main trap is unit consistency: litres must be converted to cubic metres before using $m=\rho V$.
+
+\textbf{Source page.} Page 6.
+
+\subsection*{Question 3}
+\textbf{Rewritten question.} Determine the weight of a $12\,\text{kg}$ mass at a location where $g=9.77\,\text{m/s}^2$.
+
+\textbf{Source wording caveat.} None.
+
+\textbf{System type and boundary.} Closed system; weight is an external force acting on the mass.
+
+\textbf{Assumptions.} Local gravity is constant over the object.
+
+\textbf{Given / Find.}
+Given: $m=12\,\text{kg}$, $g=9.77\,\text{m/s}^2$.
+Find: $W$.
+
+\textbf{Governing equation.}
+\[
+W=mg
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+W=(12\,\text{kg})(9.77\,\text{m/s}^2)=117.24\,\text{N}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{W=117.24\,\text{N}}
+\]
+
+\textbf{Interpretation / common trap.} Weight is measured in newtons, not kilograms; do not leave the answer as a mass.
+
+\textbf{Source page.} Page 7.
+
+\subsection*{Question 4}
+\textbf{Rewritten question.} Calculate the force required to accelerate an $8000\,\text{kg}$ rocket vertically upward at $28\,\text{m/s}^2$.
+
+\textbf{Source wording caveat.} The solution deck labels the result as thrust force.
+
+\textbf{System type and boundary.} Closed system for the rocket body; the force balance is external to the vehicle.
+
+\textbf{Assumptions.} Gravity acts downward with $g=9.81\,\text{m/s}^2$; upward acceleration is uniform.
+
+\textbf{Given / Find.}
+Given: $m=8000\,\text{kg}$, $a=28\,\text{m/s}^2$, $g=9.81\,\text{m/s}^2$.
+Find: $F_{\text{thrust}}$.
+
+\textbf{Governing equation.}
+\[
+F_{\text{thrust}}=mg+ma=m(g+a)
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+F_{\text{thrust}}=(8000\,\text{kg})(9.81\,\text{m/s}^2)+(8000\,\text{kg})(28\,\text{m/s}^2)
+\]
+\[
+F_{\text{thrust}}=78{,}480\,\text{N}+224{,}000\,\text{N}=302{,}480\,\text{N}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{F_{\text{thrust}}=3.0248\times10^5\,\text{N}}
+\]
+
+\textbf{Interpretation / common trap.} The rocket must overcome both weight and provide the upward acceleration; forgetting the $mg$ term is the usual error.
+
+\textbf{Source page.} Page 8.
+
+\subsection*{Question 5}
+\textbf{Rewritten question.} A $2200\,\text{kg}$ automobile travelling at $90\,\text{kph}$ collides with a stationary $1000\,\text{kg}$ automobile. After the collision, the large automobile slows to $60\,\text{kph}$ and the smaller vehicle moves at $78\,\text{kph}$. Determine the increase in internal energy of the two-car system.
+
+\textbf{Source wording caveat.} None.
+
+\textbf{System type and boundary.} Closed system containing both vehicles; collision is analysed through energy conservation.
+
+\textbf{Assumptions.} Neglect external work and heat transfer during the short collision; all lost kinetic energy becomes internal energy of the system.
+
+\textbf{Given / Find.}
+Given: $m_A=2200\,\text{kg}$, $m_B=1000\,\text{kg}$, $V_{A1}=90\,\text{kph}$, $V_{A2}=60\,\text{kph}$, $V_{B1}=0$, $V_{B2}=78\,\text{kph}$.
+Find: $\Delta U=U_2-U_1$.
+
+\textbf{Governing equations.}
+\[
+\Delta U=E_{k1}-E_{k2},\qquad E_k=\frac12 mV^2
+\]
+
+\textbf{Sequential substitution with units.}
+Convert speeds:
+\[
+90\,\text{kph}=25.0\,\text{m/s},\quad 60\,\text{kph}=16.67\,\text{m/s},\quad 78\,\text{kph}=21.67\,\text{m/s}
+\]
+Initial kinetic energy:
+\[
+E_{k1}=\tfrac12(2200\,\text{kg})(25.0\,\text{m/s})^2=687{,}550\,\text{J}
+\]
+Final kinetic energy:
+\[
+E_{k2}=\tfrac12(2200\,\text{kg})(16.67\,\text{m/s})^2+\tfrac12(1000\,\text{kg})(21.67\,\text{m/s})^2=540{,}472\,\text{J}
+\]
+Thus,
+\[
+\Delta U=687{,}550\,\text{J}-540{,}472\,\text{J}=147{,}078\,\text{J}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{\Delta U=1.47078\times10^5\,\text{J}}
+\]
+
+\textbf{Interpretation / common trap.} Use the kinetic energy of both cars after the collision; do not treat the stationary car as remaining stationary.
+
+\textbf{Source page.} Page 9.
+
+\subsection*{Question 6}
+\textbf{Rewritten question.} Calculate the force due to pressure acting on a horizontal $1.2\,\text{m}$ diameter submarine hatch submerged $800\,\text{m}$ below the surface.
+
+\textbf{Source wording caveat.} None.
+
+\textbf{System type and boundary.} Hydrostatic pressure force on a flat circular hatch boundary.
+
+\textbf{Assumptions.} Water density is $1000\,\text{kg/m}^3$; pressure variation over the hatch is neglected because only the gauge pressure at depth is used in the source solution.
+
+\textbf{Given / Find.}
+Given: $\rho=1000\,\text{kg/m}^3$, $h=800\,\text{m}$, $D=1.2\,\text{m}$.
+Find: $F$.
+
+\textbf{Governing equations.}
+\[
+p=\rho gh,\qquad A=\frac{\pi D^2}{4},\qquad F=pA
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+p=(1000\,\text{kg/m}^3)(9.81\,\text{m/s}^2)(800\,\text{m})=7.848\times10^6\,\text{Pa}
+\]
+\[
+A=\frac{\pi(1.2\,\text{m})^2}{4}=1.13097\,\text{m}^2
+\]
+\[
+F=(7.848\times10^6\,\text{Pa})(1.13097\,\text{m}^2)=8.876\times10^6\,\text{N}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{F=8.876\times10^6\,\text{N}}
+\]
+
+\textbf{Interpretation / common trap.} Use the circular area with diameter $1.2\,\text{m}$, not radius; the result is a force, not pressure.
+
+\textbf{Source page.} Page 10.
+
+\subsection*{Question 7}
+\questionfigure{week1-q07.png}{U-tube geometry with water, oil, and marked heights used in the pressure balance.}
+\textbf{Rewritten question.} A U-tube with both arms open to the atmosphere contains water in one arm and water plus light oil in the other. Given $\rho_{oil}=790\,\text{kg/m}^3$ and $h_1=50\,\text{cm}$, determine the heights of the two fluid columns in the mixed-fluid arm.
+
+\textbf{Source wording caveat.} The source figure is required to interpret the height labels. The solution deck indicates $h_3=h_2/4$ and uses that relation in the pressure balance.
+
+\textbf{System type and boundary.} Static fluid columns; boundary is a level pressure comparison across the same horizontal datum.
+
+\textbf{Assumptions.} Both free surfaces are exposed to atmosphere; the fluids are at rest; water density is $1000\,\text{kg/m}^3$.
+
+\textbf{Given / Find.}
+Given: $\rho_{water}=1000\,\text{kg/m}^3$, $\rho_{oil}=790\,\text{kg/m}^3$, $h_1=0.50\,\text{m}$, and $h_3=h_2/4$.
+Find: $h_2$ and $h_3$.
+
+\textbf{Governing equations.}
+\[
+p_{left}=p_{right},\qquad \rho_{water}gh_1-\rho_{water}gh_3=\rho_{oil}gh_2
+\]
+with $h_3=h_2/4$.
+
+\textbf{Sequential substitution with units.}
+\[
+1000(0.50)-1000\left(\frac{h_2}{4}\right)=790h_2
+\]
+\[
+500-250h_2=790h_2
+\]
+\[
+500=1040h_2
+\]
+\[
+h_2=\frac{500}{1040}=0.4808\,\text{m}
+\]
+\[
+h_3=\frac{h_2}{4}=0.1202\,\text{m}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{h_2=0.48\,\text{m},\qquad h_3=0.12\,\text{m}}
+\]
+
+\textbf{Interpretation / common trap.} The key is matching points at the same elevation and keeping track of which fluid occupies each vertical segment.
+
+\textbf{Source page.} Page 11.
+
+\subsection*{Question 8}
+\questionfigure{week1-q08.png}{Piston-cylinder with a compressed spring used to determine the gas pressure.}
+\textbf{Rewritten question.} Calculate the pressure in a $150\,\text{mm}$ diameter cylinder when the piston has mass $40\,\text{kg}$ and the spring is compressed by $35\,\text{cm}$.
+
+\textbf{Source wording caveat.} The solution deck does not restate the spring constant in words, but the working shows the spring force as $2000\times0.35$, so the recoverable value is $k=2000\,\text{N/m}$.
+
+\textbf{System type and boundary.} Static force balance on the piston; boundary encloses the piston face.
+
+\textbf{Assumptions.} Piston is in mechanical equilibrium; atmospheric pressure acts on the outside face; spring force acts upward/downward opposite the motion as shown in the source solution; the source result is reported as absolute pressure in the cylinder.
+
+\textbf{Given / Find.}
+Given: $m_p=40\,\text{kg}$, $k=2000\,\text{N/m}$, $x=0.35\,\text{m}$, $D=0.15\,\text{m}$.
+Find: $p_{air}$.
+
+\textbf{Governing equations.}
+\[
+pA=mg+kx,\qquad A=\frac{\pi D^2}{4}
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+A=\frac{\pi(0.15\,\text{m})^2}{4}\approx0.0177\,\text{m}^2
+\]
+\[
+mg=(40\,\text{kg})(9.81\,\text{m/s}^2)=392.4\,\text{N}
+\]
+\[
+kx=(2000\,\text{N/m})(0.35\,\text{m})=700\,\text{N}
+\]
+\[
+p=\frac{392.4\,\text{N}+700\,\text{N}}{0.0177\,\text{m}^2}=61{,}717.51\,\text{Pa}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{p=6.171751\times10^4\,\text{Pa}}
+\]
+
+\textbf{Interpretation / common trap.} Do not omit the spring force, and be careful that the piston area uses the diameter in metres.
+
+\textbf{Source page.} Page 12.
+
+\subsection*{Question 9}
+\questionfigure{week1-q09.png}{Manometer geometry comparing water and oil columns with a mercury leg.}
+\textbf{Rewritten question.} Determine the pressure difference between a water pipe and an oil pipe when the top of the mercury column is at the same elevation as the middle of the oil pipe.
+
+\textbf{Source wording caveat.} The solution deck provides the geometry via a diagram, including the $6\,\text{m}$ mercury head and $3\,\text{m}$ water head.
+
+\textbf{System type and boundary.} Static manometer balance.
+
+\textbf{Assumptions.} Fluids are at rest; use $\rho_{Hg}=13600\,\text{kg/m}^3$ and $\rho_{water}=1000\,\text{kg/m}^3$ as in the source; the oil-side reference cancels in the provided working.
+
+\textbf{Given / Find.}
+Given: $h_{Hg}=6\,\text{m}$, $h_{water}=3\,\text{m}$.
+Find: $\Delta p=p_{water}-p_{oil}$.
+
+\textbf{Governing equations.}
+\[
+\Delta p=\rho_{Hg}gh_{Hg}-\rho_{water}gh_{water}
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+\Delta p=(13600\,\text{kg/m}^3)(9.81\,\text{m/s}^2)(6\,\text{m})-(1000\,\text{kg/m}^3)(9.81\,\text{m/s}^2)(3\,\text{m})
+\]
+\[
+\Delta p=800{,}496\,\text{Pa}-29{,}430\,\text{Pa}=771{,}066\,\text{Pa}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{\Delta p=7.71066\times10^5\,\text{Pa}}
+\]
+
+\textbf{Interpretation / common trap.} The pressure difference comes from vertical head differences, not from the horizontal pipe spacing.
+
+\textbf{Source page.} Page 13.
+
+\subsection*{Question 10}
+\questionfigure{week1-q10.png}{Horizontal circular gate at the bottom of a water tank used for the opening-force calculation.}
+\textbf{Rewritten question.} A horizontal circular gate of diameter $2.5\,\text{m}$ is located at the bottom of a water tank. Determine the force required to just open the gate.
+
+\textbf{Source wording caveat.} The source page includes the gate geometry and a $6\,\text{m}$ water depth; the solution deck uses the moment balance about the hinge.
+
+\textbf{System type and boundary.} Hydrostatic force and moment balance on a submerged gate.
+
+\textbf{Assumptions.} Water density is $1000\,\text{kg/m}^3$; the resultant hydrostatic force acts at the gate center as shown in the source solution; the applied force is evaluated at the gate edge through a moment balance.
+
+\textbf{Given / Find.}
+Given: $D=2.5\,\text{m}$, $h=6\,\text{m}$, $\rho=1000\,\text{kg/m}^3$, $g=9.81\,\text{m/s}^2$.
+Find: opening force $F$.
+
+\textbf{Governing equations.}
+\[
+p=\rho gh,\qquad A=\frac{\pi D^2}{4},\qquad F_{water}=pA,
+\qquad F\,D=F_{water}\,\frac{D}{2}
+\]
+
+\textbf{Sequential substitution with units.}
+\[
+p=(1000\,\text{kg/m}^3)(9.81\,\text{m/s}^2)(6\,\text{m})=58{,}860\,\text{Pa}
+\]
+\[
+A=\frac{\pi(2.5\,\text{m})^2}{4}=4.9087\,\text{m}^2
+\]
+\[
+F_{water}=(58{,}860\,\text{Pa})(4.9087\,\text{m}^2)=288{,}928.35\,\text{N}
+\]
+\[
+F=\frac{F_{water}}{2}=144{,}464.17\,\text{N}
+\]
+
+\textbf{Final answer.}
+\[
+\boxed{F=1.44464\times10^5\,\text{N}}
+\]
+
+\textbf{Interpretation / common trap.} The opening force comes from a moment balance, not simply the full resultant hydrostatic force.
+
+\textbf{Source page.} Page 14.

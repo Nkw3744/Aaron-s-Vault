@@ -5,8 +5,8 @@ ENGE702 is organized by mathematical concept. Use the roadmap for the lecture se
 > [!info] Start here
 > [[Mathematics III Roadmap|Course roadmap]] · [[Mathematics III Practice Index|Tutorials]] · [[Mathematics III Assessment Index|Assessments and quizzes]] · [[Mathematics III Current Canvas Information|Current Canvas information]]
 
-> [!important] Current Canvas update — Week 3
-> Prepare recordings and notes 7–9 plus Kreyszig sections 2.1, 2.2, and 2.4 before Thursday's lecture. Week 3 develops second-order homogeneous ODEs, and the current Tutorial 2 answers and worked solutions are now indexed locally. See [[Mathematics III Current Canvas Information]] for the live module, announcement, and quiz deadline.
+> [!important] Current Canvas update — Week 6 and Assignment 1
+> Assignment 1 Part B and Quizzes 1–5 are due **28 August 2026 at 23:59:59 NZST**. Week 6 develops power-series solutions; prepare recordings/notes 14–15 and Kreyszig sections 6.1, 6.2, 11.1, and 11.2. See [[Mathematics III Current Canvas Information]] for the live links and Weeks 4–6 sources.
 
 ## 1. ODE Foundations
 

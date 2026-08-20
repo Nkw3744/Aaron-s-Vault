@@ -1,0 +1,422 @@
+\section*{Week 2}
+
+\subsection*{Question 1}
+\textbf{Rewritten question.} Determine the specific kinetic energy of a mass whose velocity is $45\,\mathrm{m/s}$, in $\mathrm{kJ/kg}$.
+
+\textbf{Vagueness check.} No material ambiguity; the mass value is not needed because specific kinetic energy is per unit mass.
+
+\textbf{System and boundary.} Closed body treated as a point mass; boundary is the mass itself.
+
+\textbf{Assumptions.} Classical mechanics; no potential-energy change required.
+
+\textbf{Given / Find.}
+\[
+V=45\,\mathrm{m/s},\qquad e_k=?
+\]
+
+\textbf{Governing equation.}
+\[
+ e_k=\frac{V^2}{2}
+\]
+
+\textbf{Substitution.}
+\[
+ e_k=\frac{(45\,\mathrm{m/s})^2}{2}=\frac{2025}{2}\,\mathrm{m^2/s^2}=1012.5\,\mathrm{J/kg}
+\]
+\[
+ 1012.5\,\mathrm{J/kg}=1.0125\,\mathrm{kJ/kg}
+\]
+
+\[\boxed{e_k=1.0125\,\mathrm{kJ/kg}}\]
+
+\textbf{Reasonableness / common trap.} The common error is forgetting the factor of $1/2$ or reporting total kinetic energy instead of specific kinetic energy.
+
+\textbf{Source page.} p.~1.
+
+\subsection*{Question 2}
+\textbf{Rewritten question.} A car is accelerated from rest to $85\,\mathrm{km/h}$ in $5\,\mathrm{s}$. Would the energy transferred to the car be different if it were accelerated to the same speed in $3.5\,\mathrm{s}$?
+
+\textbf{Vagueness check.} The wording asks about energy transfer, not power. The mass is not given, so only a ratio or qualitative comparison is possible.
+
+\textbf{System and boundary.} Car as a closed system; boundary encloses the vehicle. Energy crosses as work from the drivetrain.
+
+\textbf{Assumptions.} Same final speed in both cases; start from rest; neglect losses, drag, rolling resistance, and elevation change.
+
+\textbf{Given / Find.}
+\[
+V_0=0,\qquad V_1=85\,\mathrm{km/h},\qquad \Delta t_1=5\,\mathrm{s},\qquad \Delta t_2=3.5\,\mathrm{s}
+\]
+Find whether the transferred energy changes, and how the required average power compares.
+
+\textbf{Governing equations.}
+\[
+W=\Delta KE=\frac12 m\left(V_1^2-V_0^2\right),
+\qquad
+\dot W_{\mathrm{avg}}=\frac{W}{\Delta t}
+\]
+
+\textbf{Substitution.}
+Because $V_0=0$ and $V_1$ is the same in both cases, the ideal work input is identical:
+\[
+W_{5\,\mathrm{s}}=W_{3.5\,\mathrm{s}}
+\]
+For average power,
+\[
+\frac{\dot W_{3.5}}{\dot W_{5}}=\frac{W/3.5}{W/5}=\frac{5}{3.5}=1.4286
+\]
+
+\[\boxed{\text{Energy transferred is the same; }\dot W_{3.5}\approx1.43\,\dot W_{5}.}\]
+
+\textbf{Reasonableness / common trap.} Shorter acceleration time does not change the kinetic-energy increase if the start and finish speeds are the same. The trap is confusing energy with power.
+
+\textbf{Source page.} p.~2.
+
+\subsection*{Question 3}
+\textbf{Rewritten question.} A $5\,\mathrm{kg}$ system is heated from $50^\circ\mathrm{C}$ to $150^\circ\mathrm{C}$. Given $C_p=6000\,\mathrm{J/(kg\,K)}$, determine: (a) the heat added, and (b) the heat-transfer rate if the heating lasts $10\,\mathrm{s}$.
+
+\textbf{Vagueness check.} Minor wording issue: the statement says $C_p$ but the process is treated as sensible heating with constant specific heat.
+
+\textbf{System and boundary.} Closed system; boundary encloses the $5\,\mathrm{kg}$ system.
+
+\textbf{Assumptions.} Constant specific heat; no phase change; negligible work.
+
+\textbf{Given / Find.}
+\[
+m=5\,\mathrm{kg},\qquad c_p=6000\,\mathrm{J/(kg\,K)},\qquad T_1=50^\circ\mathrm{C},\qquad T_2=150^\circ\mathrm{C}
+\]
+Find $Q$ and $\dot Q$.
+
+\textbf{Governing equations.}
+\[
+Q=mc_p\Delta T,\qquad \dot Q=\frac{Q}{\Delta t}
+\]
+
+\textbf{Substitution.}
+\[
+\Delta T=150-50=100\,\mathrm{K}
+\]
+\[
+Q=(5\,\mathrm{kg})(6000\,\mathrm{J/(kg\,K)})(100\,\mathrm{K})=3.0\times10^6\,\mathrm{J}
+\]
+\[
+Q=3000\,\mathrm{kJ}=3.00\,\mathrm{MJ}
+\]
+For $\Delta t=10\,\mathrm{s}$,
+\[
+\dot Q=\frac{3000\,\mathrm{kJ}}{10\,\mathrm{s}}=300\,\mathrm{kJ/s}=300\,\mathrm{kW}
+\]
+
+\[
+\boxed{Q=3000\,\mathrm{kJ}},\qquad \boxed{\dot Q=300\,\mathrm{kW}}
+\]
+
+\textbf{Reasonableness / common trap.} Temperature rise is $100\,\mathrm{K}$, not $150\,\mathrm{K}$. Since $1\,\mathrm{kJ/s}=1\,\mathrm{kW}$, the rate is easy to misstate if units are not checked.
+
+\textbf{Source page.} p.~3.
+
+\subsection*{Question 4}
+\textbf{Rewritten question.} A steel rod of diameter $0.8\,\mathrm{cm}$ and length $21\,\mathrm{m}$ is stretched $3\,\mathrm{cm}$. Young's modulus for this steel is $21\,\mathrm{kN/cm^2}$. How much work, in $\mathrm{kJ}$, is required to stretch this rod?
+
+\textbf{Vagueness check.} The printed modulus appears inconsistent with steel. The literal printed value gives a very small answer; the likely intended value is $21{,}000\,\mathrm{kN/cm^2}$ (or $210\,\mathrm{GPa}$).
+
+\textbf{System and boundary.} The rod is the system; the boundary is the rod surface. Work is done at the ends while the rod stretches elastically.
+
+\textbf{Assumptions.} Linear elasticity; uniform axial stress; small strain; quasi-static loading.
+
+\textbf{Given / Find.}
+\[
+d=0.8\,\mathrm{cm}=0.008\,\mathrm{m},\quad L=21\,\mathrm{m},\quad \delta=3\,\mathrm{cm}=0.03\,\mathrm{m},\quad E=21\,\mathrm{kN/cm^2}
+\]
+Find the required work.
+
+\textbf{Governing equations.}
+\[
+A=\frac{\pi d^2}{4},\qquad \sigma=E\varepsilon,\qquad \varepsilon=\frac{\delta}{L},\qquad F=EA\frac{\delta}{L},\qquad W=\frac12F\delta=\frac{EA\delta^2}{2L}
+\]
+
+\textbf{Substitution.}
+\[
+A=\frac{\pi(0.008\,\mathrm{m})^2}{4}=5.0265\times10^{-5}\,\mathrm{m^2}
+\]
+Literal modulus conversion:
+\[
+1\,\mathrm{kN/cm^2}=10^7\,\mathrm{Pa}\quad\Rightarrow\quad E=21\times10^7=2.1\times10^8\,\mathrm{Pa}
+\]
+\[
+F=(2.1\times10^8)(5.0265\times10^{-5})\frac{0.03}{21}=15.08\,\mathrm{N}
+\]
+\[
+W=\frac12(15.08\,\mathrm{N})(0.03\,\mathrm{m})=0.226\,\mathrm{J}
+\]
+\[
+W=2.262\times10^{-4}\,\mathrm{kJ}
+\]
+Likely intended steel modulus:
+\[
+E=21{,}000\,\mathrm{kN/cm^2}=2.1\times10^{11}\,\mathrm{Pa}
+\]
+This is $1000\times$ larger, so the work is also $1000\times$ larger:
+\[
+W\approx0.226\,\mathrm{kJ}
+\]
+
+\[
+\boxed{W_{\text{literal}}=2.262\times10^{-4}\,\mathrm{kJ}},\qquad
+\boxed{W_{\text{likely intended}}\approx0.226\,\mathrm{kJ}}
+\]
+
+\textbf{Reasonableness / common trap.} The trap is accepting the modulus literally without checking whether the steel value is plausible. The rod is very slender, so the force and work should be modest, but not absurdly tiny for steel unless the modulus is misprinted.
+
+\textbf{Source page.} p.~4.
+
+\subsection*{Question 5}
+\textbf{Rewritten question.} Determine the torque applied to the shaft of a car that transmits $250\,\mathrm{hp}$ $(1\,\mathrm{hp}\approx745.7\,\mathrm{W})$ and rotates at a rate of $3200\,\mathrm{rpm}$.
+
+\textbf{Vagueness check.} No ambiguity beyond the approximate horsepower conversion.
+
+\textbf{System and boundary.} Rotating shaft as the control volume; power crosses the boundary as shaft work.
+
+\textbf{Assumptions.} Steady rotation; no losses in the conversion from power to torque.
+
+\textbf{Given / Find.}
+\[
+\dot W=250\,\mathrm{hp},\quad 1\,\mathrm{hp}=745.7\,\mathrm{W},\quad N=3200\,\mathrm{rpm},\quad \tau=?
+\]
+
+\textbf{Governing equation.}
+\[
+\dot W=\tau\omega
+\]
+
+\textbf{Substitution.}
+\[
+\dot W=(250)(745.7)=186425\,\mathrm{W}
+\]
+\[
+\omega=3200\,\frac{\mathrm{rev}}{\mathrm{min}}\times\frac{2\pi\,\mathrm{rad}}{1\,\mathrm{rev}}\times\frac{1\,\mathrm{min}}{60\,\mathrm{s}}=335.103\,\mathrm{rad/s}
+\]
+\[
+\tau=\frac{186425}{335.103}=556.32\,\mathrm{N\,m}
+\]
+
+\[\boxed{\tau\approx556.3\,\mathrm{N\,m}}\]
+
+\textbf{Reasonableness / common trap.} A common trap is forgetting the $2\pi/60$ conversion from rpm to rad/s.
+
+\textbf{Source page.} p.~5.
+
+\subsection*{Question 6}
+\textbf{Rewritten question.} A $100\,\mathrm{kW}$ engine and an $80\,\mathrm{MW}$ power plant are each used to lift a $500{,}000\,\mathrm{kg}$ mass $100\,\mathrm{m}$ vertically. Calculate the minimum time, in seconds, it would take for each power source to complete this task.
+
+\textbf{Vagueness check.} No ambiguity if the problem is treated as an ideal lifting limit.
+
+\textbf{System and boundary.} The lifted mass as the system; work crosses the boundary from the lifting device.
+
+\textbf{Assumptions.} Ideal lifting, no losses, no acceleration losses, and constant $g$.
+
+\textbf{Given / Find.}
+\[
+m=500000\,\mathrm{kg},\quad h=100\,\mathrm{m},\quad g=9.81\,\mathrm{m/s^2},\quad \dot W_1=100\,\mathrm{kW},\quad \dot W_2=80\,\mathrm{MW}
+\]
+Find $t_1$ and $t_2$.
+
+\textbf{Governing equations.}
+\[
+W=mgh,\qquad t=\frac{W}{\dot W}
+\]
+
+\textbf{Substitution.}
+\[
+W=(500000)(9.81)(100)=4.905\times10^8\,\mathrm{J}
+\]
+For $100\,\mathrm{kW}$:
+\[
+t_1=\frac{4.905\times10^8\,\mathrm{J}}{100\times10^3\,\mathrm{W}}=4905\,\mathrm{s}
+\]
+For $80\,\mathrm{MW}$:
+\[
+t_2=\frac{4.905\times10^8\,\mathrm{J}}{80\times10^6\,\mathrm{W}}=6.13125\,\mathrm{s}
+\]
+
+\[
+\boxed{t_1=4905\,\mathrm{s}},\qquad \boxed{t_2\approx6.13\,\mathrm{s}}
+\]
+
+\textbf{Reasonableness / common trap.} The times are ideal minimums; real systems take longer. Watch the megawatt/kilowatt conversion.
+
+\textbf{Source page.} p.~6.
+
+\subsection*{Question 7}
+\questionfigure{week2-q07.png}{Vertical piston-cylinder water heating with heat loss and boundary work.}
+
+\textbf{Rewritten question.} A vertical piston-cylinder device contains water and is being heated. During the process, $70\,\mathrm{kJ}$ of heat is transferred to the water, heat losses from the side walls amount to $9\,\mathrm{kJ}$, the piston rises as a result of evaporation, and $6\,\mathrm{kJ}$ of work is done by the vapor. Determine the change in the energy of the water for this process.
+
+\textbf{Vagueness check.} The wording is clear once sign convention is chosen.
+
+\textbf{System and boundary.} Closed system: the water in the cylinder. Boundary includes the piston and cylinder walls.
+
+\textbf{Assumptions.} Closed system; heat into the system positive; work done by the system positive.
+
+\textbf{Given / Find.}
+\[
+Q_{\text{in}}=70\,\mathrm{kJ},\quad Q_{\text{loss}}=9\,\mathrm{kJ},\quad W=6\,\mathrm{kJ}
+\]
+Find $\Delta E$.
+
+\textbf{Governing equation.}
+\[
+\Delta E=Q-W
+\]
+with net heat
+\[
+Q=Q_{\text{in}}-Q_{\text{loss}}
+\]
+
+\textbf{Substitution.}
+\[
+Q=70-9=61\,\mathrm{kJ}
+\]
+\[
+\Delta E=61-6=55\,\mathrm{kJ}
+\]
+
+\[\boxed{\Delta E=+55\,\mathrm{kJ}}\]
+
+\textbf{Reasonableness / common trap.} The trap is double-counting the losses or flipping the work sign. Positive $\Delta E$ means the water's total energy increased.
+
+\textbf{Source page.} p.~7.
+
+\subsection*{Question 8}
+\textbf{Rewritten question.} Consider a room that is initially at the outdoor temperature of $30^\circ\mathrm{C}$. The room contains a $50$-W lightbulb, a $120$-W TV set, a $300$-W refrigerator, and a $1200$-W iron. Assuming no heat transfer through the walls, determine the rate of increase of the energy content of the room when all of these electric devices are on.
+
+\textbf{Vagueness check.} The initial temperature is irrelevant to the requested rate. The refrigerator still contributes positive electrical input to the room in the energy balance.
+
+\textbf{System and boundary.} The room air and contents as a closed system; boundary is the room envelope.
+
+\textbf{Assumptions.} No heat transfer through the walls; all electrical input eventually becomes energy increase in the room.
+
+\textbf{Given / Find.}
+\[
+P_{\text{lamp}}=50\,\mathrm{W},\quad P_{\text{TV}}=120\,\mathrm{W},\quad P_{\text{fridge}}=300\,\mathrm{W},\quad P_{\text{iron}}=1200\,\mathrm{W}
+\]
+Find $\mathrm{d}E_{\text{room}}/\mathrm{d}t$.
+
+\textbf{Governing equation.}
+\[
+\frac{\mathrm{d}E_{\text{room}}}{\mathrm{d}t}=\sum P_{\text{in}}
+\]
+
+\textbf{Substitution.}
+\[
+\frac{\mathrm{d}E_{\text{room}}}{\mathrm{d}t}=50+120+300+1200=1670\,\mathrm{W}
+\]
+
+\[
+\boxed{\frac{\mathrm{d}E_{\text{room}}}{\mathrm{d}t}=1670\,\mathrm{W}=1.67\,\mathrm{kW}}\]
+
+\textbf{Reasonableness / common trap.} Do not subtract the refrigerator as if it removed energy from the room overall; the electrical input still ends up as room energy.
+
+\textbf{Source page.} p.~8.
+
+\subsection*{Question 9}
+\textbf{Rewritten question.} Consider a $2500\,\mathrm{kg}$ car cruising at constant speed of $80\,\mathrm{km/h}$. Now the car starts to pass another car by accelerating to $110\,\mathrm{km/h}$ in $5\,\mathrm{s}$. (a) Determine the additional power needed to achieve this acceleration. (b) What would your answer be if the total mass of the car were only $800\,\mathrm{kg}$?
+
+\textbf{Vagueness check.} The phrase ``additional power'' is interpreted as the average rate associated with the kinetic-energy increase during the pass.
+
+\textbf{System and boundary.} The car as a closed system.
+
+\textbf{Assumptions.} Neglect losses; use only the change in kinetic energy; constant acceleration not required because only average power is asked.
+
+\textbf{Given / Find.}
+\[
+m_1=2500\,\mathrm{kg},\quad m_2=800\,\mathrm{kg},\quad V_0=80\,\mathrm{km/h},\quad V_1=110\,\mathrm{km/h},\quad \Delta t=5\,\mathrm{s}
+\]
+Find additional average power for each mass.
+
+\textbf{Governing equations.}
+\[
+W_a=\Delta KE=\frac12m\left(V_1^2-V_0^2\right),\qquad \dot W_a=\frac{W_a}{\Delta t}
+\]
+
+\textbf{Substitution.}
+\[
+V_0=\frac{80}{3.6}=22.2222\,\mathrm{m/s},\qquad V_1=\frac{110}{3.6}=30.5556\,\mathrm{m/s}
+\]
+\[
+V_1^2-V_0^2=(30.5556)^2-(22.2222)^2=438.574\,\mathrm{m^2/s^2}
+\]
+For $m_1=2500\,\mathrm{kg}$,
+\[
+\dot W_{a,1}=\frac{1}{2}(2500)(438.574)\frac{1}{5}=1.09954\times10^5\,\mathrm{W}
+\]
+\[
+\dot W_{a,1}\approx110\,\mathrm{kW}
+\]
+For $m_2=800\,\mathrm{kg}$,
+\[
+\dot W_{a,2}=\frac{1}{2}(800)(438.574)\frac{1}{5}=3.50859\times10^4\,\mathrm{W}
+\]
+\[
+\dot W_{a,2}\approx35.1\,\mathrm{kW}
+\]
+
+\[
+\boxed{\dot W_{a,1}\approx110\,\mathrm{kW}},\qquad \boxed{\dot W_{a,2}\approx35.1\,\mathrm{kW}}
+\]
+
+\textbf{Reasonableness / common trap.} The additional power scales linearly with mass. A common mistake is using speed in $\mathrm{km/h}$ directly in the kinetic-energy formula.
+
+\textbf{Source page.} p.~9.
+
+\subsection*{Question 10}
+\questionfigure{week2-q10.png}{River flowing toward a lake, showing the 80 m elevation drop and river speed.}
+
+\textbf{Rewritten question.} Consider a river flowing toward a lake at an average velocity of $4\,\mathrm{m/s}$ at a rate of $600\,\mathrm{m^3/s}$ at a location $80\,\mathrm{m}$ above the lake surface. Determine the total mechanical energy of the river water per unit mass and the power generation potential of the entire river at that location.
+
+\textbf{Vagueness check.} Clear if the lake surface is used as the reference elevation and both free surfaces are at atmospheric pressure.
+
+\textbf{System and boundary.} Flowing water stream through a control volume around the river section.
+
+\textbf{Assumptions.} Incompressible stream; negligible pressure difference at the free surfaces; lake surface is the zero-elevation reference.
+
+\textbf{Given / Find.}
+\[
+V=4\,\mathrm{m/s},\quad \dot V=600\,\mathrm{m^3/s},\quad z=80\,\mathrm{m},\quad p_1=p_2=0\;\text{(gauge)}
+\]
+Find the specific mechanical energy and the ideal power potential.
+
+\textbf{Governing equations.}
+\[
+e_{mech}=\frac{p}{\rho}+\frac{V^2}{2}+gz
+\]
+For ideal generation potential,
+\[
+\dot m=\rho\dot V,\qquad \dot W_{gen}=\dot m\,e_{mech}
+\]
+
+\textbf{Substitution.}
+Take the lake surface as $z=0$. At the river location,
+\[
+e_{mech}=\frac{0}{\rho}+\frac{(4\,\mathrm{m/s})^2}{2}+(9.81\,\mathrm{m/s^2})(80\,\mathrm{m})
+\]
+\[
+e_{mech}=8+784.8=792.8\,\mathrm{J/kg}=0.7928\,\mathrm{kJ/kg}
+\]
+With $\rho\approx1000\,\mathrm{kg/m^3}$,
+\[
+\dot m=(1000)(600)=6.0\times10^5\,\mathrm{kg/s}
+\]
+\[
+\dot W_{gen}=(6.0\times10^5)(792.8)=4.7568\times10^8\,\mathrm{W}
+\]
+\[
+\dot W_{gen}\approx475.7\,\mathrm{MW}
+\]
+
+\[
+\boxed{e_{mech}=0.7928\,\mathrm{kJ/kg}},\qquad \boxed{\dot W_{gen}\approx4.76\times10^8\,\mathrm{W}=475.7\,\mathrm{MW}}
+\]
+
+\textbf{Reasonableness / common trap.} The elevation term dominates the kinetic term. The usual trap is forgetting to convert the volumetric flow rate to mass flow rate.
+
+\textbf{Source page.} p.~10.

@@ -15,72 +15,78 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Assist Gas Overview]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Stainless and bright-edge cutting, purity requirements, supply options (dewar vs PSA).
+> Stainless and bright-edge cutting — purity, pressure, supply options (dewar vs PSA), and yellow-edge diagnosis.
 
-## Role in cutting
+## Role
 
-Nitrogen is an inert assist: it blows molten metal from the kerf without reacting. Produces bright edges on stainless and aluminum. Requires **higher pressure and flow** than oxygen on many applications.
+Nitrogen is an inert assist: blows molten metal from the kerf without oxidizing. Produces bright edges on stainless and aluminum. Needs **higher pressure and flow** than oxygen on many jobs.
 
 ## Specifications (typical)
 
 | Parameter | Value |
 | --- | --- |
 | Purity (cutting) | ≥99.99% (4N) |
-| Purity (some bright SS apps) | 99.995%+ preferred |
-| Output pressure range | 0.2–3.0 MPa (2–30 bar) at head |
-| HP supply | Dewar, bulk tank, or PSA + booster |
-| Flow (indicative) | ~1.5 m³/min @ ≤3 kW; ~2.2 m³/min @ >3 kW |
+| Bright SS apps | 99.995%+ preferred |
+| Output at head | 0.2–3.0 MPa (2–30 bar) typical range |
+| Supply | Dewar/bulk or PSA + booster |
+| Flow hint | ~1.5 m³/min @ ≤3 kW; ~2.2 m³/min @ >3 kW |
 
-Flow table: [[Fiber Laser Power Classes]].
+Flow context: [[Fiber Laser Power Classes]].
 
 ## Supply options
 
 | Source | Best for | Notes |
 | --- | --- | --- |
-| Liquid N₂ dewar | Most production shops | Vaporizer required; steady flow |
+| Liquid N₂ dewar | Most production | Vaporizer required |
 | Bulk tank | High consumption | Contract supply |
-| PSA generator | On-site generation | Needs clean dry air feed — [[PSA Nitrogen Generators]] |
-| Gas cylinders | **Not** production | Exhaust in ~20 min on continuous cut |
+| PSA generator | On-site | Needs clean dry air — [[PSA Nitrogen Generators]] |
+| Gas cylinders | **Not** production | Exhaust in minutes on continuous cut |
 
 ## Why purity matters
 
-Low purity → yellow/gold oxide on stainless, inconsistent edge, faster nozzle wear. Contamination often traced to:
+Low purity → yellow/gold oxide on stainless, inconsistent edge, faster nozzle wear. Trace contamination to:
 
-- Wrong regulator or mixed lines
-- PSA not reaching setpoint purity
-- Booster sucking air if buffer tank low
+- Mixed/wrong lines
+- PSA not at setpoint purity
+- Booster sucking air on low buffer
+- Leaks pulling atmosphere
 
 ## Installation checklist
 
-1. Dedicated N₂ regulator rated for input pressure (15 MPa class common)
-2. Booster and HP bottle bank if cutting above PSA output
-3. Line material: stainless or copper; avoid permeable hose on HP sections
-4. Filter at machine inlet per OEM
-5. Record purity certificate or analyzer reading at commissioning
+1. Dedicated N₂ regulator rated for inlet (15 MPa / bank class as needed)
+2. Booster + HP bank if cutting above PSA buffer pressure
+3. Stainless/copper hard line; minimal HP hose
+4. Inlet filter per OEM
+5. Purity certificate or analyzer at commissioning
+6. Dynamic pressure test under cut
 
 ## Normal operation
 
-- Bright silver edge on SS when pressure and focus correct
-- Higher pitch noise at high N₂ pressure — normal
-- Consumption scales with orifice/nozzle diameter and duty cycle
+| Observation | Meaning |
+| --- | --- |
+| Bright silver SS edge | Process + purity OK |
+| High pitch at high P | Normal |
+| Stable dynamic P | Supply sized OK |
 
 ## Troubleshooting
 
 | Symptom | Likely cause | Action |
 | --- | --- | --- |
-| Yellow/gold SS edge | Purity or pressure | Verify 4N; measure under flow |
-| Edge burr | Low pressure, worn nozzle | Increase pressure; swap nozzle |
-| Pressure collapse mid-cut | Undersized booster/storage | [[Nitrogen Booster and HP Storage]] |
-| Cost spike | Leak, pierce time too long | Leak test; tune pierce |
+| Yellow/gold SS edge | Purity or pressure | Analyzer; dynamic P |
+| Edge burr | Low P; worn nozzle | Raise P; swap nozzle |
+| Pressure collapse mid-cut | Booster/storage | [[Nitrogen Booster and HP Storage]] |
+| Cost spike | Leak; long pierce | Leak test; tune pierce |
 
-## PSA plant cross-reference
+## Galvanized note
 
-If shop uses on-site N₂: [[Nitrogen System Pressure Setpoints]], [[Nitrogen System Troubleshooting]].
+N₂ preferred for edge but **does not eliminate Zn fume** — [[Zn and Coated Material Fume Notes]].
 
 ## Related notes
 
-- [[Compressed Air Cutting]] — lower cost alternative for some CS
-- [[Zn and Coated Material Fume Notes]] — N₂ on galvanized still produces zinc fume
+- [[Compressed Air Cutting]]
+- [[Nitrogen System Troubleshooting]]
+- [[Gas Regulators and PRVs]]
+- [[Cutting Parameters Index]]
 
 ## Sources
 

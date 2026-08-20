@@ -31,7 +31,7 @@ last_updated: 2026-08-02
 | Candidate laboratory | In-class technical evidence | Team/process account | Main unresolved work | Current strength |
 |---|---|---|---|---|
 | Lab 5 — Amplitude Modulation | Class `.slx`, `.mat`, `.fig`, workspace capture, and four spectrum screenshots | Weeks 1–2 recorded | Identify the decisive plotting fix and confirm final Scope observation | Strong |
-| Lab 4 — Pulse-Code Modulation | PCM bench, encoder patching, annotated instructions, meter readings, oscilloscope traces | Week 3 recorded | Check two unusual values, incomplete companded sequence, and photo classification | Promising but incomplete |
+| Lab 4 — Pulse-Code Modulation | Two weeks of PCM bench evidence, complete encoder/decoder patching, 16 voltage pairs, verified graphs, periodic-message/reconstruction traces and FFT photograph | Weeks 3–4 recorded | Earlier quantisation transcription still has two unusual values and an incomplete companded sequence; harmonic amplitudes were not recorded | Strong |
 | Candidate laboratory 3 | Not yet added | Not yet added | Complete future laboratory | Pending |
 | Candidate laboratory 4 | Not yet added | Not yet added | Complete future laboratory | Pending |
 
@@ -51,7 +51,7 @@ The team consisted of Nahil, Iyla, Amber, and Aaron. During the first two sessio
 
 This arrangement shared participation, but the single-computer environment made troubleshooting difficult. During the second session, several members developed possible fixes for the plotting problem and changes occasionally replaced one another before the earlier code had been fully diagnosed. The group eventually completed the work, but the experience showed the value of preserving a known baseline and making one agreed change at a time.
 
-Lab 4 was completed by Aaron and Nahil because two members were sick. The pair first asked the lecturer and classmates for enough context to understand how to align and decode the PCM frame. They practised the interpretation method, checked it against other students, and then divided the task between finding each result and recording the voltage/code pair. This made the smaller team effective despite the reduced attendance.
+The first Lab 4 session was completed by Aaron and Nahil because two members were sick. The pair first asked the lecturer and classmates for enough context to understand how to align and decode the PCM frame. They practised the interpretation method, checked it against other students, and then divided the task between finding each result and recording the voltage/code pair. In the second Lab 4 session, Iyla, Amber, Nihil and Aaron attended. Iyla read ahead while Nihil and Aaron set up the encoder/decoder chain and continued data collection. Lecturer assistance resolved uncertainty in the physical patching, after which the group completed all 16 encoder/decoder voltage pairs and the later reconstruction/FFT observations.
 
 ---
 
@@ -157,7 +157,7 @@ The in-class Simulink model and labelled spectrum screenshot support successful 
 ---
 
 <details open markdown="1">
-<summary><strong>Candidate Lab 4 — Pulse-Code Modulation</strong> · direct measurements, data checks pending</summary>
+<summary><strong>Candidate Lab 4 — Pulse-Code Modulation</strong> · strong two-session in-class evidence</summary>
 
 ## 4. Candidate Lab 4 — Pulse-Code Modulation
 
@@ -262,43 +262,95 @@ The jump from `-0.960 V` to `-0.308 V`, followed by only `0.038 V` to `-0.270 V`
 
 This sequence contains only 11 rows and omits several code words. A final companding plot and numerical comparison will not be certified until the hardcopy notes or additional class evidence confirms whether the sequence is complete.
 
-### 4.6 Discussion
+### 4.6 Second in-class session — decoder and reconstruction
 
-The in-class photographs support the essential qualitative result: changing the continuous DC input produced discrete binary patterns. This is direct evidence of quantisation. The code does not vary continuously with voltage; it remains in one state over an interval and changes when a threshold is crossed.
+The group returned for a second Lab 4 session with Iyla, Amber, Nihil and Aaron present. Iyla read ahead through the next tasks while Nihil and Aaron set up the PCM Encoder and PCM Decoder and continued collecting data. The group initially had difficulty translating the instructions into the complete physical patching. Lecturer assistance helped them correct the clock, frame-synchronisation, PCM-data and measurement connections. Understanding the full system and collecting the complete dataset took the remainder of the session.
 
-The linear run appears to span codes `0000` to `1111` across approximately `-2.63 V` to `+2.63 V`. Most neighbouring recorded values are separated by roughly similar increments, as expected for linear quantisation. However, the two central values identified above prevent a complete quantitative claim until they are checked.
+The second-week folder is primary in-class evidence and contains 16 photographs of the TIMS patching, meter and scope readings, periodic-message/PCM traces, sample-and-hold or reconstruction traces, and FFT mode.
 
-The second sequence appears intended to represent a non-linear or companded response. Its voltage intervals are visibly non-uniform, with narrower regions near small amplitudes and wider regions toward the extremes. That is qualitatively consistent with companding, but the missing codes and questionable ordering mean that the final graph and detailed comparison remain provisional.
+![Second-week TIMS PCM Encoder and Decoder patching.](<../Lab 4/Lab 4 Class Documents/second week evidence/report-ready/21E33F07-6AAB-465A-80C7-BD6228867B93-normalized.jpg>)
 
-The strongest process feature was the pair’s decision to understand the frame before collecting measurements. By practising the decoding method and checking it with the lecturer and classmates, they reduced the risk of recording a complete table from the wrong bit positions.
+#### Encoder/decoder data
 
-### 4.7 Limitations and evidence boundary
+The measured decoder error is defined as **e = Vdecoder − Vencoder**.
 
-- The meter-and-oscilloscope photographs are primary in-class evidence.
-- `Lab4 Recorded Data.txt` is a companion transcription and contains unresolved values.
-- `Communication Engineering Lab 4.md` is a manual-based preparation and interpretation note, not proof of what was completed.
-- `Lab 4 answers Kane.pdf` is another student’s work and is not used as Aaron’s report wording or evidence.
-- `IMG_2379_Original.jpeg` shows an ENEL800 superheterodyne-receiver sheet and is excluded as irrelevant to this PCM experiment.
+| No. | Venc (V) | Vdec (V) | Code | Error (V) |
+|---:|---:|---:|:---:|---:|
+| 1 | -2.668 | -2.530 | 0000 | +0.138 |
+| 2 | -2.095 | -2.216 | 0001 | -0.121 |
+| 3 | -1.913 | -1.902 | 0010 | +0.011 |
+| 4 | -1.498 | -1.589 | 0011 | -0.091 |
+| 5 | -1.275 | -1.273 | 0100 | +0.002 |
+| 6 | -0.933 | -0.959 | 0101 | -0.026 |
+| 7 | -0.639 | -0.646 | 0110 | -0.007 |
+| 8 | -0.289 | -0.332 | 0111 | -0.043 |
+| 9 | -0.008 | -0.016 | 1000 | -0.008 |
+| 10 | 0.325 | 0.297 | 1001 | -0.028 |
+| 11 | 0.625 | 0.611 | 1010 | -0.014 |
+| 12 | 0.955 | 0.924 | 1011 | -0.031 |
+| 13 | 1.275 | 1.240 | 1100 | -0.035 |
+| 14 | 1.592 | 1.553 | 1101 | -0.039 |
+| 15 | 1.919 | 1.867 | 1110 | -0.052 |
+| 16 | 2.233 | 2.181 | 1111 | -0.052 |
 
-### 4.8 Personal and team reflection
+![Measured encoder-to-decoder transfer and ideal one-to-one line.](<../Lab 4/Lab 4 Class Documents/second week evidence/analysis/lab4_week2_encoder_decoder_transfer.png>)
 
-Reduced attendance meant that the work could not be divided across the full group. The two attending members compensated by taking time to learn from the lecturer and classmates, confirming the decoding process, and then separating measurement from recording. This worked efficiently once the method was understood. The next improvement is to resolve uncertain entries immediately against the hardcopy record so that a graph is not delayed by ambiguous data.
+![Encoder and decoder voltage levels for each four-bit code.](<../Lab 4/Lab 4 Class Documents/second week evidence/analysis/lab4_week2_levels_by_code.png>)
 
-### 4.9 Provisional conclusion
+![Decoder error calculated for each four-bit code.](<../Lab 4/Lab 4 Class Documents/second week evidence/analysis/lab4_week2_decoder_error.png>)
 
-The in-class equipment, patching, and meter/scope photographs support that the pair completed a PCM voltage-to-code investigation using the TIMS system. The observed code changed in discrete steps as the analogue voltage was varied, demonstrating four-bit quantisation. Raw-data graphs have now been produced without correcting or filling missing values. They support the qualitative linear/companded comparison while keeping the quantitative limitations visible.
+The mean absolute error was `0.0436 V`, the RMSE was `0.0585 V`, and the mean signed error was `-0.0248 V`. The maximum absolute error was `0.138 V` at code `0000`. Linear regression gave
 
-### 4.10 Resolved evidence questions
+\[
+V_{decoder}=0.9886V_{encoder}-0.0265\text{ V},\qquad R^2=0.99879.
+\]
 
-1. Nahil attended Lab 4 with Aaron.
-2. `-0.308 V` and `-0.270 V` remain exact raw transcriptions but are not independently verified by the retained photographs; they must not be silently corrected.
-3. Only 11 companded points survive in the class-data file; codes 5, 6, 7, 8 and 10 are missing.
-4. The visible meter readings confirm `67EAA...`, `FF32...`, `AA06...`, and `1B4E...` for Question 4.1, and `7264...` and `E70F...` for Question 4.2.
-5. The full first-person answers, evidence photographs and raw-data graphs are available in [[../Lab Logbook/Communication Engineering Labbook - Answered Questions/Communication Engineering Labbook - Answered Questions.pdf|Communication Engineering Labbook — Answered Questions and Evidence]].
+This close-to-unity slope and high coefficient of determination show that the decoder tracked the encoder input closely over the measured range. The small negative intercept and predominantly negative errors show a slight downward bias, while the two largest discrepancies occurred at the negative end.
+
+#### Periodic message, reconstruction and FFT evidence
+
+![Periodic analogue message and PCM data; the scope reports approximately 259.1 Hz and 3.52 V peak-to-peak for the analogue waveform.](<../Lab 4/Lab 4 Class Documents/second week evidence/report-ready/039C2806-340B-44CC-B954-6D36F873DAF4-normalized.jpg>)
+
+![Periodic message and quantised/decoded output.](<../Lab 4/Lab 4 Class Documents/second week evidence/report-ready/71F277D7-828B-4647-A938-C01A4409C042-normalized.jpg>)
+
+![FFT-mode evidence from the reconstruction/distortion stage.](<../Lab 4/Lab 4 Class Documents/second week evidence/report-ready/966FE682-7AF7-4B6B-983C-4C8790D9CEF3-normalized.jpg>)
+
+The FFT photograph contains visible spectral peaks but no written harmonic-amplitude readings. It supports that the FFT stage was reached, but it does not justify invented second- or third-harmonic distortion values.
+
+Full-resolution checks found direct photographic support for the encoder readings near `-1.498 V` and `+1.592 V`. Other visible meter readings near `-0.629 V`, `-0.330 V`, `-2.628 V`, and `-0.473 V` are retained as setup or operating evidence where they do not exactly match a typed row. The supplied 16-row dataset remains unchanged.
+
+### 4.7 Discussion
+
+The first session demonstrated encoder quantisation and established a method for reading four-bit PCM words. The second session extended this evidence to the complete encoder-to-decoder chain. The decoder produced discrete output levels corresponding closely to the encoder input regions, confirming that the binary PCM words could be converted back into proportional analogue levels. The remaining voltage errors are consistent with finite quantisation, endpoint behaviour and practical module/measurement offsets.
+
+The second-week periodic-message photographs make the sample-and-hold behaviour more visible than the DC measurements. A continuously varying input is represented by a stepped or held decoder output. The reconstruction and FFT photographs show that the group progressed to filtering and frequency-domain inspection, although the available evidence is qualitative for harmonic distortion.
+
+The strongest process feature across both sessions was the group's willingness to pause and understand the signal path rather than record unexplained numbers. In the first session Aaron and Nahil learned how to read the PCM frame. In the second session Iyla, Amber, Nihil and Aaron worked through the larger encoder/decoder system, using lecturer assistance when the physical patching was unclear.
+
+### 4.8 Limitations and evidence boundary
+
+- Both weeks' original meter-and-oscilloscope photographs are primary in-class evidence.
+- The new 16-row encoder/decoder dataset is complete and has been graphed exactly as supplied.
+- The first-week `Lab4 Recorded Data.txt` still contains unresolved linear and companded entries; the second-week decoder table does not silently correct that earlier table.
+- Several second-week meter photographs are operating snapshots rather than exact matches to a typed row and have not been forced into the table.
+- FFT mode is photographed, but exact harmonic amplitudes were not recorded; only a qualitative distortion discussion is justified.
+- `Communication Engineering Lab 4.md` remains a manual-based preparation and interpretation note.
+- `Lab 4 answers Kane.pdf` remains peer comparison material and is not Aaron's evidence or wording.
+- `IMG_2379_Original.jpeg` remains excluded because it is unrelated ENEL800 material.
+
+### 4.9 Personal and team reflection
+
+In the first Lab 4 session, reduced attendance meant Aaron and Nahil had to learn the decoding method and divide the measurement roles carefully. In the second session, Iyla read ahead while Nihil and Aaron concentrated on the setup and data collection, with Amber present to support the group. The larger setup was still difficult because the encoder and decoder required several coordinated connections. Lecturer assistance was important in moving the group past that blocker.
+
+The key improvement for future work is to draw and label the entire signal path before patching: source, encoder input, shared clock, frame synchronisation, PCM-data link, decoder output, filter and oscilloscope channels. Verifying one signal at a time would reduce the time spent diagnosing several simultaneous connections. Recording the purpose and scope settings beside each photograph would also make the later evidence mapping faster and more precise.
+
+### 4.10 Provisional conclusion
+
+Across two in-class sessions, the group completed both encoder quantisation and encoder-to-decoder transmission work. The first-week photographs show voltage-dependent four-bit PCM patterns. The second-week data show that all 16 decoded levels tracked the encoder input closely, with a fitted slope of `0.9886`, an intercept of `-0.0265 V`, and R² = `0.99879`. Periodic-message, stepped-output, reconstruction and FFT photographs provide further evidence that the complete PCM chain was operated. The remaining limitations are confined to the earlier ambiguous quantisation transcription and the lack of numerical harmonic readings.
 
 ### 4.11 Selection strength
 
-**Current assessment:** Promising candidate. It has strong physical in-class evidence, a useful personal method account, and verified raw-data plots. Resolving the two questionable linear values and recovering the five missing companded codes would strengthen the quantitative analysis further, but the present graphs are defensible because they display the preserved uncertainty explicitly.
+**Current assessment:** Strong candidate. Lab 4 now has evidence from two sessions, complete encoder/decoder voltage data, verified graphs, physical patching photographs, periodic-message and reconstruction traces, FFT-stage evidence, and a clear first-person troubleshooting narrative. Its remaining uncertainties are explicitly separated from the verified second-week dataset.
 
 </details>
 
@@ -364,12 +416,12 @@ The final three should not be selected until all four candidate sections are dra
 
 | Criterion | Lab 5 | Lab 4 | Candidate 3 | Candidate 4 |
 |---|---:|---:|---:|---:|
-| Primary in-class evidence | Strong | Strong photographs; table checks pending | — | — |
-| Technical result clarity | Strong | Moderate pending data checks | — | — |
-| Theory-to-result connection | Strong | Strong qualitatively | — | — |
-| Team/process detail | Strong | Good; one name/detail pending | — | — |
-| Troubleshooting/reflection | Strong | Moderate | — | — |
-| Effort to make submission-ready | Low–moderate | Moderate | — | — |
+| Primary in-class evidence | Strong | Strong: two sessions, complete decoder table, setup/scope photographs and FFT evidence | — | — |
+| Technical result clarity | Strong | Strong for the second-week encoder/decoder run; earlier companding data still limited | — | — |
+| Theory-to-result connection | Strong | Strong | — | — |
+| Team/process detail | Strong | Strong: attendance, roles and lecturer assistance recorded | — | — |
+| Troubleshooting/reflection | Strong | Strong | — | — |
+| Effort to make submission-ready | Low–moderate | Low–moderate | — | — |
 
 ## 8. Overall discussion
 
@@ -377,7 +429,7 @@ The final three should not be selected until all four candidate sections are dra
 
 ## 9. Team reflection
 
-The team’s experience so far shows two different forms of practical collaboration. Lab 5 involved the full group around one computer, creating broad participation but also competing code changes. Lab 4 involved only two members, making communication simpler but reducing available roles. In both cases, progress improved when the team agreed on the interpretation method before gathering or presenting results.
+The team’s experience so far shows different forms of practical collaboration. Lab 5 involved the full group around one computer, creating broad participation but also competing code changes. The first Lab 4 session involved Aaron and Nahil, making communication simpler but reducing available roles. The second Lab 4 session included Iyla, Amber, Nihil and Aaron; Iyla read ahead while Nihil and Aaron concentrated on setup and data collection. In every case, progress improved when the team agreed on the interpretation or signal path before gathering or presenting results.
 
 The strongest improvement for future sessions is to preserve a starting version or raw record, make one change at a time, and label evidence immediately. This reduces the risk of overwriting code, losing measurement context, or reaching the report stage with photographs that cannot be mapped confidently to a result.
 
@@ -415,7 +467,10 @@ See [[Mechatronics Course Content/Communication Engineering/Assessments/Labs/Lab
 - full TIMS bench and PCM Encoder photographs;
 - annotated frame-decoding instruction photograph;
 - meter-and-oscilloscope photographs across the measured voltage range;
-- companion `Lab4 Recorded Data.txt`, retained without invented corrections.
+- companion `Lab4 Recorded Data.txt`, retained without invented corrections;
+- second-week PCM Encoder/Decoder patching and 16 original photographs;
+- `Lab 4 Week 2 Encoder Decoder Data.csv` with all 16 measured pairs;
+- three verified second-week analysis graphs and deterministic status JSON.
 
 ### Appendix D — Pending evidence checklist
 
@@ -423,12 +478,12 @@ See [[Mechatronics Course Content/Communication Engineering/Assessments/Labs/Lab
 - [x] Saved Lab 5 in-class Simulink model
 - [x] Saved Lab 5 in-class spectrum screenshots
 - [x] Lab 4 setup and oscilloscope photographs
-- [x] Week 1–3 running logbook entries
+- [x] Week 1–4 running logbook entries
 - [ ] Exact Lab 5 plotting fix and final Scope observation
-- [ ] Name of Aaron’s Week 3 Lab 4 teammate
+- [x] Aaron’s Lab 4 attendance and teammate details recorded for both weeks
 - [ ] Check Lab 4 values around `-0.960`, `-0.308`, and `-0.270 V`
 - [ ] Recover or confirm missing Lab 4 companded points
-- [ ] Classify remaining Lab 4 photographs by linear/companded run
+- [x] Classify the 16 second-week Lab 4 photographs by setup, meter/scope, reconstruction and FFT evidence
 - [ ] Add candidate sections for the remaining laboratories
 - [ ] Select the strongest three laboratories
 - [ ] Complete final abstract, comparison, conclusion, and reference formatting

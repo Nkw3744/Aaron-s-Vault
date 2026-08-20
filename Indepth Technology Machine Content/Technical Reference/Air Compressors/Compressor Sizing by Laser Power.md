@@ -15,57 +15,86 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Air Compressors for Laser Cutting]] · [[Technical Reference Index]]
 
 > [!info] When to open this note
-> Rough motor kW and flow planning for air-cutting assist by laser class.
+> Rough motor kW and flow planning for air-cutting assist (and dual PSA feed) by laser class.
 
 > [!warning] Request OEM air consumption
-> Nozzle diameter, duty cycle, and pierce time dominate actual m³/min. These tables are planning estimates only.
+> Nozzle diameter, pierce time, and duty cycle dominate real m³/min. Tables below are planning estimates only.
 
-## Motor kW vs laser class (screw, 16 bar class)
+## Motor kW vs laser class (screw, ~16 bar class)
 
-| Laser power | Indicative screw motor kW | Notes |
+| Laser optical power | Indicative screw motor kW | Notes |
 | --- | --- | --- |
-| 1–3 kW | 11–15 kW | Single machine, thin sheet |
+| 1–3 kW | 11–15 kW | Single machine, thin sheet air cut |
 | 4–6 kW | 15–22 kW | Higher pierce duty |
-| 8–12 kW | 22–37 kW+ | Often paired with larger receiver |
-| Multiple machines | Sum peak flows + 20% margin | Central plant |
+| 8–12 kW | 22–37 kW+ | Larger receiver typical |
+| Multiple machines | Sum peak flows + ≥20% margin | Central plant |
 
-## Flow planning
+Pair with [[Fiber Laser Power Classes]] and [[Screw vs Piston Compressors]].
 
-1. Obtain **maximum assist air flow** from cutting head or machine manual (m³/min at rated pressure)
-2. Add 20–30% margin for leaks and future nozzle upsize
-3. Verify FAD curve at **16 bar** (not 7 bar catalog rating)
-4. Receiver volume: often 500–1000 L for 15 kW class; reduces short pierce dips
+## Flow planning method
 
-## Pressure budget
+1. Obtain max assist air flow from head/machine manual (m³/min at rated pressure)
+2. Add 20–30% for leaks and future larger nozzles
+3. Verify FAD on compressor curve at **16 bar** (not 7 bar brochure)
+4. Size receiver for pierce peaks (often 500–1000 L class for mid-size screws — OEM dependent)
+5. Add dryer and filter ΔP into pressure budget
+
+## Pressure budget example
 
 | Stage | Typical loss |
 | --- | --- |
-| Treatment train | 0.3–0.8 bar |
-| Pipe run | 0.1–0.3 bar per 10 m small bore |
-| Machine regulator | Set per recipe |
+| Treatment train (dryer + filters) | 0.3–0.8 bar |
+| Pipe run | 0.1–0.3 bar per 10 m if undersized bore |
+| Machine inlet → nozzle | Internal + proportional valve |
 
-Head needs dynamic pressure per [[Compressed Air Cutting]] — often 10–16 bar depending on thickness.
+Head needs dynamic pressure per recipe — often 10–16 bar on air cut — [[Compressed Air Cutting]].
+
+## Dual duty: air cut + PSA
+
+| Scenario | Sizing approach |
+| --- | --- |
+| Air cut OR PSA, not both peak | Size for larger of the two + margin |
+| Simultaneous | Sum peaks + 20–30% |
+| Unknown simultaneity | Assume simultaneous for production plants |
+
+Starving PSA feed to favor air cut causes purity collapse — [[PSA Nitrogen Generators]].
 
 ## Electrical coordination
 
-Compressor inrush can disturb laser if shared weak feeder. Prefer:
+| Issue | Guidance |
+| --- | --- |
+| Inrush sag on laser | Separate compressor feeder; soft-start/VFD screw |
+| Stabilizer | On laser electronics — not on compressor through undersized unit |
+| Detail | [[Laser Electrical Supply Requirements]] |
 
-- Dedicated compressor circuit
-- Soft starter or VFD screw
-- Stabilizer on laser only — not on compressor branch through same undersized cable
+## Receiver and piping tips
 
-See [[Laser Electrical Supply Requirements]].
+| Item | Practice |
+| --- | --- |
+| Receiver | After separator; ASME/local coded; relief valve |
+| Main header | Large bore; slope to drains |
+| Laser drop | Treated air only after dryer/filters |
+| Tools drops | Tee **upstream** of laser fine filters only if acceptable — prefer separate |
 
-## PSA interaction
+## Undersize symptoms
 
-Same compressor often feeds PSA N₂ plant. Size for **sum** of peak laser air cut and PSA peak air demand, or schedule mutual exclusion.
+| Symptom | Meaning |
+| --- | --- |
+| Pressure collapses on pierce | FAD or receiver too small |
+| Compressor never unloads | Continuous demand > capacity |
+| Dryer PDP rises under load | Dryer also undersized for FAD |
+| Cut quality varies with duty | Supply marginal |
 
-See [[PSA Nitrogen Generators]].
+## Oversizing caveats
+
+Huge compressors short-cycling on tiny demand waste energy and can wet the system if dryer is oversized badly. Prefer VFD screw or correctly staged plant.
 
 ## Related notes
 
-- [[Fiber Laser Power Classes]]
-- [[Screw vs Piston Compressors]]
+- [[Air Compressors for Laser Cutting]]
+- [[Refrigerated Dryers]]
+- [[Air Filtration Stages]]
+- [[Nitrogen System Pressure Setpoints]]
 
 ## Sources
 

@@ -15,11 +15,11 @@ status: generic reference — verify against nameplate and project drawing
 Return to [[Technical Reference Index]]
 
 > [!info] When to open this note
-> On-site nitrogen from compressed air — system layout, feed air quality, and generator operation.
+> On-site nitrogen from compressed air — layout, feed-air quality, generator operation, and links to booster/HP stages.
 
 ## What PSA does
 
-Pressure Swing Adsorption separates nitrogen from compressed air using carbon molecular sieve (CMS). Produces continuous N₂ at moderate pressure and purity; laser cutting usually needs **booster + HP storage** downstream for high-pressure assist.
+Pressure Swing Adsorption separates N₂ from compressed air using carbon molecular sieve (CMS). Produces continuous N₂ at moderate pressure/purity. Laser cutting usually needs **booster + HP storage** downstream for high-pressure assist — [[Nitrogen Booster and HP Storage]].
 
 ## System layout
 
@@ -36,48 +36,53 @@ flowchart LR
     comp --> treat --> psa --> buffer --> boost --> hp --> reg --> laser
 ```
 
-Detail: [[Nitrogen Booster and HP Storage]], [[Nitrogen System Pressure Setpoints]].
+Setpoints: [[Nitrogen System Pressure Setpoints]]. Faults: [[Nitrogen System Troubleshooting]].
 
 ## Feed air requirements
 
 | Parameter | Typical |
 | --- | --- |
-| Clean, dry compressed air | Same quality as good shop air — dryer mandatory |
-| Discharge pressure | Generator needs stable feed — see OEM (often 7–10 bar class feed) |
-| Oil content | Low — protect CMS beds |
-| Temperature | Within OEM ambient range |
+| Clean dry air | Dryer mandatory |
+| Stable feed pressure | Per OEM (often ~7–10 bar class) |
+| Oil content | Very low — protect CMS |
+| Temperature | Within OEM ambient |
 
-Poor feed air → CMS poisoned by oil/water → purity collapse.
+Poor feed → CMS poisoned → purity collapse. Treatment train: [[Refrigerated Dryers]], [[Air Filtration Stages]].
 
-## Generator operation (normal)
+## Generator operation — what good looks like
 
-- Cycles between production and standby to hold buffer pressure
-- Purity analyzer (if fitted) shows 4N+ when healthy
-- Vent muffler on O₂-rich waste stream — ensure ventilation
+| Observation | Meaning |
+| --- | --- |
+| Cycles to hold buffer band | Normal |
+| Purity ≥99.99% when cutting SS | Healthy |
+| Waste O₂-rich vent audible pattern stable | Valves timing OK |
+| No oil smell at inlet filter | Feed OK |
 
 ## Installation checklist
 
 1. Compressor sized for PSA + any air-cut load — [[Compressor Sizing by Laser Power]]
-2. Treatment before PSA inlet
-3. Buffer tank pressure band per project drawing
-4. Booster and HP bank rated for peak cut pressure
-5. Relief valves on all pressure zones
-6. Purity verification before releasing laser production
+2. Full treatment before PSA inlet
+3. Buffer tank and relief valves
+4. Booster + HP bank for cut pressure
+5. Purity verification before SS production release
+6. Ventilate waste vent
+7. Log certificates / analyzer readings
 
 ## Troubleshooting preview
 
-Full table: [[Nitrogen System Troubleshooting]].
-
 | Symptom | First check |
 | --- | --- |
-| Low purity | Feed air quality; CMS age; leaks |
-| Generator won't build pressure | Feed pressure low; valve stuck |
-| High O₂ in product | Bed degradation; wrong cycle timing |
+| Low purity | Feed air; CMS age; leaks |
+| Won't build pressure | Feed pressure; inlet filter; valves |
+| High O₂ in product | Beds; cycle timing |
+
+Full table: [[Nitrogen System Troubleshooting]].
 
 ## Related notes
 
 - [[Nitrogen Assist Gas]]
-- [[Air Filtration Stages]]
+- [[Air Compressors for Laser Cutting]]
+- [[Assist Gas Overview]]
 
 ## Sources
 
