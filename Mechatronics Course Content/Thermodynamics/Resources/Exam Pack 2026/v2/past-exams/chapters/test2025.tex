@@ -1,0 +1,185 @@
+\section*{Test 2025}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} A 10 kg system was taken from $25\,^\circ\mathrm{C}$ to $75\,^\circ\mathrm{C}$. Given the specific heat capacity of the system is $c_p = 3000\,\mathrm{J/(kg\cdot ^\circ C)}$.\footnote{Source sheet: p.~1, 9 marks total.}
+
+\textbf{Source page / marks.} Question sheet p.~1; Q1 worth 9 marks, split as (a) 4 marks, (b) 3 marks, (c) 2 marks.
+
+\textbf{System and boundary.} Closed system; no mass crosses the boundary. The energy accounting is for the system only.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The specific heat is constant over the temperature change.
+  \item No work interaction is stated, so the heating is interpreted as pure sensible energy addition.
+  \item Heat losses are only introduced explicitly in part (c).
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=10\,\mathrm{kg}$, $T_1=25\,^\circ\mathrm{C}$, $T_2=75\,^\circ\mathrm{C}$, $c_p=3000\,\mathrm{J/(kg\cdot ^\circ C)}$.
+  \item Find: (a) $Q$ added, (b) $\dot Q$, (c) heat lost relative to the no-loss case.
+\end{itemize}
+
+\textbf{Governing model.}
+\[
+Q = mc_p\Delta T,\qquad \dot Q = \frac{Q}{\Delta t}
+\]
+
+\textbf{Sequential working with units.}
+\[
+\Delta T = T_2-T_1 = 75-25 = 50\,^\circ\mathrm{C}
+\]
+\[
+Q = (10\,\mathrm{kg})(3000\,\mathrm{J/(kg\cdot ^\circ C)})(50\,^\circ\mathrm{C})
+= 1.50\times 10^6\,\mathrm{J} = 1500\,\mathrm{kJ}
+\]
+\[
+\dot Q = \frac{1500\,\mathrm{kJ}}{20\,\mathrm{s}} = 75\,\mathrm{kW}
+\]
+\[
+Q_{\text{ideal}} = (10)(3000)(80-25)=1.65\times 10^6\,\mathrm{J}=1650\,\mathrm{kJ}
+\]
+\[
+Q_{\text{lost}} = Q_{\text{ideal}}-Q_{\text{actual}} = 1650-1500 = 150\,\mathrm{kJ}
+\]
+
+\textbf{Boxed answers.}
+\[
+\boxed{Q=1500\,\mathrm{kJ},\qquad \dot Q=75\,\mathrm{kW},\qquad Q_{\text{lost}}=150\,\mathrm{kJ}}
+\]
+
+\textbf{Exam check.} Units reduce correctly: $\mathrm{J/(kg\,^{\circ}C)}\times\mathrm{kg}\times{}^\circ\mathrm{C}=\mathrm{J}$. The loss in part (c) is the difference between the ideal no-loss heating requirement and the actual heating supplied.
+
+\subsection*{Q2}
+\textbf{Rewritten question.} 2 kg of water initially at $95\,^\circ\mathrm{C}$ with quality 0.35 occupies a linear spring-loaded piston--cylinder. It is heated until the pressure reaches 800 kPa and the temperature is $275\,^\circ\mathrm{C}$. Determine the initial and final specific volumes and total work.
+
+\textbf{Source page / marks.} Question sheet p.~1; Q2 worth 12 marks, split as (a) 3 marks, (b) 4 marks, (c) 5 marks.
+
+\textbf{System and boundary.} Closed system; piston--cylinder with a moving boundary. The boundary does work only while the piston moves.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The piston motion is quasi-equilibrium and the spring gives a linear $P$--$V$ path.
+  \item The initial state is a saturated mixture at $95\,^\circ\mathrm{C}$, so saturation data apply.
+  \item The final state is superheated at 800 kPa and $275\,^\circ\mathrm{C}$, so superheated-steam data apply.
+  \item Kinetic and potential energy changes are negligible.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=2\,\mathrm{kg}$, $T_1=95\,^\circ\mathrm{C}$, $x_1=0.35$, $P_2=800\,\mathrm{kPa}$, $T_2=275\,^\circ\mathrm{C}$.
+  \item Find: $v_1$, $v_2$, and $W_{1\to2}$.
+\end{itemize}
+
+\textbf{Governing model.}
+\[
+ v_1 = v_f + x_1(v_g-v_f),\qquad v_2 = v(P_2,T_2),\qquad W_{1\to2} = \int_1^2 P\,dV
+\]
+For a linear spring path,
+\[
+W_{1\to2}=\frac{P_1+P_2}{2}(V_2-V_1)=m\,\frac{P_1+P_2}{2}(v_2-v_1)
+\]
+
+\textbf{Source table values.} Using local steam tables for water:
+\[
+\begin{array}{l}
+P_{\text{sat}}(95\,^\circ\mathrm{C}) \approx 84.6\,\mathrm{kPa},\\
+v_f(95\,^\circ\mathrm{C}) \approx 0.00104\,\mathrm{m^3/kg},\\
+v_g(95\,^\circ\mathrm{C}) \approx 2.01\,\mathrm{m^3/kg},\\
+\text{and at } 800\,\mathrm{kPa},\ 275\,^\circ\mathrm{C}:\ v_2\approx 0.307\,\mathrm{m^3/kg}\ \text{(superheated-table lookup; approximate)}.
+\end{array}
+\]
+If a table entry is read as a symbol rather than a fully trusted number, the calculation below is shown with a clearly labelled approximation.
+
+\textbf{Sequential working with units.}
+\[
+ v_1 = 0.00104 + 0.35(2.01-0.00104) \approx 0.704\,\mathrm{m^3/kg}
+\]
+\[
+ V_1 = mv_1 = (2\,\mathrm{kg})(0.704\,\mathrm{m^3/kg}) = 1.408\,\mathrm{m^3}
+\]
+\[
+ V_2 = mv_2 \approx (2\,\mathrm{kg})(0.307\,\mathrm{m^3/kg}) = 0.614\,\mathrm{m^3}
+\]
+Because the device is spring-loaded, the pressure varies linearly between states, so using the average pressure gives the same boundary work as the area under the straight line.
+\[
+W_{1\to2} \approx \frac{84.6+800}{2}\,\mathrm{kPa}\,(0.614-1.408)\,\mathrm{m^3}
+\]
+\[
+W_{1\to2} \approx (442.3\,\mathrm{kPa})(-0.794\,\mathrm{m^3}) \approx -351\,\mathrm{kJ}
+\]
+
+\textbf{Boxed answers.}
+\[
+\boxed{v_1\approx 0.704\,\mathrm{m^3/kg},\qquad v_2\approx 0.307\,\mathrm{m^3/kg},\qquad W_{1\to2}\approx -351\,\mathrm{kJ}}
+\]
+
+\textbf{Exam check and source warning.} The computed path is a net compression, so work by the water is negative even though heat is supplied. This conflicts with the prompt's phrase ``work produced'' and suggests that at least one printed state value may be erroneous. Preserve the literal calculation above, but confirm the intended final state with the lecturer before using it as a model answer.
+
+\subsection*{Q3}
+\textbf{Rewritten question.} R-134a at 0.8 MPa and $90\,^\circ\mathrm{C}$ is cooled at 0.8 MPa to $30\,^\circ\mathrm{C}$ by air. Air enters at 100 kPa and $22\,^\circ\mathrm{C}$ with a volume flow rate of $400\,\mathrm{m^3/min}$ and leaves at 95 kPa and $57\,^\circ\mathrm{C}$. Determine the inlet/outlet enthalpies of both streams and the refrigerant mass flow rate.
+
+\textbf{Source page / marks.} Question sheet p.~2; Q3 worth 9 marks, split as (a) 2 marks, (b) 2 marks, (c) 1 mark, (d) 1 mark, (e) 3 marks.
+
+\textbf{System and boundary.} Two coupled steady-flow control volumes: one for the R-134a stream and one for the air stream. The condenser wall is the interaction surface between them.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steady flow through both streams.
+  \item No shaft work and negligible kinetic/potential energy changes.
+  \item Air is an ideal gas, so $h=h(T)$ only.
+  \item The condenser is adiabatic to the surroundings, so heat lost by the refrigerant equals heat gained by the air.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: R-134a at $P_3=0.8\,\mathrm{MPa}$, $T_3=90\,^\circ\mathrm{C}$, $P_4=0.8\,\mathrm{MPa}$, $T_4=30\,^\circ\mathrm{C}$; air at $P_1=100\,\mathrm{kPa}$, $T_1=22\,^\circ\mathrm{C}$, $\dot V_1=400\,\mathrm{m^3/min}$, $P_2=95\,\mathrm{kPa}$, $T_2=57\,^\circ\mathrm{C}$.
+  \item Find: $h_1, h_2, h_3, h_4,$ and $\dot m_{\mathrm{R134a}}$.
+\end{itemize}
+
+\textbf{Governing model.}
+\[
+\dot Q_{\mathrm{air}} = \dot m_{\mathrm{air}}(h_4-h_3),\qquad \dot Q_{\mathrm{R}} = \dot m_{\mathrm{R134a}}(h_2-h_1),\qquad \dot Q_{\mathrm{air}} + \dot Q_{\mathrm{R}} = 0
+\]
+with the air mass flow rate from the ideal-gas relation,
+\[
+\dot m_{\mathrm{air}} = \rho_1\dot V_1 = \frac{P_1}{RT_1}\dot V_1
+\]
+
+\textbf{Source table values.} From the local property tables / worked resource:
+\[
+\begin{array}{l}
+ h_1(\text{R134a},\ 0.8\,\mathrm{MPa},\ 90\,^\circ\mathrm{C}) \approx 416.03\,\mathrm{kJ/kg},\\
+ h_2(\text{R134a},\ 0.8\,\mathrm{MPa},\ 30\,^\circ\mathrm{C}) \approx 218.19\,\mathrm{kJ/kg},\\
+ h_3(\text{air},\ 22\,^\circ\mathrm{C}) \approx 295.0\,\mathrm{kJ/kg}\ \text{(Table A-17; approximate)},\\
+ h_4(\text{air},\ 57\,^\circ\mathrm{C}) \approx 330.8\,\mathrm{kJ/kg}\ \text{(Table A-17; approximate)}.
+\end{array}
+\]
+Hence,
+\[
+ h_1-h_2 \approx 197.84\,\mathrm{kJ/kg},\qquad h_4-h_3 \approx 35.8\,\mathrm{kJ/kg}
+\]
+
+\textbf{Sequential working with units.}
+\[
+\dot m_{\mathrm{air}} = \frac{(100\,\mathrm{kPa})(400\,\mathrm{m^3/min})}{(0.2870\,\mathrm{kJ/(kg\,K)})(295.15\,\mathrm{K})}
+\times \frac{1\,\mathrm{min}}{60\,\mathrm{s}}
+\approx 7.92\,\mathrm{kg/s}
+\]
+\[
+\dot Q_{\mathrm{air}} = \dot m_{\mathrm{air}}(h_4-h_3) \approx (7.92\,\mathrm{kg/s})(35.8\,\mathrm{kJ/kg}) \approx 284\,\mathrm{kW}
+\]
+For the refrigerant side, the heat rejected has the same magnitude:
+\[
+\dot Q_{\mathrm{R}} = \dot m_{\mathrm{R134a}}(h_2-h_1)
+\]
+\[
+\dot m_{\mathrm{R134a}} = \frac{\dot Q_{\mathrm{air}}}{h_1-h_2} \approx \frac{284\,\mathrm{kW}}{197.84\,\mathrm{kJ/kg}} \approx 1.44\,\mathrm{kg/s}
+\]
+
+\textbf{Boxed answers.}
+\[
+\boxed{h_1\approx 416.03\,\mathrm{kJ/kg},\quad h_2\approx 218.19\,\mathrm{kJ/kg},\quad h_3\approx 295.0\,\mathrm{kJ/kg},\quad h_4\approx 330.8\,\mathrm{kJ/kg},\quad \dot m_{\mathrm{R134a}}\approx 1.44\,\mathrm{kg/s}}
+\]
+
+\textbf{Exam check.} The air and refrigerant balances must oppose each other in sign. If the air enthalpy rise is computed from local table values instead of the rounded approximations above, the refrigerant mass flow rate should move slightly but remain of the same order; do not report false precision beyond the table accuracy.

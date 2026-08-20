@@ -1,0 +1,57 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=16mm,headsep=5mm,footskip=8mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,graphicx,xcolor,enumitem,fancyhdr,hyperref,float,longtable}
+\definecolor{navy}{HTML}{16324F}\definecolor{teal}{HTML}{0F6B67}\definecolor{pale}{HTML}{EEF6F5}\definecolor{warn}{HTML}{FFF4D8}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,pdftitle={Thermodynamics Past Exam Booklet Weeks 1-6}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{3pt}
+\setlist[itemize]{nosep,leftmargin=5mm}\setlist[enumerate]{nosep,leftmargin=6mm}
+\pagestyle{fancy}\fancyhf{}\lhead{Thermodynamics Past Exams}\rhead{Weeks 1--6}\cfoot{\thepage}
+\newcommand{\questionfigure}[2]{\begin{figure}[H]\centering\IfFileExists{question-images/#1}{\includegraphics[width=0.84\linewidth,height=0.45\textheight,keepaspectratio]{question-images/#1}}{\fbox{\parbox{0.8\linewidth}{Missing source figure: #1}}}\caption{#2}\end{figure}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{25mm}{\Huge\bfseries Thermodynamics\\Past Exam Booklet\par}\vspace{5mm}{\Large Weeks 1--6 Questions and Clear Answers\par}\vspace{4mm}{\large Mid-semester papers plus selected end-of-year applications\par}\vfill
+\fbox{\parbox{0.88\textwidth}{\textbf{How to use this booklet.} Attempt each question before reading its answer. Every solution identifies the system, assumptions, property model, sequential working, units, final result and common trap. Repeated questions are retained because repetition reveals what examiners value. End-of-year questions are clearly marked as stretch applications.}}
+\vfill{\small Prepared from the authorised local Thermodynamics assessment files. No live Canvas session was used.\par}\end{titlepage}
+\tableofcontents\clearpage
+
+\section{Coverage map and source boundary}
+This booklet contains \textbf{22 rewritten past-exam questions}: nineteen from five mid-semester papers and three selected end-of-year refrigeration questions that directly extend Week 5--6 principles.
+
+\begin{center}
+\begin{tabular}{p{0.22\linewidth}p{0.13\linewidth}p{0.55\linewidth}}
+\toprule
+Source & Questions & Main coverage\\\midrule
+Test 1 (2016) & 4 & phase diagrams, R-134a piston-cylinder, rigid tank, water tables\\
+Test 2 (2018) & 4 & ideal-gas validity, R-134a tables, piston stops, electrical/paddle work\\
+Test 3 (2019) & 4 & phase/table skills, electrical heating, ideal-gas process cycle\\
+Test 4 (2017 alt.) & 4 & repeated phase skill, steam piston, room heating, R-134a tables\\
+2025 test & 3 & sensible heat, spring-loaded piston, condenser heat exchanger\\
+End-year selection & 3 & Week 5/6 refrigeration balances and COP as stretch applications\\\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}\fbox{\parbox{0.92\linewidth}{\textbf{Evidence rule.} Official handwritten answers are followed where internally consistent. If a source answer is ambiguous or arithmetically inconsistent, this booklet says so and gives a transparent reconstruction. Property values remain tied to the edition of the course tables used by the paper, so small last-digit differences may occur with another table edition.}}\end{center}
+
+\textbf{What was excluded from the end-of-year set.} Otto, Diesel, detailed Brayton-regenerator and Rankine-cycle problems were not included because they depend on later cycle theory rather than only the first six weeks. The selected refrigeration questions use Week 5 steady-flow balances and Week 6 COP concepts, but are labelled as stretch work because they also require vapour-compression-cycle conventions.
+
+\clearpage\addcontentsline{toc}{section}{Test 1 (2016)}\input{chapters/test1}
+\clearpage\addcontentsline{toc}{section}{Test 2 (2018)}\input{chapters/test2}
+\clearpage\addcontentsline{toc}{section}{Test 3 (2019)}\input{chapters/test3}
+\clearpage\addcontentsline{toc}{section}{Test 4 (2017 alternative)}\input{chapters/test4}
+\clearpage\addcontentsline{toc}{section}{2025 Mid-Semester Test}\input{chapters/test2025}
+\clearpage\addcontentsline{toc}{section}{Selected end-of-year stretch questions}\input{chapters/endyear-stretch}
+
+\clearpage
+\section{Final exam-use checklist}
+\begin{enumerate}
+\item Draw the boundary and name the system type before selecting an equation.
+\item Build a state table and classify each phase before reading properties.
+\item Write the full energy balance before deleting zero terms.
+\item Separate total and specific quantities; $PV$ is energy only with compatible units.
+\item Mark constant-$V$, constant-$P$, linear-spring and polytropic paths on the diagram.
+\item For electrical devices, determine whether $VI\Delta t$ is work into or out of the system.
+\item For a heat exchanger, heat lost by one stream equals heat gained by the other if external losses are neglected.
+\item For refrigerators, keep $\dot Q_H$, $\dot Q_L$ and $\dot W_{in}$ distinct and state the COP definition.
+\item Box a value with units and perform one physical direction/sign check.
+\item If the provided source data conflict, state the conflict instead of silently changing them.
+\end{enumerate}
+\end{document}

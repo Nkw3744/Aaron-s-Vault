@@ -3,7 +3,7 @@
 Return to the [[Thermodynamics Overview|subject overview]] · Follow the [[Thermodynamics Roadmap|course roadmap]].
 
 > [!tip] Complete tutorial pack
-> [[Thermodynamics Exam Pack v2|V2 exam-pack guide]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|61 rewritten questions and expanded answers]] — every question includes system type, boundary, assumptions, source-vagueness notes, working, units, a boxed answer and necessary figures. [[Thermodynamics-Tutorial-Booklet-Weeks-1-6.pdf|V1 source-page facsimile booklet]] remains available.
+> [[Thermodynamics Exam Pack v2|V2 exam-pack guide]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|61 rewritten tutorial questions]] · [[Thermodynamics-Past-Exam-Booklet-Weeks-1-6.pdf|22 rewritten past-exam questions]] — answers include system type, boundary, assumptions, source-vagueness notes, working, units, boxed results and necessary figures. [[Thermodynamics-Tutorial-Booklet-Weeks-1-6.pdf|V1 source-page facsimile booklet]] remains available.
 
 ## Foundations and Properties
 

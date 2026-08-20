@@ -1,7 +1,7 @@
 # Thermodynamics Exam Pack v2
 
 > [!important] Recommended exam resources
-> [[Thermodynamics-Half-Semester-Resource-v2.pdf|Expanded half-semester theory resource v2]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|Rewritten tutorial booklet v2]]
+> [[Thermodynamics-Half-Semester-Resource-v2.pdf|Expanded half-semester theory resource v2]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|Rewritten tutorial booklet v2]] · [[past-exams/Thermodynamics-Past-Exam-Booklet-Weeks-1-6.pdf|Past-exam booklet]]
 
 ## What changed from v1
 
@@ -40,15 +40,20 @@ Editable master: [[Thermodynamics-Tutorial-Booklet-v2.tex]]
 Chapter sources: `chapters/`  
 Question figures: `question-images/`
 
+### Past-exam booklet
+
+The separate [[past-exams/Thermodynamics Past Exam Booklet|past-exam guide]] links a **30-page booklet with 22 rewritten questions and clear answers**. It covers five mid-semester papers and three carefully selected end-of-year refrigeration questions that extend the first-six-week material. Fourteen official diagrams or worked figures are included. Later Otto, Diesel, Brayton-regenerator and Rankine-cycle questions are excluded from this first-six-week resource.
+
 ## Source and evidence boundary
 
 This package uses the latest authorised local 2026 Thermodynamics files already pulled from Canvas, plus the current formula sheet, property tables and course notes. It did not require a new live Canvas session. Ambiguous or defective source data are identified rather than silently replaced.
 
 ## Verification
 
-- Both `.tex` masters compile from this `v2` folder with Tectonic.
+- Both main v2 `.tex` masters compile from this folder; the past-exam master compiles from `past-exams/`.
 - Theory PDF: 12 A4 pages.
 - Tutorial PDF: 47 A4 pages.
+- Past-exam PDF: 30 A4 pages, with 22 questions and 14 embedded figures.
 - Automated coverage checks passed for 61 questions, 61 system/boundary statements, 61 assumption sets and 61 or more boxed answers.
 - All display-math delimiters and question-image dependencies passed.
 - Every PDF page was rendered and inspected for clipping, blank pages, overflow and broken figures.

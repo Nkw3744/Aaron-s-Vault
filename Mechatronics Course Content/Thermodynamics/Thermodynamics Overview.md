@@ -9,7 +9,7 @@ ENME601 is organized by durable concepts covering properties, energy analysis, o
 > The mid-semester test runs **21 August 2026, 6:00–9:15 pm NZST** and is paper-based and open-book; check Canvas for your room allocation. The saturation lab remains due **24 August 2026 at 23:59 NZST**. Weeks 4–6 lecture/tutorial sources and six practice-test files are indexed through [[Thermodynamics Practice Index]] and [[Thermodynamics Assessment Index]].
 
 > [!tip] Open-book exam pack
-> [[Thermodynamics Exam Pack v2|Start with v2]] · [[Thermodynamics-Half-Semester-Resource-v2.pdf|expanded 12-page theory PDF]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|61 rewritten tutorials with answers]] · [[ENME601 Formula Sheet 2026.pdf|formula sheet]] · [[Property Tables 2026.pdf|property tables]]
+> [[Thermodynamics Exam Pack v2|Start with v2]] · [[Thermodynamics-Half-Semester-Resource-v2.pdf|expanded 12-page theory PDF]] · [[Thermodynamics-Tutorial-Booklet-v2.pdf|61 rewritten tutorials with answers]] · [[Thermodynamics-Past-Exam-Booklet-Weeks-1-6.pdf|22 past-exam questions with clear answers]] · [[ENME601 Formula Sheet 2026.pdf|formula sheet]] · [[Property Tables 2026.pdf|property tables]]
 
 ## 1. Foundations and Properties
 

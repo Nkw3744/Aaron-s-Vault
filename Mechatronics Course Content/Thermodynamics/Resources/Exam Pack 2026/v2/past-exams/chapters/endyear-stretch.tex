@@ -1,0 +1,180 @@
+\section*{Selected end-of-year questions}
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Scope note.} These are stretch applications of the Week 5 steady-flow balance and Week 6 refrigerator/COP ideas. They also require later vapour-compression-cycle conventions and R-134a property tables. Otto, Diesel, Brayton-regenerator and Rankine questions were excluded because their cycle theory lies beyond Weeks 1--6.}}
+\end{center}
+
+\subsection*{End-of-year Problem 10 --- commercial refrigerator}
+\textbf{Rewritten question.} A commercial refrigerator using R-134a keeps a refrigerated space at $-25^\circ\mathrm{C}$. Cooling water enters the condenser at $20^\circ\mathrm{C}$ at $0.25\,\mathrm{kg/s}$ and leaves at $25^\circ\mathrm{C}$. Refrigerant enters the condenser at $1.2\,\mathrm{MPa}$ and $70^\circ\mathrm{C}$ and leaves at $42^\circ\mathrm{C}$. It enters the compressor at $60\,\mathrm{kPa}$ and $-20^\circ\mathrm{C}$. The compressor gains $450\,\mathrm{W}$ of heat from the surroundings. Determine (a) quality at the evaporator inlet, (b) refrigeration load and (c) refrigerator COP.
+
+\textbf{Source page / marks.} Previous Test and Exam Problems, p.~6, Problem 10; official solution pp.~18--19.
+
+\textbf{System and boundary.} Steady-flow control volumes around the condenser, compressor, throttle and evaporator.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steady operation; negligible kinetic and potential energy changes.
+  \item No pressure loss through each heat exchanger.
+  \item Throttling is isenthalpic: $h_4=h_3$.
+  \item Liquid-water enthalpy is taken from the water table; R-134a properties are taken from the course tables.
+\end{itemize}
+
+\textbf{Given / Find.} Given the four refrigerant state conditions, cooling-water data and compressor heat gain; find $x_4$, $\dot Q_L$ and $\mathrm{COP}_R$.
+
+\questionfigure{endyear-p10.png}{Official $T$--$s$ sketch and state numbering for end-of-year Problem 10.}
+
+\textbf{Property values.}
+\[
+h_1=240.78,\quad h_2=300.63,\quad h_3=h_4=111.28\quad \mathrm{kJ/kg}
+\]
+At $60\,\mathrm{kPa}$, $h_f=38.87$ and $h_{fg}=223.36\,\mathrm{kJ/kg}$. For the cooling water, $h_{w,in}=83.915$ and $h_{w,out}=104.83\,\mathrm{kJ/kg}$.
+
+\textbf{Sequential working.}
+\[
+x_4=\frac{h_4-h_f}{h_{fg}}=\frac{111.28-38.87}{223.36}=0.324\approx0.32
+\]
+Condenser energy balance:
+\[
+\dot m_w(h_{w,out}-h_{w,in})=\dot m_R(h_2-h_3)
+\]
+\[
+\dot m_R=\frac{0.25(104.83-83.915)}{300.63-111.28}=0.0276\approx0.028\,\mathrm{kg/s}
+\]
+\[
+\dot Q_H=\dot m_R(h_2-h_3)=0.028(300.63-111.28)=5.30\,\mathrm{kW}
+\]
+For the compressor, heat enters at $0.45\,\mathrm{kW}$:
+\[
+\dot W_{in}=\dot m_R(h_2-h_1)-\dot Q_{comp,in}
+=0.028(300.63-240.78)-0.45=1.23\,\mathrm{kW}
+\]
+For the complete cycle, $\dot Q_H=\dot Q_L+\dot W_{in}+\dot Q_{comp,in}$:
+\[
+\dot Q_L=5.30-1.23-0.45=3.62\,\mathrm{kW}
+\]
+\[
+\mathrm{COP}_R=\frac{\dot Q_L}{\dot W_{in}}=\frac{3.62}{1.23}=2.94
+\]
+
+\textbf{Boxed official answers.}
+\[
+\boxed{x_4\approx0.32,\quad \dot m_R\approx0.028\,\mathrm{kg/s},\quad \dot Q_L=3.62\,\mathrm{kW},\quad \dot W_{in}=1.23\,\mathrm{kW},\quad \mathrm{COP}_R=2.94}
+\]
+
+\textbf{Exam trap.} The condenser-water heat rate is $\dot Q_H$, not $\dot Q_L$, and the compressor is not adiabatic.
+
+\subsection*{End-of-year Problem 11 --- evaporator pressure and a 250 kW cycle}
+\textbf{Rewritten question.} (A) Briefly explain the main factors influencing evaporator-pressure choice in a vapour-compression refrigerator. (B) A $250\,\mathrm{kW}$ R-134a refrigerator receives saturated vapour at $140\,\mathrm{kPa}$ at the compressor inlet and compresses it to $800\,\mathrm{kPa}$ with compressor isentropic efficiency $85\%$. Refrigerant is saturated liquid before throttling. Sketch the cycle, determine quality after throttling, compressor input power, and COP.
+
+\textbf{Source page / marks.} Previous Test and Exam Problems, pp.~6--7, Problem 11; official solution p.~20.
+
+\textbf{System and boundary.} Four steady-flow components forming a simple vapour-compression cycle.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steady operation and negligible kinetic/potential energy changes.
+  \item Compressor inlet is saturated vapour and throttle inlet is saturated liquid exactly as stated.
+  \item Throttle is isenthalpic; compressor is adiabatic with $\eta_c=0.85$.
+\end{itemize}
+
+\questionfigure{endyear-p11.png}{Official state sketch and property working for end-of-year Problem 11.}
+
+\textbf{Part A --- clear conceptual answer.}
+\begin{itemize}
+  \item The refrigerant saturation temperature should normally be about $5$--$10^\circ\mathrm{C}$ below the refrigerated-space temperature so heat has a practical driving temperature difference.
+  \item Evaporator pressure should not be below atmospheric pressure where avoidable, because air leakage into the system becomes likely.
+  \item A very low evaporator pressure increases compressor pressure ratio, work and discharge temperature, reducing efficiency and reliability.
+\end{itemize}
+
+\textbf{Property values from the official solution.}
+\[
+h_1=236.04,\quad s_1=0.9322,\quad h_3=h_4=95.42\quad \mathrm{kJ/kg}
+\]
+At $800\,\mathrm{kPa}$ and $s_{2s}=s_1$, interpolation gives $h_{2s}=267.10\,\mathrm{kJ/kg}$.
+
+\textbf{Sequential working.}
+After throttling at the $140\,\mathrm{kPa}$ evaporator pressure,
+\[
+x_4=\frac{h_4-h_f}{h_{fg}}=\frac{95.42-25.77}{210.27}=0.332
+\]
+Compressor efficiency:
+\[
+\eta_c=\frac{h_{2s}-h_1}{h_2-h_1}
+\quad\Rightarrow\quad
+h_2=h_1+\frac{h_{2s}-h_1}{0.85}=272.1\,\mathrm{kJ/kg}
+\]
+Evaporator load determines refrigerant flow:
+\[
+250=\dot m_R(h_1-h_4)
+\quad\Rightarrow\quad
+\dot m_R=\frac{250}{236.04-95.42}=1.78\,\mathrm{kg/s}
+\]
+\[
+\dot W_{in}=\dot m_R(h_2-h_1)=1.78(272.1-236.04)=64.3\,\mathrm{kW}
+\]
+The official handwritten page reports $74.33\,\mathrm{kW}$ and hence COP $=3.36$; its intermediate mass-flow/enthalpy arithmetic is internally inconsistent with the values printed on that same page. Using the printed properties consistently gives:
+\[
+\mathrm{COP}_R=\frac{250}{64.3}=3.89
+\]
+
+\textbf{Boxed answer with source discrepancy.}
+\[
+\boxed{x_4\approx0.332,\quad \dot m_R\approx1.78\,\mathrm{kg/s},\quad \dot W_{in}\approx64.3\,\mathrm{kW},\quad \mathrm{COP}_R\approx3.89}
+\]
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{\textbf{Official-page note:} the handwritten sheet boxes $\dot W_{in}=74.33\,\mathrm{kW}$ and $\mathrm{COP}=3.36$. These do not follow from its displayed $h_1$, $h_{2s}$, $h_3$, $250\,\mathrm{kW}$ load and $85\%$ efficiency. The internally consistent reconstruction above is recommended; retain the source values for lecturer comparison.}}
+\end{center}
+
+\textbf{Exam trap.} Do not apply compressor efficiency directly to temperature, and do not hide inconsistent source arithmetic.
+
+\subsection*{End-of-year Problem 12 --- condenser heat exchanger}
+\textbf{Rewritten question.} An R-134a vapour-compression refrigerator maintains a space at $-30^\circ\mathrm{C}$. Refrigerant enters the condenser at $1.2\,\mathrm{MPa}$ and $65^\circ\mathrm{C}$ and leaves at $42^\circ\mathrm{C}$. It enters the compressor at $60\,\mathrm{kPa}$ and $-34^\circ\mathrm{C}$, while the compressor gains $450\,\mathrm{W}$ from the surroundings. Cooling water enters the condenser at $0.25\,\mathrm{kg/s}$ and $18^\circ\mathrm{C}$ and leaves at $26^\circ\mathrm{C}$. Sketch the cycle; determine refrigeration capacity, compressor input and COP; explain why the compressor inlet is superheated.
+
+\textbf{Source page / marks.} Previous Test and Exam Problems, pp.~7--8, Problem 12; official solution pp.~21--22.
+
+\textbf{System and boundary.} Refrigeration loop plus a separate condenser-water control volume.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steady operation; negligible kinetic/potential energy changes and heat loss from the condenser to surroundings.
+  \item Condenser and evaporator pressures are $1.2\,\mathrm{MPa}$ and $60\,\mathrm{kPa}$.
+  \item Throttling is isenthalpic.
+\end{itemize}
+
+\questionfigure{endyear-p12.png}{Official cycle, condenser diagram and $T$--$s$ sketch for end-of-year Problem 12.}
+
+\textbf{Official property values.}
+\[
+h_1=230.04,\quad h_2=295.18,\quad h_3=h_4=111.25\quad \mathrm{kJ/kg}
+\]
+For water, $h_{w,in}=75.47$ and $h_{w,out}=109.04\,\mathrm{kJ/kg}$, so $\Delta h_w=33.57\,\mathrm{kJ/kg}$.
+
+\textbf{Sequential working.}
+Condenser balance:
+\[
+\dot m_R(h_2-h_3)=\dot m_w(h_{w,out}-h_{w,in})
+\]
+\[
+\dot m_R=\frac{0.25(109.04-75.47)}{295.18-111.25}=0.0456\,\mathrm{kg/s}
+\]
+\[
+\dot Q_L=\dot m_R(h_1-h_4)=0.0456(230.04-111.25)=5.40\,\mathrm{kW}
+\]
+With $0.45\,\mathrm{kW}$ entering the compressor,
+\[
+\dot W_{in}=\dot m_R(h_2-h_1)-0.45
+=0.0456(295.18-230.04)-0.45=2.52\,\mathrm{kW}
+\]
+Using the source's rounded mass flow gives $2.575\,\mathrm{kW}$ and
+\[
+\mathrm{COP}_R=\frac{5.404}{2.575}=2.10\ \text{(the handwritten page labels this approximately 2.15).}
+\]
+
+\textbf{Boxed answers.}
+\[
+\boxed{\dot m_R\approx0.0456\,\mathrm{kg/s},\quad \dot Q_L\approx5.40\,\mathrm{kW},\quad \dot W_{in}\approx2.52\text{--}2.58\,\mathrm{kW},\quad \mathrm{COP}_R\approx2.10\text{--}2.15}
+\]
+
+\textbf{Why superheat the compressor inlet?} A compressor is designed for vapour, not a liquid--vapour mixture. Liquid droplets can damage valves, pistons or blades. Slight superheat ensures dry vapour enters the compressor.
+
+\textbf{Exam trap.} Do not confuse condenser effectiveness with COP, and include the compressor heat gain with the correct sign.

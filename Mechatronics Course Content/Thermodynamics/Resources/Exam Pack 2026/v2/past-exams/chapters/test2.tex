@@ -1,0 +1,250 @@
+\section*{Test 2}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} Under what conditions (temperature, pressure, density) could the ideal gas equation be used to accurately predict properties for steam?
+
+\textbf{Vague/source note.} The source page gives only the qualitative prompt; the handwritten response is a three-point list and no numerical values are required.
+
+\textbf{System and boundary.} Closed-system property statement for steam; no process calculation is needed.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steam is sufficiently far from the saturation dome that ideal-gas behavior is a good approximation.
+  \item The pressure is low.
+  \item The density is low, which corresponds to a large specific volume.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: steam, with the condition asked qualitatively in terms of temperature, pressure, and density.
+  \item Find: the conditions under which the ideal-gas equation is accurate.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+PV=mRT, \qquad Z\approx 1 \text{ for ideal-gas behavior}
+\]
+
+\textbf{Property-table values.} None.
+
+\textbf{Sequential working with units.}
+\begin{itemize}
+  \item High temperature.
+  \item Low pressure.
+  \item Low density.
+\end{itemize}
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\text{Use the ideal-gas equation for steam at high temperature, low pressure, and low density.}}
+\]
+
+\textbf{Exam trap.} Do not say only ``high temperature''; the handwritten answer explicitly includes low pressure and low density as well.
+
+\textbf{Source pages / marks.} Test sheet p. 2 / 3 marks.
+
+\subsection*{Q2}
+\textbf{Rewritten question.} Fill in the missing information in the following table for R134a.
+
+\textbf{Vague/source note.} The source page shows a filled table and two worked parts below it. The handwritten values in the table are the official results to preserve.
+
+\textbf{System and boundary.} Property-state lookup for R134a; each row is a separate equilibrium state.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Each table entry is read from the appropriate saturated, compressed-liquid, or superheated R134a data.
+  \item Saturated-mixture rows use the quality relation $h=h_f+xh_{fg}$.
+  \item The handwritten values on the source page are taken as the target answers.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: the partially completed R134a table below.
+  \item Find: the missing $T$, $p$, $h$, $x$, and phase description entries.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+ h=h_f+xh_{fg}, \qquad x=\frac{h-h_f}{h_{fg}} \qquad \text{for saturated mixtures}
+\]
+
+\textbf{Property-table values.}
+\begin{center}
+\begin{tabular}{c c c c l}
+\hline
+& $T\,(^\circ\mathrm{C})$ & $p\,(\mathrm{kPa})$ & $h\,(\mathrm{kJ/kg})$ & $x$ / phase description \\
+\hline
+a. & $-22$ & $121.72$ & $22.89$ & $0$; saturated liquid \\
+b. & $31.31$ & $800$ & $200$ & $0.6$; saturated mixture \\
+c. & $-20$ & $132.82$ & $89.36$ & $0.3$; saturated mixture \\
+d. & $8$ & $1000$ & $62.69$ & --; compressed liquid \\
+e. & $40$ & $200$ & $287.74$ & --; superheated \\
+f. & $85$ & $2928.2$ & $279.51$ & $1.0$; saturated vapour \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Sequential working with units.}
+\[
+\text{b) } x=\frac{h-h_f}{h_{fg}}=\frac{200-95.48}{174.06}=0.6
+\]
+\[
+\text{c) } h=h_f+xh_{fg}=25.47+0.3\times 212.96=89.36\,\mathrm{kJ/kg}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\begin{array}{l}
+\text{a. } T=-22^\circ\mathrm{C},\; p=121.72\,\mathrm{kPa},\; h=22.89\,\mathrm{kJ/kg},\; x=0,\; \text{saturated liquid} \\
+\text{b. } T=31.31^\circ\mathrm{C},\; p=800\,\mathrm{kPa},\; h=200\,\mathrm{kJ/kg},\; x=0.6,\; \text{saturated mixture} \\
+\text{c. } T=-20^\circ\mathrm{C},\; p=132.82\,\mathrm{kPa},\; h=89.36\,\mathrm{kJ/kg},\; x=0.3,\; \text{saturated mixture} \\
+\text{d. } T=8^\circ\mathrm{C},\; p=1000\,\mathrm{kPa},\; h=62.69\,\mathrm{kJ/kg},\; x=--,\; \text{compressed liquid} \\
+\text{e. } T=40^\circ\mathrm{C},\; p=200\,\mathrm{kPa},\; h=287.74\,\mathrm{kJ/kg},\; x=--,\; \text{superheated} \\
+\text{f. } T=85^\circ\mathrm{C},\; p=2928.2\,\mathrm{kPa},\; h=279.51\,\mathrm{kJ/kg},\; x=1.0,\; \text{saturated vapour}
+\end{array}}
+\]
+
+\textbf{Exam trap.} The source has mixed state types: not every row uses quality; rows d and e are not saturated-mixture states.
+
+\textbf{Source pages / marks.} Test sheet p. 3 / 9 marks.
+
+\subsection*{Q3}
+\textbf{Rewritten question.} A piston-cylinder device (Figure 1) with a set of stops on the top contains 2.2 kg of saturated liquid water at 150 kPa. Heat is transferred to the water, causing some of the liquid to evaporate and move the piston upwards (at constant pressure). When the piston reaches the stops, the enclosed volume is 45 l. More heat is transferred until the pressure is doubled. Determine: (a) the amount of saturated liquid, if any, in kg, at the final state; (b) the final temperature; (c) the total work and heat transfer; and (d) show the process on a $p$--$v$ diagram (with respect to saturation lines).
+
+\textbf{Vague/source note.} The handwritten solution uses saturated-water tables at 150 kPa and 300 kPa, then evaluates the final state as a saturated mixture at 300 kPa.
+
+\textbf{System and boundary.} Closed system; moving-boundary piston-cylinder with stops, so boundary work occurs only during the constant-pressure part up to the stops.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Saturated-water properties are taken from the steam tables.
+  \item The piston moves at constant pressure until it hits the stops; after that the volume is fixed.
+  \item Kinetic and potential energy changes are negligible.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=2.2\,\mathrm{kg}$, initial saturated liquid water at $p_1=150\,\mathrm{kPa}$, stop volume $V_2=45\,\ell=0.045\,\mathrm{m}^3$, and final pressure $p_3=300\,\mathrm{kPa}$.
+  \item Find: $m_{f,3}$, $T_3$, $W_{1\to3}$, and $Q_{1\to3}$.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+V=mv,\qquad x=\frac{v-v_f}{v_{fg}},\qquad u=u_f+xu_{fg}
+\]
+\[
+W_{1\to3}=W_{1\to2}=p_1(V_2-V_1),\qquad Q_{1\to3}=W_{1\to3}+m(u_3-u_1)
+\]
+
+\textbf{Property-table values.}
+\[
+\begin{gathered}
+\text{At }150\,\mathrm{kPa}:\quad u_1=u_f=466.97\,\mathrm{kJ/kg},\quad v_1=v_f=0.001053\,\mathrm{m^3/kg},\\
+\text{At }300\,\mathrm{kPa}:\quad u_f=561.11,\ u_{fg}=1982.1\,\mathrm{kJ/kg},\\
+v_f=0.001073,\ v_{fg}=0.60582\,\mathrm{m^3/kg},\quad T_{sat}=133.53^\circ\mathrm{C}.
+\end{gathered}
+\]
+
+\textbf{Sequential working with units.}
+\[
+V_1=mv_1=(2.2\,\mathrm{kg})(0.001053\,\mathrm{m^3/kg})=0.0023166\,\mathrm{m^3}
+\]
+\[
+V_2=45\,\ell=0.045\,\mathrm{m^3},\qquad p_2=p_1=150\,\mathrm{kPa}
+\]
+\[
+V_3=V_2=0.045\,\mathrm{m^3},\qquad v_3=\frac{V_3}{m}=0.02045\,\mathrm{m^3/kg},\qquad p_3=2p_1=300\,\mathrm{kPa}
+\]
+\[
+v_f<v_3<v_g\text{ at }300\,\mathrm{kPa}\Rightarrow x_3=\frac{v_3-v_f}{v_{fg}}=\frac{0.02045-0.001073}{0.60582-0.001073}=0.032
+\]
+\[
+u_3=u_f+x_3u_{fg}=561.11+0.032\times 1982.1=624.54\,\mathrm{kJ/kg}
+\]
+\[
+m_{f,3}=(1-x_3)m=(1-0.032)(2.2\,\mathrm{kg})=2.12\,\mathrm{kg}
+\]
+\[
+T_3=T_{sat}(300\,\mathrm{kPa})=133.53^\circ\mathrm{C}
+\]
+\[
+W_{1\to3}=W_{1\to2}=p_1(V_2-V_1)=(150\,\mathrm{kPa})(0.045-0.0023166\,\mathrm{m^3})=6.4025\,\mathrm{kJ}
+\]
+\[
+Q_{1\to3}=W_{1\to3}+m(u_3-u_1)=6.4025\,\mathrm{kJ}+(2.2\,\mathrm{kg})(624.54-466.97)\,\mathrm{kJ/kg}=353.1\,\mathrm{kJ}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{m_{f,3}=2.12\,\mathrm{kg},\qquad T_3=133.53^\circ\mathrm{C},\qquad W_{1\to3}=6.4025\,\mathrm{kJ},\qquad Q_{1\to3}=353.1\,\mathrm{kJ}}
+\]
+
+\textbf{Exam trap.} The work stops once the piston hits the stops; the second heating stage changes internal energy only because the volume is fixed.
+
+\textbf{Source pages / marks.} Test sheet pp. 4--5 / 16 marks.
+
+\questionfigure{test2-q3.png}{Piston-cylinder device with stops for Q3.}
+
+\subsection*{Q4}
+\textbf{Rewritten question.} An insulated rigid vessel with a volume of 3 m$^3$ is fitted with a resistance heater and a paddle wheel as shown in Figure 2. The vessel is initially filled with air at a temperature of 27$^\circ$C and a pressure of 130 kPa. Now, a current of 4 A from a 230 V supply is passed through the resistance heater while the paddle wheel transfers energy at a rate of 150 J/s to the air. Determine the time taken for the air to reach a temperature of 227$^\circ$C. State any assumptions made and also state any tables used for data.
+
+\textbf{Vague/source note.} The source page and the handwritten solution use the ideal-gas model for air plus temperature-dependent $c_v$ data from Table A-2; a constant-$c_v$ check using Table A-18 is also shown.
+
+\textbf{System and boundary.} Closed rigid vessel; no boundary work, with electrical and shaft work input to the air.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Air behaves as an ideal gas in the temperature range considered.
+  \item The vessel is rigid and insulated, so $Q=0$ and $W_b=0$.
+  \item Changes in kinetic and potential energy are negligible.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $P_1=130\,\mathrm{kPa}$, $T_1=27^\circ\mathrm{C}=300\,\mathrm{K}$, $V=3\,\mathrm{m^3}$, $T_2=227^\circ\mathrm{C}=500\,\mathrm{K}$, $I=4\,\mathrm{A}$, $V_{el}=230\,\mathrm{V}$, and paddle-wheel transfer rate $150\,\mathrm{J/s}$ to the air.
+  \item Find: time $\Delta t$.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+Q-W=\Delta U,\qquad \Delta U=m(u_2-u_1),\qquad m=\frac{PV}{RT}
+\]
+\[
+\dot W_{el}=VI,\qquad \dot W_{sh}=150\,\mathrm{J/s},\qquad \Delta t=\frac{m(u_2-u_1)}{\dot W_{el}+\dot W_{sh}}
+\]
+
+\textbf{Property-table values.}
+\[
+R_{air}=0.287\,\mathrm{kJ/(kg\,K)},\qquad c_{v,air}=0.726\,\mathrm{kJ/(kg\,K)}\;\text{(Table A-2)}
+\]
+\[
+\text{Alternative table values shown on the source page: } u_1=214.07\,\mathrm{kJ/kg}\text{ at }300\,\mathrm{K},\; u_2=359.49\,\mathrm{kJ/kg}\text{ at }500\,\mathrm{K}
+\]
+
+\textbf{Sequential working with units.}
+\[
+m=\frac{PV}{RT_1}=\frac{(130\,\mathrm{kPa})(3\,\mathrm{m^3})}{(0.287\,\mathrm{kJ/(kg\,K)})(300\,\mathrm{K})}=4.53\,\mathrm{kg}
+\]
+\[
+\Delta u=c_{v,air}\Delta T=(0.726\,\mathrm{kJ/(kg\,K)})(500-300\,\mathrm{K})=145.2\,\mathrm{kJ/kg}
+\]
+\[
+\dot W_{el}=-(4\,\mathrm{A})(230\,\mathrm{V})=-920\,\mathrm{J/s},\qquad \dot W_{sh}=-150\,\mathrm{J/s}
+\]
+\[
+\Delta t=\frac{m(u_2-u_1)}{-\dot W_{el}-\dot W_{sh}}=\frac{(4.53\,\mathrm{kg})(145.2\,\mathrm{kJ/kg})}{(920+150)\times 10^{-3}\,\mathrm{kJ/s}}=614.7\,\mathrm{s}
+\]
+\[
+614.7\,\mathrm{s}=10\,\mathrm{min}\;14\,\mathrm{s}
+\]
+
+\textbf{Boxed official answer.}
+\[
+\boxed{\Delta t=614.7\,\mathrm{s}\approx 10\,\mathrm{min}\;14\,\mathrm{s}}
+\]
+
+\textbf{Exam trap.} The heater power and paddle-wheel power both enter as energy to the air; do not forget the sign convention when writing the closed-system energy balance.
+
+\textbf{Source pages / marks.} Test sheet pp. 8--9 / 8 marks.
+
+\questionfigure{test2-q4.png}{Insulated rigid vessel with resistance heater and paddle wheel for Q4.}

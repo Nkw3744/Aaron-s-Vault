@@ -1,0 +1,173 @@
+\section*{Test 4 (2017 alternative paper)}
+
+\subsection*{Q1 --- pure-substance $P$--$v$ diagram}
+\textbf{Rewritten question.} On the unlabeled $P$--$v$ diagram, identify liquid, solid, vapour, liquid+solid, solid+vapour and liquid+vapour regions; mark the critical point and triple line; draw a constant-pressure sublimation process and a constant-temperature boiling process from compressed liquid to superheated vapour.
+
+\textbf{Source page / marks.} Test 4 p.~1; 5 marks.
+
+\textbf{Source note.} This question repeats the same high-value diagram skill as Test 1 Q1 and Test 3 Q1.
+
+\textbf{System and boundary.} Conceptual pure-substance state map; no control boundary is required.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The sketch is the standard $P$--$v$ topology for a substance that contracts on freezing.
+  \item In the liquid--vapour region, constant-temperature boiling is also constant pressure.
+\end{itemize}
+
+\textbf{Given / Find.} Given an unlabeled diagram; find all regions, features and the two requested paths.
+
+\questionfigure{test4-q1.png}{Fully labeled official $P$--$v$ answer for Test 4 Q1.}
+
+\textbf{Clear answer.}
+\begin{itemize}
+  \item Solid lies to the far left; liquid lies between the fusion boundary and saturated-liquid line; vapour lies right of the dome.
+  \item Liquid+solid lies between the solid and liquid boundaries; solid+vapour lies along/below the low-pressure sublimation region; liquid+vapour lies inside the dome.
+  \item Critical point: dome apex. Triple line: low-pressure horizontal three-phase line.
+  \item Sublimation: horizontal constant-$P$ path from solid to vapour below the triple point.
+  \item Boiling: isothermal path from compressed liquid through the dome and into superheated vapour.
+\end{itemize}
+\[
+\boxed{\text{Label all six regions, the critical point, triple line, and both process paths as shown.}}
+\]
+
+\textbf{Exam trap.} Do not put the triple line at the critical point.
+
+\subsection*{Q2 --- steam piston-cylinder with stops}
+\textbf{Rewritten question.} A piston-cylinder contains $2\,\mathrm{kg}$ of steam at $300\,\mathrm{kPa}$ with quality $x_1=0.25$, while its piston rests on stops. Heat is added at constant volume until $500\,\mathrm{kPa}$, where the piston starts moving. Heating continues at $500\,\mathrm{kPa}$ until the volume is twice its initial value. Determine initial volume, boundary work, total heat transfer, and show the path on a $P$--$v$ diagram.
+
+\textbf{Source page / marks.} Test 4 pp.~2--3; 16 marks.
+
+\textbf{System and boundary.} Closed system; steam bounded by the piston-cylinder walls and moving piston.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Quasi-equilibrium piston motion; negligible kinetic and potential energy changes.
+  \item $1\to2$ is constant volume and $2\to3$ is constant pressure.
+  \item Saturated-water tables apply at states 1 and 3.
+\end{itemize}
+
+\textbf{Given / Find.} $m=2\,\mathrm{kg}$, $P_1=300\,\mathrm{kPa}$, $x_1=0.25$, $P_2=P_3=500\,\mathrm{kPa}$ and $V_3=2V_1$; find $V_1$, $W$, $Q$, and process path.
+
+\questionfigure{test4-q2.png}{Piston-cylinder apparatus and official $P$--$v$ path for Test 4 Q2.}
+
+\textbf{Property values.}
+\[
+\begin{array}{ll}
+300\,\mathrm{kPa}:&v_f=0.001073,\ v_g=0.60582\,\mathrm{m^3/kg},\ u_f=561.11,\ u_{fg}=1982.1\,\mathrm{kJ/kg},\\
+500\,\mathrm{kPa}:&v_f=0.001093,\ v_g=0.37483\,\mathrm{m^3/kg},\ u_f=639.54,\ u_{fg}=1921.2\,\mathrm{kJ/kg}.
+\end{array}
+\]
+
+\textbf{Sequential working.}
+\[
+v_1=v_f+x_1(v_g-v_f)=0.001073+0.25(0.60582-0.001073)=0.15226\,\mathrm{m^3/kg}
+\]
+\[
+V_1=mv_1=2(0.15226)=0.30452\,\mathrm{m^3},\quad V_3=2V_1=0.60904\,\mathrm{m^3}
+\]
+\[
+W_{13}=0+P_2(V_3-V_2)=500(0.60904-0.30452)=152.26\,\mathrm{kJ}
+\]
+\[
+u_1=561.11+0.25(1982.1)=1056.64\,\mathrm{kJ/kg}
+\]
+\[
+v_3=V_3/m=0.30452\,\mathrm{m^3/kg},\quad x_3=\frac{0.30452-0.001093}{0.37483-0.001093}=0.812
+\]
+\[
+u_3=639.54+0.812(1921.2)=2199.31\,\mathrm{kJ/kg}
+\]
+\[
+Q_{13}=W_{13}+m(u_3-u_1)=152.26+2(2199.31-1056.64)=2437.6\,\mathrm{kJ}
+\]
+\[
+\boxed{V_1=0.30452\,\mathrm{m^3},\quad W_{out}=152.26\,\mathrm{kJ},\quad Q_{in}=2437.6\,\mathrm{kJ}}
+\]
+
+\textbf{Exam trap.} Use total volume in $P\Delta V$, but specific volume in table-quality calculations.
+
+\subsection*{Q3 --- heating a room}
+\textbf{Rewritten question.} A $5\times6\times3\,\mathrm{m}$ room at atmospheric pressure is heated by a steam radiator supplying $15{,}000\,\mathrm{kJ/h}$. A $200\,\mathrm{W}$ fan distributes the air, and heat loss is $100\,\mathrm{kJ/min}$. The room is heated from $7^\circ\mathrm{C}$ to $22^\circ\mathrm{C}$. (a) Estimate the heating time by treating room air as a constant-volume system. (b) Discuss whether that assumption is reasonable.
+
+\textbf{Source page / marks.} Test 4 pp.~4--5; 10 marks.
+
+\textbf{System and boundary.} Approximate closed, rigid system containing the room air.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Ideal-gas air; atmospheric pressure $101.3\,\mathrm{kPa}$ initially.
+  \item Uniform room-air temperature; negligible KE/PE changes.
+  \item Radiator input, fan work and stated heat loss are constant during heating.
+\end{itemize}
+
+\textbf{Given / Find.} $V=90\,\mathrm{m^3}$, $T_1=280\,\mathrm{K}$, $T_2=295\,\mathrm{K}$ and the three energy rates; find $\Delta t$ and judge the model.
+
+\questionfigure{test4-q3.png}{Room, radiator, fan and heat-loss diagram for Test 4 Q3.}
+
+\textbf{Sequential working.}
+\[
+m=\frac{PV}{RT_1}=\frac{101.3(90)}{0.287(280)}=113.45\,\mathrm{kg}
+\]
+From ideal-gas Table A-17, $u_1=199.75$ at $280\,\mathrm{K}$ and $u_2=210.49\,\mathrm{kJ/kg}$ at $295\,\mathrm{K}$:
+\[
+\Delta U=m(u_2-u_1)=113.45(210.49-199.75)=1218.47\,\mathrm{kJ}
+\]
+Net input rate:
+\[
+\dot E_{in}=\frac{15000}{3600}+0.200-\frac{100}{60}=2.70\,\mathrm{kJ/s}
+\]
+\[
+\Delta t=\frac{1218.47}{2.70}=451.3\,\mathrm{s}=7.52\,\mathrm{min}
+\]
+Using average $c_v=0.7175\,\mathrm{kJ/(kg\,K)}$ gives $7.54\,\mathrm{min}$.
+\[
+\boxed{\Delta t\approx7.52\text{--}7.54\,\mathrm{min}}
+\]
+
+\textbf{Assumption discussion.} The geometric room volume is fixed, but a real room is not an airtight closed system; some air escapes as it warms. Constant volume is nevertheless a reasonable exam approximation because the temperature rise and associated leakage are modest. Constant pressure would require a mass-flow model.
+
+\textbf{Exam trap.} Fan work enters the air, while the stated $100\,\mathrm{kJ/min}$ leaves it.
+
+\subsection*{Q4 --- R-134a property table}
+\textbf{Rewritten question.} Complete the missing $T$, $P$, $h$, quality and phase entries for six R-134a states.
+
+\textbf{Source page / marks.} Test 4 p.~6; 9 marks.
+
+\textbf{System and boundary.} Independent equilibrium-state lookups; no process boundary.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Use the course R-134a saturation, superheated-vapour and compressed-liquid tables.
+  \item Quality applies only in the two-phase region.
+\end{itemize}
+
+\textbf{Given / Find.} Use each supplied property pair to identify phase and fill all missing entries.
+
+\textbf{Working pattern.}
+\[
+x=\frac{h-h_f}{h_{fg}}\quad\text{for a mixture},\qquad h\approx h_f(T)\quad\text{for a compressed liquid.}
+\]
+For row (a), $x=(250-102.34)/167.19=0.883$. For row (c), $h=30.67+0.4(210.23)=114.762\,\mathrm{kJ/kg}$.
+
+\textbf{Completed official table.}
+\begin{center}
+\small
+\begin{tabular}{ccccc}
+\toprule
+Row & $T(^\circ\mathrm{C})$ & $P(\mathrm{kPa})$ & $h(\mathrm{kJ/kg})$ & $x$ / phase\\
+\midrule
+a & 36 & 912.35 & 250 & 0.88, saturated mixture\\
+b & 50 & 500 & 291.98 & --, superheated vapour\\
+c & -16 & 157.38 & 114.762 & 0.4, saturated mixture\\
+d & 8.91 & 400 & 255.61 & 1.0, saturated vapour\\
+e & -32 & 76.71 & 10.09 & 0.0, saturated liquid\\
+f & -2 & 900 & 49.15 & --, compressed liquid\\
+\bottomrule
+\end{tabular}
+\end{center}
+\[
+\boxed{\text{Use phase first, then select the saturation, superheat, or compressed-liquid table.}}
+\]
+
+\textbf{Exam trap.} Do not assign a quality to superheated or compressed-liquid states.

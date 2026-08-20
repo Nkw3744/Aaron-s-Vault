@@ -1,0 +1,269 @@
+\section*{Test 1}
+
+\subsection*{Q1}
+\textbf{Rewritten question.} For the unlabeled $P$--$v$ diagram of a pure substance, identify the phase regions, key features, and process lines requested in Figure 1.
+
+\textbf{Source page/marks.} source/test1.pdf, p.~2; 5 marks.
+
+\textbf{Vague-data note.} This is a diagram-labelling question, so the answer is taken from the handwritten labelled solution page rather than from a numerical calculation.
+
+\textbf{System and boundary.} Not a calculation problem; a conceptual pure-substance phase map on a $P$--$v$ diagram.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item The sketch is the standard pure-substance $P$--$v$ phase diagram.
+  \item The handwritten labels on the solution page are the official intended identifications.
+  \item The constant-temperature boiling path runs from compressed liquid through the two-phase dome to superheated vapour.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: an unlabeled $P$--$v$ diagram for a pure substance.
+  \item Find: liquid, solid, vapour, liquid+solid, solid+vapour, liquid+vapour, critical point, triple line, constant-pressure sublimation path, and constant-temperature boiling path.
+\end{itemize}
+
+\textbf{Governing equations.} Qualitative phase-diagram topology only; no numerical equations are required.
+
+\textbf{Sequential working.}
+\begin{itemize}
+  \item Left region: solid.
+  \item Between the left boundary and the left side of the triple region: liquid+solid.
+  \item Inside the dome: liquid+vapour.
+  \item Right of the dome: vapour.
+  \item Below the triple-point horizontal segment: solid+vapour.
+  \item The apex of the dome: critical point.
+  \item The horizontal coexistence line at low pressure: triple line.
+  \item Constant-pressure sublimation follows the solid--vapour boundary.
+  \item Constant-temperature boiling follows the line from compressed liquid to superheated vapour through the two-phase region.
+\end{itemize}
+
+\textbf{Property-table values.} None.
+
+\textbf{Boxed final answer.}
+\[
+\boxed{\begin{gathered}\text{Six phase regions + critical point + triple line}\\\text{sublimation path + boiling path}\end{gathered}}
+\]
+
+\textbf{Exam trap.} Do not place the triple line on the dome boundary; it is the low-pressure horizontal coexistence line.
+
+\questionfigure{test1-q1.png}{Official Q1 $P$--$v$ diagram with labels.}
+
+\subsection*{Q2}
+\textbf{Rewritten question.} A piston-cylinder device contains 3 kg of R-134a at 200 kPa and quality $x=0.2$. Heat is added until the pressure reaches 400 kPa, after which the piston moves at constant pressure until the volume becomes twice the initial volume. Determine the initial volume, the boundary work, and the total heat transfer.
+
+\textbf{Source page/marks.} source/test1.pdf, pp.~3--4; 16 marks.
+
+\textbf{Vague-data note.} The source diagram is only partially informative, so the process description is taken from the printed text and verified against the handwritten solution: constant-volume heating to 400 kPa, then constant-pressure expansion to $V_3=2V_1$.
+
+\textbf{System and boundary.} Closed system; the refrigerant is the control mass inside the piston-cylinder device. The boundary is the moving piston face and cylinder walls.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item R-134a properties are read from the saturation tables used in the handwritten solution.
+  \item The process from 1 to 2 occurs at constant volume while the piston is on the stops, so $W_{1\to2}=0$.
+  \item The process from 2 to 3 occurs at constant pressure $400\,\text{kPa}$.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=3\,\text{kg}$, $P_1=200\,\text{kPa}$, $x_1=0.2$, $P_3=400\,\text{kPa}$, $V_3=2V_1$.
+  \item Find: $V_1$, $W_{1\to3}$, and $Q_{1\to3}$.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+V_1=mv_1,\qquad v_1=v_f+x_1v_{fg}
+\]
+\[
+W_{1\to2}=0,\qquad W_{2\to3}=P_3\,(V_3-V_2)
+\]
+\[
+Q_{1\to3}-W_{1\to3}=\Delta U=m(u_3-u_1)
+\]
+
+\textbf{Property-table values.}
+\begin{itemize}
+  \item At 200 kPa: $v_f=0.0007532\,\text{m}^3/\text{kg}$, $v_g=0.09951\,\text{m}^3/\text{kg}$, $u_f=38.26\,\text{kJ/kg}$, $u_{fg}=186.25\,\text{kJ/kg}$.
+  \item At 400 kPa: $v_f=0.0007905\,\text{m}^3/\text{kg}$, $v_g=0.051266\,\text{m}^3/\text{kg}$, $u_f=63.61\,\text{kJ/kg}$, $u_{fg}=171.49\,\text{kJ/kg}$.
+\end{itemize}
+
+\textbf{Sequential working.}
+\[
+v_1=0.0007532+0.2(0.09951-0.0007532)=0.020593\,\text{m}^3/\text{kg}
+\]
+\[
+V_1=3(0.020593)=0.06178\,\text{m}^3
+\]
+\[
+V_2=V_1=0.06178\,\text{m}^3,\qquad V_3=2V_1=0.12356\,\text{m}^3
+\]
+\[
+W_{1\to3}=W_{2\to3}=400\times10^3(0.12356-0.06178)=24.711\,\text{kJ}
+\]
+\[
+u_1=38.26+0.2(186.25)=75.51\,\text{kJ/kg}
+\]
+\[
+v_3=\frac{V_3}{m}=\frac{0.12356}{3}=0.041186\,\text{m}^3/\text{kg}
+\]
+\[
+x_3=\frac{v_3-v_f}{v_{fg}}=\frac{0.041186-0.0007905}{0.051266-0.0007905}=0.800
+\]
+\[
+u_3=63.61+0.8(171.49)=200.8\,\text{kJ/kg}
+\]
+\[
+Q_{1\to3}=W_{1\to3}+m(u_3-u_1)=24.711+3(200.802-75.51)=400.6\,\text{kJ}
+\]
+
+\textbf{Boxed final answer.}
+\[
+\boxed{V_1=0.06178\,\text{m}^3,\qquad W_{1\to3}=24.711\,\text{kJ},\qquad Q_{1\to3}=400.6\,\text{kJ}}
+\]
+
+\textbf{Exam trap.} The first leg is constant volume, so its boundary work is zero even though heat is added.
+
+\questionfigure{test1-q2.png}{Official Q2 piston-cylinder apparatus and piecewise $P$--$v$ process working.}
+
+\subsection*{Q3}
+\textbf{Rewritten question.} A rigid tank is divided into two equal parts by a partition. Initially one side contains 5 kg of water at 200 kPa and 25$^\circ$C, and the other side is evacuated. The partition is removed and the water expands to fill the entire tank, then exchanges heat with the surroundings until the temperature returns to 25$^\circ$C. Determine the tank volume, the final pressure, and the heat transfer.
+
+\textbf{Source page/marks.} source/test1.pdf, p.~5; 16 marks.
+
+\textbf{Vague-data note.} The handwritten solution uses the 25$^\circ$C saturated-water properties and treats the initial state as compressed liquid; the tank is rigid and the final temperature is forced back to 25$^\circ$C.
+
+\textbf{System and boundary.} Closed system; the water in the rigid tank is the control mass. The boundary is fixed, so there is no boundary motion.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Water at 25$^\circ$C and 200 kPa is a compressed liquid, so $v_1\approx v_f@25^\circ$C.
+  \item The tank is rigid, so the total volume is constant and $W_b=0$.
+  \item Final state is at 25$^\circ$C and the same specific volume set by the expanded rigid tank.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: $m=5\,\text{kg}$, $P_1=200\,\text{kPa}$, $T_1=25^\circ\text{C}$, initially one half evacuated.
+  \item Find: $V_{tank}$, $P_2$, and $Q_{1\to2}$.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+v_1\approx v_f@25^\circ\text{C},\qquad V_1=mv_1,\qquad V_{tank}=2V_1
+\]
+\[
+v_2=\frac{V_{tank}}{m},\qquad Q_{1\to2}=\Delta U=m(u_2-u_1)
+\]
+
+\textbf{Property-table values.}
+\begin{itemize}
+  \item At 25$^\circ$C: $v_f=0.001003\,\text{m}^3/\text{kg}$, $v_g=43.34\,\text{m}^3/\text{kg}$, $u_f=104.83\,\text{kJ/kg}$, $u_{fg}=2304.3\,\text{kJ/kg}$.
+  \item Saturation pressure at 25$^\circ$C: $P_{sat}=3.1698\,\text{kPa}$.
+\end{itemize}
+
+\textbf{Sequential working.}
+\[
+v_1\approx 0.001003\,\text{m}^3/\text{kg}
+\]
+\[
+V_1=5(0.001003)=0.005015\,\text{m}^3
+\]
+\[
+V_{tank}=2V_1=0.01003\,\text{m}^3
+\]
+\[
+v_2=\frac{0.01003}{5}=0.002006\,\text{m}^3/\text{kg}
+\]
+\[
+x_2=\frac{v_2-v_f}{v_{fg}}=\frac{0.002006-0.001003}{43.34-0.001003}=2.314\times10^{-5}
+\]
+\[
+u_1=104.83\,\text{kJ/kg}
+\]
+\[
+u_2=u_f+x_2u_{fg}=104.83+(2.314\times10^{-5})(2304.3)=104.88\,\text{kJ/kg}
+\]
+\[
+P_2=P_{sat}@25^\circ\text{C}=3.1698\,\text{kPa}
+\]
+\[
+Q_{1\to2}=5(104.88-104.83)=0.267\,\text{kJ}
+\]
+
+\textbf{Boxed final answer.}
+\[
+\boxed{V_{tank}=0.01003\,\text{m}^3,\qquad P_2=3.1698\,\text{kPa},\qquad Q_{1\to2}=0.267\,\text{kJ}}
+\]
+
+\textbf{Exam trap.} The tank is rigid, so the pressure change comes from heat transfer and phase change, not from boundary work.
+
+\questionfigure{test1-q3.png}{Rigid-tank diagram used in Q3.}
+
+\subsection*{Q4}
+\textbf{Rewritten question.} Complete the missing values in the water-steam property table for cases a--f.
+
+\textbf{Source page/marks.} source/test1.pdf, p.~7; 9 marks.
+
+\textbf{Vague-data note.} The printed table is clear and the handwritten page provides the completed values. Row (e) is a superheated-vapour state that was checked against the handwritten interpolation.
+
+\textbf{System and boundary.} Property-table lookup only; no control volume or control mass boundary is needed.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Steam tables for water are used.
+  \item $x=0$ means saturated liquid, $x=1$ means saturated vapour, and an omitted $x$ means it is not applicable.
+  \item When $u$ lies between $u_f$ and $u_g$, the state is a saturated mixture and $u=u_f+xu_{fg}$.
+\end{itemize}
+
+\textbf{Given / Find.}
+\begin{itemize}
+  \item Given: the partial table entries for rows a--f.
+  \item Find: every missing $T$, $p$, $u$, $x$, and phase description entry.
+\end{itemize}
+
+\textbf{Governing equations.}
+\[
+x=\frac{u-u_f}{u_{fg}},\qquad u=u_f+xu_{fg}
+\]
+\[
+P=P_{sat}(T),\qquad T=T_{sat}(P)
+\]
+
+\textbf{Property-table values.}
+\begin{itemize}
+  \item Row (a), 145$^\circ$C: $P_{sat}=415.68\,\text{kPa}$, $u_f=610.19\,\text{kJ/kg}$, $u_{fg}=1944.2\,\text{kJ/kg}$.
+  \item Row (b), 800 kPa: $T_{sat}=170.41^\circ\text{C}$, but $u=209.33\,\text{kJ/kg}<u_f$, so the state is compressed liquid; the handwritten completion gives $T=50^\circ$C.
+  \item Row (c), 270$^\circ$C: $P_{sat}=5503.0\,\text{kPa}$ and $u_g=2593.7\,\text{kJ/kg}$.
+  \item Row (d), 30 kPa: $T_{sat}=69.09^\circ\text{C}$, $u_f=289.24\,\text{kJ/kg}$, $u_{fg}=2178.5\,\text{kJ/kg}$.
+  \item Row (e), 1600 kPa and $u=3120.1\,\text{kJ/kg}$: superheated vapour; handwritten completion gives $T=500^\circ$C.
+  \item Row (f), 85$^\circ$C: $P_{sat}=57.868\,\text{kPa}$, $u_f=355.96\,\text{kJ/kg}$.
+\end{itemize}
+
+\textbf{Sequential working.}
+\begin{itemize}
+  \item (a) $x=(2000-610.19)/1944.2=0.7148$; $P=415.68\,\text{kPa}$; saturated mixture.
+  \item (b) At 800 kPa, $u< u_f$, so the state is compressed liquid; the completed table gives $T=50^\circ$C.
+  \item (c) Saturated vapour at 270$^\circ$C gives $x=1$ and $u=2593.7\,\text{kJ/kg}$.
+  \item (d) $x=0.4$ gives $u=289.24+0.4(2178.5)=1160.64\,\text{kJ/kg}$ and $T=69.09^\circ$C.
+  \item (e) Interpolating the superheated tables at 1.6 MPa gives $u=3120.1\,\text{kJ/kg}$ at $T=500^\circ$C.
+  \item (f) $x=0$ gives saturated liquid at 85$^\circ$C with $P=57.868\,\text{kPa}$ and $u=355.96\,\text{kJ/kg}$.
+\end{itemize}
+
+\textbf{Completed final table.}
+\begin{center}\small
+\begin{tabular}{cccccl}
+\toprule
+Row & $T(^\circ\mathrm{C})$ & $p(\mathrm{kPa})$ & $u(\mathrm{kJ/kg})$ & $x$ & Phase \\
+\midrule
+a & 145 & 415.68 & 2000 & 0.7148 & saturated mixture \\
+b & 50 & 800 & 209.33 & -- & compressed liquid \\
+c & 270 & 5503.0 & 2593.7 & 1.0 & saturated vapour \\
+d & 69.09 & 30 & 1160.64 & 0.4 & saturated mixture \\
+e & 500 & 1600 & 3120.1 & -- & superheated vapour \\
+f & 85 & 57.868 & 355.96 & 0.0 & saturated liquid \\
+\bottomrule
+\end{tabular}
+\end{center}
+\[\boxed{\text{All six states classified before table lookup.}}\]
+
+\textbf{Exam trap.} For row (b), do not force a quality value into a compressed-liquid state; $x$ is only defined on the saturation line.

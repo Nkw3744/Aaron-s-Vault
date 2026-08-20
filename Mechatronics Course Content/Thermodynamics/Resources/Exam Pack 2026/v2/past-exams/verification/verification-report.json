@@ -1,0 +1,77 @@
+{
+  "chapters": {
+    "test1.tex": {
+      "questions": 4,
+      "assumptions": 4,
+      "systems": 4,
+      "open_math": 29,
+      "close_math": 29
+    },
+    "test2.tex": {
+      "questions": 4,
+      "assumptions": 4,
+      "systems": 4,
+      "open_math": 29,
+      "close_math": 29
+    },
+    "test3.tex": {
+      "questions": 4,
+      "assumptions": 4,
+      "systems": 4,
+      "open_math": 16,
+      "close_math": 16
+    },
+    "test4.tex": {
+      "questions": 4,
+      "assumptions": 4,
+      "systems": 4,
+      "open_math": 17,
+      "close_math": 17
+    },
+    "test2025.tex": {
+      "questions": 3,
+      "assumptions": 3,
+      "systems": 3,
+      "open_math": 25,
+      "close_math": 25
+    },
+    "endyear-stretch.tex": {
+      "questions": 3,
+      "assumptions": 3,
+      "systems": 3,
+      "open_math": 23,
+      "close_math": 23
+    }
+  },
+  "errors": [],
+  "figures": {
+    "references": 14,
+    "files": 14,
+    "missing": []
+  },
+  "pdf": {
+    "pages": 30,
+    "a4": true,
+    "encrypted": true,
+    "bytes": 4147433
+  },
+  "arithmetic": {
+    "values": {
+      "test4_q2": [
+        0.3045195,
+        152.25975,
+        2437.6056364656165
+      ],
+      "test3_q3_current": 12.180676328502415,
+      "test3_q4_net": 9.5749,
+      "2025_q1": [
+        1500,
+        75.0,
+        150
+      ],
+      "endyear_p10_cop": 2.943089430894309
+    },
+    "passed": true
+  },
+  "status": "PASS"
+}

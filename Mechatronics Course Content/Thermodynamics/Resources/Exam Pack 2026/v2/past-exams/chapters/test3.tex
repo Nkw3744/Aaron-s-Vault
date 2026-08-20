@@ -1,0 +1,156 @@
+\section*{Test 3 (2019)}
+
+\subsection*{Q1 --- pure-substance diagram}
+\textbf{Rewritten question.} Label the six phase regions, critical point, triple line, constant-pressure sublimation path and constant-temperature boiling path on an unlabeled pure-substance $P$--$v$ diagram.
+
+\textbf{Source page / marks.} Test 3 p.~2; 5 marks.
+
+\textbf{System and boundary.} Conceptual property diagram; no system boundary.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Standard pure-substance $P$--$v$ topology.
+  \item The requested boiling path passes from compressed liquid through the two-phase dome to superheated vapour.
+\end{itemize}
+
+\textbf{Given / Find.} Given the blank diagram; identify every phase region and requested path.
+
+\questionfigure{test3-q1.png}{Official labeled phase diagram for Test 3 Q1.}
+
+\textbf{Clear answer.} Solid is far left, liquid is between the fusion line and saturated-liquid boundary, vapour is right of the dome, liquid+vapour is inside the dome, and solid+liquid / solid+vapour occupy the corresponding coexistence regions. The critical point is at the dome apex and the triple line at the low-pressure three-phase line.
+\[
+\boxed{\text{All six regions, critical point, triple line, sublimation and boiling paths correctly located.}}
+\]
+
+\textbf{Exam trap.} The triple line and critical point are different features.
+
+\subsection*{Q2 --- water-steam property table}
+\textbf{Rewritten question.} Complete the missing temperature, pressure, internal energy, quality and phase entries for six water-steam states.
+
+\textbf{Source page / marks.} Test 3 p.~3; 9 marks.
+
+\textbf{System and boundary.} Independent equilibrium-state lookups.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Use the course saturated, superheated and compressed-water tables.
+  \item Quality is defined only in the saturated-mixture region.
+\end{itemize}
+
+\textbf{Given / Find.} Use each supplied property pair to classify the phase first, then fill all missing values.
+
+\textbf{Core relations.}
+\[
+x=\frac{u-u_f}{u_{fg}},\qquad u=u_f+xu_{fg}.
+\]
+Row (a): $x=(2000-610.19)/1944.2=0.715$. Row (d): $u=289.24+0.4(2178.5)=1160.64\,\mathrm{kJ/kg}$.
+
+\textbf{Completed official table.}
+\begin{center}
+\small
+\begin{tabular}{ccccc}
+\toprule
+Row & $T(^\circ\mathrm{C})$ & $P(\mathrm{kPa})$ & $u(\mathrm{kJ/kg})$ & $x$ / phase\\
+\midrule
+a & 145 & 415.68 & 2000 & 0.715, saturated mixture\\
+b & 50 & 800 & 209.34 & --, compressed liquid\\
+c & 270 & 5503.0 & 2593.7 & 1.0, saturated vapour\\
+d & 69.09 & 30 & 1160.64 & 0.4, saturated mixture\\
+e & 500 & 1600 & 3120.1 & --, superheated vapour\\
+f & 85 & 57.868 & 355.36 & 0.0, saturated liquid\\
+\bottomrule
+\end{tabular}
+\end{center}
+\[
+\boxed{\text{Classify phase before choosing the table and using quality.}}
+\]
+
+\textbf{Exam trap.} Do not force quality into rows (b) or (e).
+
+\subsection*{Q3 --- R-134a with heat and electrical work}
+\textbf{Rewritten question.} A piston-cylinder contains $2\,\mathrm{kg}$ saturated liquid R-134a and $10\,\mathrm{kg}$ saturated R-134a vapour at $200\,\mathrm{kPa}$. At constant pressure, $250\,\mathrm{kJ}$ of heat is added while a $230\,\mathrm{V}$ source supplies a resistance element for $6\,\mathrm{min}$. If the final temperature is $70^\circ\mathrm{C}$, determine the current and show the process on a $T$--$v$ diagram.
+
+\textbf{Source page / marks.} Test 3 pp.~4--5; 10 marks.
+
+\textbf{System and boundary.} Closed system with moving boundary; heat and electrical work enter the refrigerant.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Quasi-equilibrium constant-pressure process at $200\,\mathrm{kPa}$.
+  \item Negligible KE/PE changes.
+  \item R-134a table properties are those used in the official solution.
+\end{itemize}
+
+\textbf{Given / Find.} $m_f=2\,\mathrm{kg}$, $m_g=10\,\mathrm{kg}$, $P=200\,\mathrm{kPa}$, $Q=250\,\mathrm{kJ}$, $V_e=230\,\mathrm{V}$, $\Delta t=360\,\mathrm{s}$, $T_2=70^\circ\mathrm{C}$; find $I$ and the process path.
+
+\questionfigure{test3-q3.png}{Piston-cylinder and official $T$--$v$ path for Test 3 Q3.}
+
+\textbf{Sequential working.} Initial quality is the vapour mass fraction:
+\[
+x_1=\frac{10}{12}=0.833
+\]
+At $200\,\mathrm{kPa}$, $h_f=38.41$ and $h_{fg}=206.09\,\mathrm{kJ/kg}$:
+\[
+h_1=h_f+x_1h_{fg}=38.41+0.833(206.09)=210.15\,\mathrm{kJ/kg}
+\]
+At $200\,\mathrm{kPa}$ and $70^\circ\mathrm{C}$, the final state is superheated and $h_2=315.03\,\mathrm{kJ/kg}$.
+
+For a constant-pressure closed-system process, combining boundary work with $\Delta U$ gives an enthalpy balance:
+\[
+Q+W_{e,in}=m(h_2-h_1)
+\]
+\[
+W_{e,in}=12(315.03-210.15)-250=1008.56\,\mathrm{kJ}
+\]
+\[
+W_{e,in}=V_e I\Delta t\quad\Rightarrow\quad I=\frac{1008.56\times10^3}{230(360)}=12.18\,\mathrm{A}
+\]
+\[
+\boxed{I=12.18\,\mathrm{A}}
+\]
+
+\textbf{Exam trap.} Electrical work is into the system. At constant pressure it is simplest to write the result using $\Delta H$, which already accounts for boundary work.
+
+\subsection*{Q4 --- three-process ideal-gas cycle}
+\textbf{Rewritten question.} A piston-cylinder contains $0.2\,\mathrm{kg}$ of air initially at $1.5\,\mathrm{MPa}$ and $200^\circ\mathrm{C}$. It expands at constant pressure until its volume doubles, then cools at constant volume, then is compressed polytropically back to the initial state with $n=1.2$. Determine work for each process and net cycle work, and sketch the $P$--$V$ cycle.
+
+\textbf{Source page / marks.} Test 3 pp.~8--9; 13 marks.
+
+\textbf{System and boundary.} Closed ideal-gas system in a piston-cylinder.
+
+\textbf{Assumptions.}
+\begin{itemize}
+  \item Air is ideal with $R=0.287\,\mathrm{kJ/(kg\,K)}$.
+  \item Quasi-equilibrium boundary work; negligible KE/PE changes.
+  \item The return path obeys $PV^{1.2}=\text{constant}$.
+\end{itemize}
+
+\textbf{Given / Find.} $m=0.2\,\mathrm{kg}$, $P_1=1500\,\mathrm{kPa}$, $T_1=473\,\mathrm{K}$, $V_2=2V_1$, $V_3=V_2$, $n=1.2$; find $W_{12}$, $W_{23}$, $W_{31}$ and $W_{net}$.
+
+\questionfigure{test3-q4.png}{Official $P$--$V$ cycle sketch for Test 3 Q4.}
+
+\textbf{Sequential working.}
+\[
+V_1=\frac{mRT_1}{P_1}=\frac{0.2(0.287)(473)}{1500}=0.0181\,\mathrm{m^3},\qquad V_2=V_3=0.0362\,\mathrm{m^3}
+\]
+\[
+W_{12}=P_1(V_2-V_1)=1500(0.0362-0.0181)=27.2\,\mathrm{kJ}
+\]
+\[
+W_{23}=0
+\]
+Since $P_3V_3^n=P_1V_1^n$,
+\[
+P_3=P_1\left(\frac{V_1}{V_3}\right)^n=1500(1/2)^{1.2}=652.9\,\mathrm{kPa}
+\]
+\[
+W_{31}=\frac{P_1V_1-P_3V_3}{1-n}=-17.6\,\mathrm{kJ}
+\]
+\[
+W_{net}=27.2+0-17.6=9.6\,\mathrm{kJ}
+\]
+\[
+\boxed{W_{12}=27.2\,\mathrm{kJ},\quad W_{23}=0,\quad W_{31}=-17.6\,\mathrm{kJ},\quad W_{net}=9.6\,\mathrm{kJ}}
+\]
+
+\textbf{Exam trap.} Compression work is negative under the work-out convention; the net positive area means the cycle produces work.
